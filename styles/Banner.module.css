@@ -1,0 +1,157 @@
+.container {
+    max-width: 996px;
+    height: 411px;
+    background-color: #fff;
+    border-radius: 12px;
+    margin-bottom: 92px;
+    background-image: url(../public/ellipse.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapperLeft {
+    padding-left: 27px;
+    padding-top: 18px;
+    width: 372px;
+}
+
+.wrapperRight {
+    padding-top: 18px;
+    padding-right: 20px;
+}
+
+.title {
+    font-family: 'Oswald';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+    color: #304250;
+    margin-top: 0;
+    margin-bottom: 21px;   
+}
+
+.subtitle {
+    font-family: 'Golos';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0em;
+    line-height: 17px;
+    margin-bottom: 9px;
+    color: #304250;
+}
+
+.description {
+    display: block;
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0em;
+    margin-bottom: 77px;
+    color: #304250;
+}
+
+.priceContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.oldPrice {
+    font-family: 'Oswald';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 59px;
+    letter-spacing: 0em;
+    color: #304250;
+    text-decoration: line-through;
+    margin-bottom: 6px;
+}
+
+.discountWrapper {
+    width: 117px;
+    height: 52px;
+    background-image: url(../public/discountBG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Oswald';
+    font-size: 38px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.newPriceWrapper {
+    display: flex;
+    align-items: start;
+}
+
+.newPrice {
+    font-family: 'Oswald';
+    font-size: 130px;
+    line-height: 100%;
+    color: #304250;
+}
+
+.newPriceKop {
+    font-family: 'Oswald';
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #304250;
+}
+
+.bannerFooterText {
+    padding-left: 30px;
+    font-family: 'Din';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: #304250;
+    opacity: 0.23;
+    min-width: 810px;
+    margin-bottom: 20px;
+}
+
+.durationWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: 'Din';
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: #304250;
+    margin-bottom: 25px;
+}
+
+.durationDate {
+    font-family: 'Din';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+}
+
+.bannerImg {
+    padding-right: 45px;
+}

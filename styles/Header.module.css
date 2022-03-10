@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;    
+}
+
+.link {
+    color: #8797A4;
+    margin-right: 24px;
+}
+
+.containerr {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin-bottom: 40px;
+}
+
+.basket {
+    background-color: #fff;
+    width: 46px;
+    height: 46px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

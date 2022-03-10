@@ -1,9 +1,54 @@
+@font-face {
+  font-family: 'Golos';
+  src: url('../public/fonts/Golos/Golos-UI_Regular.woff');
+  src: url('../public/fonts/Golos/Golos-UI_Regular.woff2');
+  font-style: normal; 
+  font-weight: normal; 
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../public/fonts/Oswald/oswald-regular.woff');
+  src: url('../public/fonts/Oswald/oswald-regular.woff2');
+  font-style: normal; 
+  font-weight: normal; 
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../public/fonts/Oswald/oswald-300.woff');
+  src: url('../public/fonts/Oswald/oswald-300.woff2');
+  font-style: normal; 
+  font-weight: 300; 
+}
+
+@font-face {
+  font-family: 'Din';
+  src: url('../public/fonts/DIN/DINPro-regular.woff');
+  src: url('../public/fonts/DIN/DINPro-Regular.woff2');
+  font-style: normal; 
+  font-weight: normal; 
+}
+
+@font-face {
+  font-family: 'Din';
+  src: url('../public/fonts/DIN/DINPro-Bold.woff');
+  src: url('../public/fonts/DIN/DINPro-Bold.woff2');
+  font-style: normal; 
+  font-weight: 700; 
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: sans-serif;
+  background-color: #DEDEDE;
+}
+
+h1, h2, h3, h4, p {
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -13,4 +58,16 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+  width: 1428px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }

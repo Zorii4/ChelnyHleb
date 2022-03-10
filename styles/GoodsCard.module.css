@@ -1,0 +1,72 @@
+
+
+.discountLikeContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.discountProcent {
+    width: 59px;
+    height: 24px;
+    background-image: url(../public/discountBG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Oswald';
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.goodCardTitle {
+    margin-top: 8px;
+    margin-bottom: 25px;
+}
+
+.goodOldPrice {
+    font-family: 'Oswald';
+    font-weight: 300;
+    line-height: 21px;
+    color: #B0BCC9;
+    text-decoration: line-through;
+}
+
+.goodNewPiceWrapper {
+    display: flex;
+    align-items: start;
+}
+
+.goodNewPriceRub {
+    font-family: 'Oswald';
+    font-size: 30px;
+    line-height: 100%;
+    color: #304250;
+}
+
+.goodNewPriceKop {
+    font-family: 'Oswald';
+    font-weight: 300;
+    line-height: 21px;
+    color: #304250;
+}
+
+.goodBasketContainer {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.orderButton {
+    width: 76px;
+    height: 34px;
+    background: linear-gradient(109.23deg, #BFE470 -22.36%, #61A430 92.46%);
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}

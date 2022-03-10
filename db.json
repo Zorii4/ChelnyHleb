@@ -1,0 +1,116 @@
+{
+    "banner": [
+        {   
+            "id":1, 
+            "title": "Виноград",
+            "subtitle": "Виноград киш-миш, 1 кг",
+            "description": "Сладкий и ароматный, созревший под жарким солнцем Армении. И совсем без косточек",
+            "oldprice": 149.90,
+            "newprice": 83.90,
+            "discount": 40,
+            "image": "/img/grape.png",
+            "duration": "28 июн - 10 июл"
+        }
+    ],
+
+    "goods": [
+        {
+            "id": 1,
+            "title": "Сок Ideas тыквенно-апельсиновый, 1л",
+            "rate": 4.6,
+            "oldprice": 211.56,
+            "newprice": 189.89,
+            "image": "/img/watermelon.png",
+            "discount": 12,
+            "like": true          
+        },
+
+        {
+            "id": 2,
+            "title": "Арбуз, 1кг",
+            "rate": 4.5,
+            "oldprice": 211.56,
+            "newprice": 34.89,
+            "image": "/img/watermelon.png",
+            "discount": 20,
+            "like": false  
+        },
+
+        {
+            "id": 3,
+            "title": "Коктейль молочный Чудо Шоколад 3%, 200мл",
+            "rate": 4.9,
+            "oldprice": 211.56,
+            "newprice": 29.89,
+            "image": "/img/juice.png",
+            "discount": 80,
+            "like": true 
+        },
+
+        {
+            "id": 4,
+            "title": "Голубика, 120гр",
+            "rate": 4.5,
+            "oldprice": 211.56,
+            "newprice": 320.89,
+            "image": "/img/juice.png",
+            "discount": 12, 
+            "like": false 
+        },
+
+        {
+            "id": 5,
+            "title": "Семена тыквенные Семушка очищенные, 150г",
+            "rate": 4.8,
+            "oldprice": 211.56,
+            "newprice": 77.89,
+            "image": "/img/watermelon.png",
+            "discount": 15, 
+            "like": true 
+        },
+
+        {
+            "id": 6,
+            "title": "Напиток безалкогольный Coca-Cola газированный, 330мл",
+            "rate": 4.8,
+            "oldprice": 211.56,
+            "newprice": 34.89,
+            "image": "/img/watermelon.png",
+            "discount": 10,
+            "like": false  
+        },
+
+        {
+            "id": 7,
+            "title": "Сметана Простоквашино 15% 300г",
+            "rate": 4.6,
+            "oldprice": 211.56,
+            "newprice": 59.89,
+            "image": "/img/juice.png",
+            "discount": 0,
+            "like": true 
+        },
+
+        {
+            "id": 8,
+            "title": "Индейка Инди-Лайт, 1кг",
+            "rate": 4.4,
+            "oldprice": 211.56,
+            "newprice": 189.89,
+            "image": "/img/watermelon.png",
+            "discount": 0,
+            "like": false 
+        },
+
+        {
+            "id": 9,
+            "title": "Огурцы, 450г",
+            "rate": 4.6,
+            "oldprice": 211.56,
+            "newprice": 49.89,
+            "image": "/img/juice.png",
+            "discount": 0,
+            "like": true 
+        }   
+    ]
+}

@@ -1,0 +1,24 @@
+.cardWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cardItem {
+    height: 363px;
+    width: 276px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.subtitle {
+    font-family: 'Golos';
+    font-size: 30px;
+    line-height: 110%;
+    color: #304250;
+    margin-bottom: 24px;
+}
