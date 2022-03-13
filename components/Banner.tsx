@@ -12,7 +12,7 @@ const Banner: React.FC <BannerProps> = ({ data }) => {
             {data.map((item)=> (
                 <div className={styles.wrapper}>
                     <div className={styles.wrapperLeft}>
-                        <h2 className={styles.title}>{item.title}</h2>
+                        <h3 className={styles.title}>{item.title}</h3>
                         <p className={styles.subtitle}>{item.subtitle}</p>
                         <p className={styles.description}>{item.description}</p>
                         <div className={styles.priceContainer}>

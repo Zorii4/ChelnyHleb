@@ -1,0 +1,46 @@
+.wiseBakerContainer {
+    background-image: url(../public/Baker.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 420px;
+    height: 100%;
+    border-radius: 12px;
+    padding: 18px 26px 24px 23px;
+}
+
+.wiseBakerTitle {
+    font-family: 'Oswald';
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.wiseBakerSubtitle {
+    width: 241px;
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #FFFFFF;
+    margin-bottom: 171px;
+}
+
+.wiseBakerLinkWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.wiseBakerLink {
+    font-family: 'Din';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+    opacity: 0.66;
+}

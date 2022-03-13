@@ -17,3 +17,17 @@
     border-radius: 8px;
     cursor: pointer;
 }
+
+.footerFeedbackBtn {
+    width: 316px;
+    height: 56px;
+    background: #61A430;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+    color: #FFFFFF;
+}

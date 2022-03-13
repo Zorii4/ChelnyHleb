@@ -112,5 +112,72 @@
             "discount": 0,
             "like": true 
         }   
+    ],
+
+    "sesonesBanner": [
+        {
+            "id": 1,
+            "title": "Фермерские продукты",
+            "background": "/img/sesonsBG.jpg",
+            "description": "Возраждение традиций и качественных продуктов питания"
+        }
+    ],
+
+    "categories": [
+        {
+            "id": 1,
+            "title": "Мудрый пекарь",
+            "background": "/img/categories/bakerBG.jpg",
+            "url": "url"
+        },
+        {
+            "id": 2,
+            "title": "Домашняя кухня",
+            "background": "/img/categories/homeKitchen.jpg",
+            "url": "url"
+        },
+        {
+            "id": 3,
+            "title": "Мясо, птица",
+            "background": "/img/categories/meat.jpg",
+            "url": "url"
+        },
+        {
+            "id": 4,
+            "title": "Бакалея",
+            "background": "/img/categories/bakaley.jpg",
+            "url": "url"
+        },
+        {
+            "id": 5,
+            "title": "Овощи, фрукты, ягоды, зелень",
+            "background": "/img/categories/bakaley.jpg",
+            "url": "url"
+        },
+        {
+            "id": 6,
+            "title": "Хлеб, выпечка",
+            "background": "/img/categories/meat.jpg",
+            "url": "url"
+        },
+        {
+            "id": 7,
+            "title": "Молочные продукты, яйцо",
+            "background": "/img/categories/homeKitchen.jpg",
+            "url": "url"
+        },
+        {
+            "id": 8,
+            "title": "Соки, воды, напитки",
+            "background": "/img/categories/meat.jpg",
+            "url": "url"
+        },
+        {
+            "id": 9,
+            "title": "Кобасы, сосиски, деликатесы",
+            "background": "/img/categories/bakaley.jpg",
+            "url": "url"
+        }
     ]
+    
 }

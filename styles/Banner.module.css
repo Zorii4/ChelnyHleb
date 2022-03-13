@@ -1,9 +1,8 @@
 .container {
-    max-width: 996px;
-    height: 411px;
+    width: 996px;
+    height: 100%;
     background-color: #fff;
     border-radius: 12px;
-    margin-bottom: 92px;
     background-image: url(../public/ellipse.png);
     background-size: contain;
     background-repeat: no-repeat;

@@ -1,12 +1,16 @@
 import { HYDRATE } from "next-redux-wrapper";
 import { combineReducers } from "redux";
 import { bannerReducer } from "./bannerReducer";
+import { categoriesReducer } from "./categoriesReducer";
 import { goodsReducer } from "./goodsReducer";
+import { sesonesReducer } from "./sesonesReducer";
 
 
 const rootReducer = combineReducers({
     goods: goodsReducer,
-    bannerData: bannerReducer
+    bannerData: bannerReducer,
+    sesonesData: sesonesReducer,
+    categories: categoriesReducer
 })
 
 export const reducer = (state, action) => {

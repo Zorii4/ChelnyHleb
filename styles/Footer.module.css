@@ -1,0 +1,160 @@
+.footer {
+    height: 337px;
+    background: #FFFFFF;
+    width: 100%;
+}
+
+.footerContainer {
+    width: 1428px;
+    height: 235px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 57px;
+    padding-bottom: 45px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.logoWrapper {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.copyrightText {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #B0BCC9;
+}
+
+.navMenu {
+    width: 344px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navMenuLeft {
+    display: flex;
+    flex-direction: column;
+    width: 148px;
+}
+
+.navMenuRight {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+.navLink {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #304250;
+    margin-bottom: 14px;
+}
+
+.footerConatctsWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerContactsSubtitle {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #304250;
+    margin-bottom: 15px;
+}
+
+.footerContactsPhone {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    color: #304250;
+    margin-bottom: 2px;
+}
+
+.conatctsDuration {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #B0BCC9;
+    margin-bottom: 24px;
+}
+
+.socialLink {
+    margin-right: 10px;
+}
+
+.feedbackWrapper {
+    width: 348px;
+    height: 150px;
+    background: #F2F5FB;
+    border-radius: 12px;
+    padding-left: 16px;
+    padding-top: 14px;
+}
+
+.feedbackTitle {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 120%;
+    color: #304250;
+    margin-bottom: 4px;
+}
+
+.feedbackText {
+    display: block;
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #B0BCC9;
+    margin-bottom: 17px;
+}
+
+.copyrightContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 1428px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.copyrightWrapper {
+    display: flex;
+}
+
+.copyrightYears {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #B0BCC9;
+    margin-right: 24px;
+}
+
+.copirightInfo {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #B0BCC9;
+}
+
+.siteCreators {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #B0BCC9;
+}

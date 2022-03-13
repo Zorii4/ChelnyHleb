@@ -60,11 +60,7 @@ a {
   box-sizing: border-box;
 }
 
-.container {
-  width: 1428px;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 
 ul {
   list-style-type: none;

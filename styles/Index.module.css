@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 60px;
 }
 
 .cardItem {
@@ -15,10 +16,42 @@
     justify-content: space-between;
 }
 
+.subtitleWrapper {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 24px;
+}
+
 .subtitle {
     font-family: 'Golos';
     font-size: 30px;
     line-height: 110%;
     color: #304250;
-    margin-bottom: 24px;
+    font-weight: normal;
+    line-height: 110%;
+    margin-right: 15px;
+}
+
+.bannersContainer {
+    height: 411px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 92px;
+}
+
+.showAllLink {
+    font-family: 'Din';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    text-decoration-line: underline;
+    color: #61A430;
+}
+
+.categoriesWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 85px;
 }

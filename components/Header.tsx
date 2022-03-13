@@ -7,7 +7,7 @@ import Input from "./common/input/Input"
 
 const Header: React.FC = () => {
     return (
-        <header>
+        <header className={styles.mainContainer}>
             <div className={styles.container}>
                 <div>
                     <Link href="#"><a className={styles.link}>Мудрый пекарь</a></Link>
