@@ -1,15 +1,14 @@
 import { BannerData } from "../types/banner"
 import styles from "../styles/Banner.module.css"
+import { useTypedSelector } from "../hooks/useTypeSelector"
 
-interface BannerProps {
-    data: BannerData[]
-  }
+const Banner: React.FC= () => {
 
-const Banner: React.FC <BannerProps> = ({ data }) => {
+    const {bannerData, error} = useTypedSelector(state => state.bannerData)
 
     return (
         <div className={styles.container}>
-            {data.map((item)=> (
+            {bannerData.map((item)=> (
                 <div className={styles.wrapper}>
                     <div className={styles.wrapperLeft}>
                         <h3 className={styles.title}>{item.title}</h3>

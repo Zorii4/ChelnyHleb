@@ -2,10 +2,11 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Layout from '../components/Layout'
 import Head from 'next/head'
-import { wrapper, NextThunkDispatch } from '../store'
-import { fetchCategories } from '../store/actions-creators/categories'
+import { wrapper } from '../store'
+
 
 function MyApp({ Component, pageProps }: AppProps) {
+ 
   return(
     <div className="container">
       <Layout>
@@ -19,5 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     </div>
   )
 }
-   
+
 export default wrapper.withRedux(MyApp)
+
+

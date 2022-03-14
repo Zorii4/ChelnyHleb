@@ -1,8 +1,18 @@
 .container {
     display: flex;
+    width: 1428px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 124px;
 }
 
 .menu {
-    width: 259px;
+    width: 27%;
 }
 
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+}

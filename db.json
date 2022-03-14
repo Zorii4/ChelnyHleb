@@ -128,7 +128,7 @@
             "id": 1,
             "title": "Мудрый пекарь",
             "background": "/img/categories/bakerBG.jpg",
-            "url": "url"
+            "url": "http://localhost:3000/catalog/milk"
         },
         {
             "id": 2,

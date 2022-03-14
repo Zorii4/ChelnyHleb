@@ -14,15 +14,12 @@ import { fetchCategories } from '../store/actions-creators/categories'
 import CategoriesCard from '../components/CategoriesCard'
 
 const Home: NextPage = () => {
-  const {goods} = useTypedSelector(state => state.goods)
-  
-  const {bannerData, error} = useTypedSelector(state => state.bannerData)
-  const {categories} = useTypedSelector(state => state.categories)
-
+  const {goods} = useTypedSelector(state => state.goods)  
+ 
   return (
     <> 
       <div className={styles.bannersContainer}>
-        <Banner data={bannerData}/>
+        <Banner />
         <WiseBakerBanner />
       </div>
       <div className={styles.subtitleWrapper}> 
@@ -53,7 +50,7 @@ const Home: NextPage = () => {
         <Link href='#'><a className={styles.showAllLink}>Смотреть все</a></Link>
       </div>
       <div className={styles.categoriesWrapper}>
-        <CategoriesCard data={categories} />
+        <CategoriesCard numberOfColumn={4}/>
       </div>      
     </>     
   )

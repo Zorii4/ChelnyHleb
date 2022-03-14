@@ -1,27 +1,31 @@
 import type { NextPage } from 'next'
-import { connect } from 'react-redux'
 import CategoriesCard from '../components/CategoriesCard'
-import { useTypedSelector } from "../hooks/useTypeSelector"
-import { RootState } from '../store/reducers'
+import WeeksNewBanner from '../components/WeeksNewBanner'
+import { NextThunkDispatch, wrapper } from '../store'
+import { fetchCategories } from '../store/actions-creators/categories'
+import { fetchGoods } from '../store/actions-creators/goods'
 import styles from "../styles/Catalog.module.css"
 
 
-
-const Catalog: NextPage = ({...props}) => {
-     const {categories} = useTypedSelector(state => state.categories)
-    console.log(props)
+const Catalog: NextPage = () => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.menu}>select</div>
+            <div className={styles.menu}>select</div>    
             <div className={styles.content}>
-                <h1>Каталог товаров</h1>
-                <div className={styles.categoriesWrapper}>
-                    <CategoriesCard data={categories} />
-                </div>   
+                <WeeksNewBanner />
+                <CategoriesCard numberOfColumn={3}/>                
             </div>
         </div>
     )
 }
 
-export default connect((state: RootState) => state)(Catalog);
+export default Catalog
+
+export const getServerSideProps = wrapper.getServerSideProps(store => async () => {
+    const dispatch = store.dispatch as NextThunkDispatch
+    await dispatch (await fetchCategories())
+    await dispatch (await fetchGoods())
+  
+    return { props: { } }
+  })
