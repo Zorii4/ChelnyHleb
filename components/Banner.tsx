@@ -1,10 +1,18 @@
 import { BannerData } from "../types/banner"
 import styles from "../styles/Banner.module.css"
 import { useTypedSelector } from "../hooks/useTypeSelector"
+import { useEffect, useState } from "react"
+import { fetchBannerData } from "../FAKE_API/goods"
 
-const Banner: React.FC= () => {
+const Banner: React.FC = () => {
+    const [bannerData, setBannerData] = useState()
+    // const {bannerData, error} = useTypedSelector(state => state.bannerData)
 
-    const {bannerData, error} = useTypedSelector(state => state.bannerData)
+    useEffect(()=> {
+        setBannerData(fetchBannerData())
+    },[])
+
+    if (!bannerData) return (<p>loading...</p>)
 
     return (
         <div className={styles.container}>

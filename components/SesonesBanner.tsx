@@ -2,9 +2,19 @@ import Link from "next/link"
 import styles from "../styles/SesonesBanner.module.css"
 import { SesonesBanner } from "../types/sesones"
 import { useTypedSelector } from "../hooks/useTypeSelector"
+import { useEffect, useState } from "react"
+import { fetchSesonesData } from "../FAKE_API/goods"
 
 const SesonesBanner: React.FC = () => {
-    const {sesonesBanner} = useTypedSelector(state => state.sesonesData)
+    const [sesonesBanner, setSesonesBanner] = useState()
+    // const {sesonesBanner} = useTypedSelector(state => state.sesonesData)
+    
+    useEffect (() => {
+        setSesonesBanner(fetchSesonesData())
+    },[])
+    
+    if (!sesonesBanner) return (<p>loading</p>)
+
     return (
         <>
             {sesonesBanner.map((item)=> (

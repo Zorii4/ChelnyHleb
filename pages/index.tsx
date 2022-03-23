@@ -76,14 +76,14 @@ const Home: NextPage = () => {
 
 export default Home;
 
-export const getServerSideProps = wrapper.getServerSideProps(store => async () => {
-  const dispatch = store.dispatch as NextThunkDispatch
+// export const getServerSideProps = wrapper.getServerSideProps(store => async () => {
+//   const dispatch = store.dispatch as NextThunkDispatch
 //   await dispatch (await fetchGoods())
 
-await dispatch (await fetchBannerData())
+// await dispatch (await fetchBannerData())
 
 //   await dispatch (await fetchSesonesBanner())
 //   await dispatch (await fetchCategories())
 
-  return { props: { } }
-})
+//   return { props: { } }
+// })

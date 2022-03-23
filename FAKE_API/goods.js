@@ -381,6 +381,29 @@ const comments = [
     }
 ]
 
+const banner = [
+    {   
+        id:1, 
+        title: "Виноград",
+        subtitle: "Виноград киш-миш, 1 кг",
+        description: "Сладкий и ароматный, созревший под жарким солнцем Армении. И совсем без косточек",
+        oldprice: 149.90,
+        newprice: 83.90,
+        discount: 40,
+        image: "/img/grape.png",
+        duration: "28 июн - 10 июл"
+    }
+]
+
+const sesonesBanner = [
+    {
+        id: 1,
+        title: "Фермерские продукты",
+        background: "/img/sesonsBG.jpg",
+        description: "Возраждение традиций и качественных продуктов питания"
+    }
+]
+
 export function fetchAllGoods() {
     return goods
 }
@@ -413,4 +436,12 @@ export function fetchAllUsers () {
 
 export function fetchAllComments () {
     return comments
+}
+
+export function fetchBannerData () {
+    return banner
+}
+
+export function fetchSesonesData () {
+    return sesonesBanner
 }
