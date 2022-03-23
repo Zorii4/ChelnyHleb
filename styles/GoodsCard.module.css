@@ -1,8 +1,8 @@
 
-
 .discountLikeContainer {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 3px;
 }
 
 .discountProcent {
@@ -21,6 +21,10 @@
     justify-content: space-around;
 }
 
+.imageContainer {
+    margin-bottom: 5px;
+}
+
 .goodCardTitle {
     font-family: 'Golos';
     font-weight: normal;
@@ -28,7 +32,7 @@
     line-height: 120%;
     color: #304250;
     margin-top: 8px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .goodOldPrice {
@@ -41,7 +45,7 @@
 
 .goodNewPiceWrapper {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .goodNewPriceRub {

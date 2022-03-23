@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
         <div className={styles.footer}>
             <div className={styles.footerContainer}>
                 <div className={styles.logoWrapper}>
-                    <Image layout="fixed" src= {logo}/>
+                    <Image layout="fixed" src={logo}/>
                 </div>
                     <nav className={styles.navMenu}>
                         <div className={styles.navMenuLeft}>
@@ -33,9 +33,9 @@ const Footer: React.FC = () => {
                             <a className={styles.socialLink}>
                                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="40" height="40" rx="20" fill="#F2F5FB"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.622 13.25H23.3788C25.2403 13.25 26.75 14.759 26.75 16.622V23.3788C26.75 25.2403 25.241 26.75 23.378 26.75H16.622C14.7597 26.75 13.25 25.241 13.25 23.378V16.622C13.25 14.7597 14.759 13.25 16.622 13.25V13.25Z" stroke="#304250" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M23.7106 16.035C23.5711 16.0357 23.4578 16.149 23.4578 16.2885C23.4578 16.428 23.5718 16.5412 23.7113 16.5412C23.8508 16.5412 23.9641 16.428 23.9641 16.2885C23.9648 16.1482 23.8508 16.035 23.7106 16.035" stroke="#304250" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M21.909 18.0906C22.9634 19.145 22.9634 20.8546 21.909 21.909C20.8546 22.9634 19.145 22.9634 18.0906 21.909C17.0362 20.8546 17.0362 19.145 18.0906 18.0906C19.145 17.0362 20.8546 17.0362 21.909 18.0906" stroke="#304250" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fillRule="evenodd" clipRule="evenodd" d="M16.622 13.25H23.3788C25.2403 13.25 26.75 14.759 26.75 16.622V23.3788C26.75 25.2403 25.241 26.75 23.378 26.75H16.622C14.7597 26.75 13.25 25.241 13.25 23.378V16.622C13.25 14.7597 14.759 13.25 16.622 13.25V13.25Z" stroke="#304250" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M23.7106 16.035C23.5711 16.0357 23.4578 16.149 23.4578 16.2885C23.4578 16.428 23.5718 16.5412 23.7113 16.5412C23.8508 16.5412 23.9641 16.428 23.9641 16.2885C23.9648 16.1482 23.8508 16.035 23.7106 16.035" stroke="#304250" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M21.909 18.0906C22.9634 19.145 22.9634 20.8546 21.909 21.909C20.8546 22.9634 19.145 22.9634 18.0906 21.909C17.0362 20.8546 17.0362 19.145 18.0906 18.0906C19.145 17.0362 20.8546 17.0362 21.909 18.0906" stroke="#304250" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                             </a>
                         </Link>
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
                                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="40" height="40" rx="20" fill="#F2F5FB"/>
                                 <path d="M23.728 26.501V21.6161H25.3824L25.6299 19.7119H23.728V18.4969C23.728 17.9451 23.8831 17.5697 24.6801 17.5697L25.6962 17.5685V15.8656C25.5197 15.8419 24.917 15.791 24.2147 15.791C22.7487 15.791 21.7456 16.678 21.7456 18.3075V19.7119L20.2891 19.7072V21.6114L21.7456 21.6161V26.5022H23.728V26.501Z" fill="#304250"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.622 13.25H24.3788C26.2403 13.25 27.75 14.759 27.75 16.622V23.3788C27.75 25.2403 26.241 26.75 24.378 26.75H17.622C15.7597 26.75 14.25 25.241 14.25 23.378V16.622C14.25 14.7597 15.759 13.25 17.622 13.25V13.25Z" stroke="#304250" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fillRule="evenodd" clipRule="evenodd" d="M17.622 13.25H24.3788C26.2403 13.25 27.75 14.759 27.75 16.622V23.3788C27.75 25.2403 26.241 26.75 24.378 26.75H17.622C15.7597 26.75 14.25 25.241 14.25 23.378V16.622C14.25 14.7597 15.759 13.25 17.622 13.25V13.25Z" stroke="#304250" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                             </a>
                         </Link>

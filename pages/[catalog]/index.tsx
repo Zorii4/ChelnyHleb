@@ -1,10 +1,11 @@
 import type { NextPage } from 'next'
-import CategoriesCard from '../components/CategoriesCard'
-import WeeksNewBanner from '../components/WeeksNewBanner'
-import { NextThunkDispatch, wrapper } from '../store'
-import { fetchCategories } from '../store/actions-creators/categories'
-import { fetchGoods } from '../store/actions-creators/goods'
-import styles from "../styles/Catalog.module.css"
+import { useRouter } from 'next/router'
+import CategoriesCard from '../../components/CategoriesCard'
+import WeeksNewBanner from '../../components/WeeksNewBanner'
+import { NextThunkDispatch, wrapper } from '../../store'
+import { fetchCategories } from '../../store/actions-creators/categories'
+import { fetchGoods } from '../../store/actions-creators/goods'
+import styles from "../../styles/Catalog.module.css"
 
 
 const Catalog: NextPage = () => {

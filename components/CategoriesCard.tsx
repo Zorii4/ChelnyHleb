@@ -1,6 +1,7 @@
 import Link from "next/link"
-import styles from "../styles/CategoriesCard.module.css"
+import { useEffect, useState } from "react"
 import { useTypedSelector } from "../hooks/useTypeSelector"
+import { fetchAllGoods, fetchAllCategories } from '../FAKE_API/goods'
 
 interface CategoriesCardProps {
     numberOfColumn: number
@@ -8,13 +9,20 @@ interface CategoriesCardProps {
 
 const CategoriesCard: React.FC<CategoriesCardProps> = ({ numberOfColumn }) => {
 
-    const {categories} = useTypedSelector(state => state.categories)
+    // const {categories} = useTypedSelector(state => state.categories)
+
+    const [categories, setCategories] = useState([])
+
+
+  useEffect(()=> {
+    setCategories(fetchAllCategories())
+  },[])
 
     return (
         <ul>
             {categories.map((item)=> (
-                <li style={{backgroundImage: `url(${item.background})`}}>
-                    <Link href={item.url}>
+                <li key={item.id} style={{backgroundImage: `url(${item.background})`}}>
+                    <Link href={`http://localhost:3000/catalog/${item.category}`}>
                         <a>
                             <h3>{item.title}</h3>
                         </a>

@@ -6,8 +6,10 @@ export interface Goods {
     oldprice: number
     newprice: number
     image: string
-    discount: number
+    discount?: number
+    popular?: boolean
     like: boolean
+    category:string
 }
 
 export interface GoodsState {
@@ -18,6 +20,8 @@ export interface GoodsState {
 export enum GoodsActionTypes {
     FETCH_GOODS_SUCCESS = "FETCH_GOODS_SUCCESS",
     FETCH_GOODS_ERROR = "FETCH_GOODS_ERROR",
+    FETCH_GOOD_FROM_CATEGORY_SUCCESS = "FETCH_GOOD_FROM_CATEGORY_SUCCESS",
+    FETCH_GOOD_FROM_CATEGORY_ERROR = "FETCH_GOOD_FROM_CATEGORY_ERROR",
 }
 
 interface FetchGoodsSuccess {
@@ -30,4 +34,17 @@ interface FetchGoodsError {
     payload: string
 }
 
-export type GoodsAction = FetchGoodsSuccess | FetchGoodsError
+interface FetchGoodsFromCategorySuccess {
+    type: GoodsActionTypes.FETCH_GOOD_FROM_CATEGORY_SUCCESS
+    payload: Goods[]
+}
+
+interface FetchGoodsFromCategoryError {
+    type: GoodsActionTypes.FETCH_GOOD_FROM_CATEGORY_ERROR
+    payload: string
+}
+
+export type GoodsAction = FetchGoodsSuccess | 
+FetchGoodsError | 
+FetchGoodsFromCategorySuccess | 
+FetchGoodsFromCategoryError

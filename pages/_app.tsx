@@ -3,10 +3,11 @@ import type { AppProps } from 'next/app'
 import Layout from '../components/Layout'
 import Head from 'next/head'
 import { wrapper } from '../store'
+import { StoreContext } from 'redux-react-hook'
+import { createContext } from 'react'
 
 
 function MyApp({ Component, pageProps }: AppProps) {
- 
   return(
     <div className="container">
       <Layout>

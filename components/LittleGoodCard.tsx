@@ -16,7 +16,7 @@ const LittleGoodCard: React.FC <GoodProps> = ({ good }) => {
             <div className={styles.discountLikeContainer}>
                 <div className={styles.discountProcent}>
                     <svg width="10" height="3" viewBox="0 0 10 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M-0.0012579 0.984474L9.96484 0.984474V2.4082L-0.0012579 2.4082V0.984474Z" fill="white"/>
+                        <path fillRule="evenodd" clipRule="evenodd" d="M-0.0012579 0.984474L9.96484 0.984474V2.4082L-0.0012579 2.4082V0.984474Z" fill="white"/>
                     </svg>
                     {good.discount}%
                 </div>

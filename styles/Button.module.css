@@ -1,22 +1,5 @@
-.catalogbutton {
-    background-color: #61A430;
-    font-size: 40px;
-    border-radius: 8px;
-    border: none;
-    color: #fff;
-    cursor:pointer;
-    font-family: 'Oswald', sans-serif;
-}
 
-.wayDelivery {
-    background-color: #CEEDB8;
-    color: #61A430;
-    width: 288px;
-    height: 46px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
+
 
 .footerFeedbackBtn {
     width: 316px;

@@ -10,8 +10,6 @@ const makeStore: MakeStore<Store> = (context: Context) => createStore(reducer,
       )
     );
     
-    
-
 export const wrapper = createWrapper<Store<RootState>>(makeStore, {debug: true})
 
 export type NextThunkDispatch = ThunkDispatch <RootState, void, AnyAction>

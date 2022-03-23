@@ -8,7 +8,6 @@ export const fetchGoods = () => {
         try {
             const response = await axios.get('http://localhost:4200/goods', {params: {
                 _limit: 5,
-                discount_gte: 0
             }})
             dispatch({type: GoodsActionTypes.FETCH_GOODS_SUCCESS, payload: response.data})
         } catch (error) {
@@ -16,3 +15,15 @@ export const fetchGoods = () => {
         }
     }
 }
+
+export const fetchGoodsFromCategory = (category: string) => {
+    return async (dispatch: Dispatch<GoodsAction>) => {
+        try {
+            const response = await axios.get(`http://localhost:4200/goods?category=${category}`)
+            
+            dispatch({type: GoodsActionTypes.FETCH_GOOD_FROM_CATEGORY_SUCCESS, payload: response.data})
+        } catch (error) {
+            dispatch({type: GoodsActionTypes.FETCH_GOOD_FROM_CATEGORY_ERROR, payload:"Произошла ошибка при загрузке товаров"})
+        }
+    }
+ }

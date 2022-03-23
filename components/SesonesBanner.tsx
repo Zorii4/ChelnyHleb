@@ -3,8 +3,6 @@ import styles from "../styles/SesonesBanner.module.css"
 import { SesonesBanner } from "../types/sesones"
 import { useTypedSelector } from "../hooks/useTypeSelector"
 
-
-
 const SesonesBanner: React.FC = () => {
     const {sesonesBanner} = useTypedSelector(state => state.sesonesData)
     return (

@@ -1,0 +1,28 @@
+.infoDescriptionItem {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.infoDescriptionCat {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #304250;
+    white-space: nowrap;
+}
+
+.infoDescriptionDotted {
+    width: 100%;
+    border-bottom:  1px dashed #8797A4;
+}
+
+.infoDescriptionText {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #8797A4;
+    white-space: nowrap;
+}

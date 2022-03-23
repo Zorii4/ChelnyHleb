@@ -1,0 +1,415 @@
+.wrapperOne {
+    height: 512px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-right: 72px;
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+}
+
+.wrapperTwo {
+    height: 495px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    padding: 51px 80px 60px 72px ; 
+}
+
+.wrapperThree {
+    height: 789px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 60px;
+    padding: 71px 52px 92px 52px;
+    display: flex;
+    justify-content: space-between;
+}
+ 
+.priceWrapper {
+    min-width: 564px;
+    max-height: 355px;
+    background: #F2F5FB;
+    border-radius: 12px;
+    padding: 24px 24px 22px 32px;
+    margin-bottom: 24px;
+}
+
+.brandName {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #8797A4;
+    margin-bottom: 18px;
+}
+
+.title {
+    max-width: 428px;
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    color: #304250;
+    margin-bottom: 15px;
+}
+
+.feedbackWrapper {
+    margin-bottom: 53px;
+}
+
+.feedbackLink {
+    font-family: 'Din';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+    text-decoration-line: underline;
+    color: #8797A4;
+}
+
+.discountWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.discountProcent {
+    width: 59px;
+    height: 24px;
+    background-image: url(../../../../../../public/discountBG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Oswald';
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 12px;
+}
+
+
+.goodOldPiceWrapper {
+    display: flex;
+    align-items: flex-start;
+    text-decoration: line-through;
+    text-decoration-color: #B0BCC9;
+    text-decoration-thickness: 1px;
+}
+
+.goodOldPriceRub {
+    font-family: 'Oswald';
+    font-size: 24px;
+    line-height: 100%;
+    color: #B0BCC9;
+}
+
+.goodOldPriceKop {
+    font-family: 'Oswald';
+    font-size: 12px;
+    font-weight: 300;
+    color: #B0BCC9;
+}
+
+.goodNewPiceWrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.goodNewPriceRub {
+    font-family: 'Oswald';
+    font-size: 90px;
+    line-height: 100%;
+    color: #304250;
+}
+
+.goodNewPriceKop {
+    font-family: 'Oswald';
+    font-size: 24px;
+    color: #304250;
+}
+
+.bottomContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.orderButton {
+    min-width: 251px;
+    min-height: 56px;
+    background: #61A430;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+}
+
+.goodQuantityText {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #8797A4;
+}
+
+.btnColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rightColumnWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.consistTitle {
+    font-family: 'Din';
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    color: #304250;
+    margin-bottom: 4px;
+}
+
+.consistDesc {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #8797A4;
+}
+
+.energyTitle {
+    width: 252px;
+    font-family: 'Din';
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    color: #304250;
+}
+
+.characteristicWrapper {
+    width: 1020px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin-bottom: 30px;
+}
+
+.characteristicList {
+    display: flex;
+    width: 520px;
+    justify-content: space-between;
+}
+
+.characteristicItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.characteristicItemData {
+    width: 90px;
+    height: 100%;
+    font-family: 'Oswald';
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 59px;
+    text-transform: uppercase;
+    color: #304250;
+    text-align: center;
+    background-image: url(../../../../../../public/characteristicBG.png);
+    background-repeat: no-repeat;    
+    margin-bottom: 8px;
+}
+
+.characteristicItemDescription {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #304250;
+}
+
+.goodInfoDescriptionTitle {
+    font-family: 'Din';
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    color: #304250;
+    margin-bottom: 24px;
+}
+
+.infoDescriptionList {
+    width: 563px;
+}
+
+.infoDescriptionWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rateWrapper {
+    width: 346px;
+    height: 367px;
+    background: #F2F5FB;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.rateNumberWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.rateNumber {
+    font-family: 'Oswald';
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #304250;
+}
+
+.rateQuantity {
+    font-family: 'Din';
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: #304250;
+}
+
+.rateButton {
+    width: 298px;
+    height: 46px;
+    border: 1px solid #61A430;
+    border-radius: 8px;
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+    color: #61A430;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 63px;
+}
+
+.feedBackTitle {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    color: #304250;
+}
+
+.commentItem {
+    margin-bottom: 44px;
+}
+
+.commentDateWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.commentUserName {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #304250;
+    margin-right: 10px;
+}
+
+.commentDate {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #B0BCC9;
+    margin-right: 10px;
+}
+
+.commentDescription {
+    font-family: 'Din';
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: #304250;
+}
+
+.commentPhoto {
+    margin-top: 25px;
+}
+
+.showMoreBtn {
+    width: 100%;
+    height: 44px;
+    border: 1px solid #DAE2E9;
+    border-radius: 8px;
+    background-color: transparent;
+    font-family: 'Din';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: #304250;
+}
+
+.cardWrapper {
+    display: flex; 
+    justify-content: space-between;
+    margin-bottom: 60px;
+    height: 363px;
+    overflow: hidden;
+}
+
+.cardItem {
+    height: 363px;
+    width: 276px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 14px;
+    flex-shrink: 0;
+}
+
+.cardItem:not(:nth-child(5n)) {
+    margin-right: 12px;
+}
+
+.similarGoodTitle {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    color: #304250;
+    margin-bottom: 24px;
+}
