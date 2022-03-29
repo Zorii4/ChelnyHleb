@@ -4,10 +4,10 @@ import { useTypedSelector } from "../hooks/useTypeSelector"
 import styles from "../styles/WeeksNewBanner.module.css"
 import LittleGoodCard from "./LittleGoodCard"
 
-const WeeksNewBanner: React.FC = () => {
+const WeeksNewBanner = () => {
 
     // const {goods} = useTypedSelector(state => state.goods)  
-    const [goods, setGoods] = useState<Goods[]>([])
+    const [goods, setGoods] = useState([])
 
     useEffect(()=> {
       setGoods(fetchAllGoods())

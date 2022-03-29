@@ -1,0 +1,30 @@
+.menuButtonWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.menuImgTitleWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttonMenu {
+    background-color: transparent;
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #304250;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuTitle {
+    margin-left: 8px;
+}

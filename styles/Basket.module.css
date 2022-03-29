@@ -1,0 +1,48 @@
+.basketMainContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mainTitle {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 110%;
+    color: #304250;
+    margin-bottom: 60px;
+}
+
+.goodsInBasketList {
+    margin-bottom: 65px;
+}
+
+.cardWrapper {
+    display: flex; 
+    justify-content: space-between;
+    margin-bottom: 60px;
+    height: 363px;
+    overflow: hidden;
+}
+
+.cardItem {
+    height: 363px;
+    width: 276px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 14px;
+    flex-shrink: 0;
+}
+
+.cardItem:not(:nth-child(5n)) {
+    margin-right: 12px;
+}
+
+.orderTitle {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    color: #304250;
+    margin-bottom: 25px;
+}
+

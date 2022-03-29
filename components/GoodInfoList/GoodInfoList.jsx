@@ -1,6 +1,6 @@
 import styles from "./goodInfoList.module.css"
 
-const GoodInfoList: React.FC = ({nameGoodProperty, valueGoodProperty}) => {
+const GoodInfoList = ({nameGoodProperty, valueGoodProperty}) => {
     return (
         <li className={styles.infoDescriptionItem}>
             <div className={styles.infoDescriptionCat}>{nameGoodProperty}</div>

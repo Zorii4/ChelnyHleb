@@ -1,22 +1,24 @@
 import { BannerData } from "../types/banner"
 import styles from "../styles/Banner.module.css"
 import { useTypedSelector } from "../hooks/useTypeSelector"
-import { useEffect, useState } from "react"
-import { fetchBannerData } from "../FAKE_API/goods"
+import { useEffect, useState, useRef} from "react"
+import { fetchBannerDatas } from "../FAKE_API/goods"
+import { Swiper, SwiperSlide } from "swiper/react"
+import 'swiper/css';
 
-const Banner: React.FC = () => {
+const Banner = ({item, prev, next}) => {
     const [bannerData, setBannerData] = useState()
     // const {bannerData, error} = useTypedSelector(state => state.bannerData)
 
+
     useEffect(()=> {
-        setBannerData(fetchBannerData())
+        setBannerData(fetchBannerDatas())
     },[])
 
     if (!bannerData) return (<p>loading...</p>)
 
-    return (
+    return (     
         <div className={styles.container}>
-            {bannerData.map((item)=> (
                 <div key={item.id} className={styles.wrapper}>
                     <div className={styles.wrapperLeft}>
                         <h3 className={styles.title}>{item.title}</h3>
@@ -47,16 +49,33 @@ const Banner: React.FC = () => {
                                 <path d="M8.99832 8.99832L5.99707 5.99707" stroke="#304250" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                 <path d="M16.001 14.7506H12.1914V10.833" stroke="#304250" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>
-                            Акция действует с  
+                            Акция действует с &nbsp;  
                             <span className={styles.durationDate}>{item.duration}</span>
                         </p>
                         <img src={item.image} className={styles.bannerImg}></img>
                     </div>
                 </div>
-            ))}
-            <p className={styles.bannerFooterText}>
-                Изображение товара может незначительно отличаться от представленных в магазинах. Количество товара ограничено. Цены указаны в рублях.</p>
+            <div className={styles.navWrapper}>
+                <p className={styles.bannerFooterText}>
+                        Изображение товара может незначительно отличаться от представленных в магазинах. Количество товара ограничено. Цены указаны в рублях.
+                </p>
+                 {/* <div className={styles.navBtnContainer}>
+                    <div className={styles.swiperBtn} ref={prev}>
+                        <svg width="6" height="14" viewBox="0 0 6 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 13L1.3698 7.5547C1.14587 7.2188 1.14587 6.7812 1.3698 6.4453L5 1" stroke="#304250" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div className={styles.swiperBtn} ref={next}>
+                        <svg width="6" height="14" viewBox="0 0 6 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L4.6302 6.4453C4.85413 6.7812 4.85413 7.2188 4.6302 7.5547L1 13" stroke="#304250" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>  */}
+            </div>
+                
+            
         </div>
+        
     )
 }
 

@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+
 import Link from "next/link"
 import Banner from '../components/Banner'
 import GoodCard from '../components/GoodCard'
@@ -8,35 +8,82 @@ import { fetchGoods } from '../store/actions-creators/goods'
 import styles from "../styles/Index.module.css"
 import { fetchBannerData } from '../store/actions-creators/banner'
 import WiseBakerBanner from '../components/WiseBakerBanner'
-import SesonesBanner from '../components/SesonesBanner'
+import SesonesBanner from '../components/SesonesBanner.jsx'
 import { fetchSesonesBanner } from '../store/actions-creators/sesones'
 import { fetchCategories } from '../store/actions-creators/categories'
 import CategoriesCard from '../components/CategoriesCard'
 
 import CatalogMenu from '../components/CatalogMenu/CatalogMenu'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
-import { fetchAllGoods } from '../FAKE_API/goods'
+import { fetchAllGoods, fetchBannerDatas } from '../FAKE_API/goods'
 import { Goods } from '../types/goods'
+import { Swiper, SwiperSlide } from "swiper/react"
+import  { Navigation, Autoplay } from "swiper"
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 
-const Home: NextPage = () => {
+const Home = () => {
   // const {goods} = useTypedSelector(state => state.goods)
 
-  const [goods, setGoods] = useState<Goods[]>([])
+  const [goods, setGoods] = useState([])
+  const [bannerData, setBannerData] = useState()
+
+  const navigationPrevRef = useRef(null)
+  const navigationNextRef = useRef(null)
 
   useEffect(()=> {
     setGoods(fetchAllGoods())
+    setBannerData(fetchBannerDatas())
   },[])
+
+  if (!bannerData) return (<p>loading...</p>)
 
   return (
     <> 
 
-    {/* <CatalogMenu /> */}
+    {/* <CatalogMenu />  */}
 
       <div className={styles.bannersContainer}>
-        <Banner />
-        <WiseBakerBanner />
+      <Swiper     
+          slidesPerView={1}
+          spaceBetween={10}
+          modules={[Navigation, Autoplay]}
+          speed={500}
+          grabCursor={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          navigation={{
+            prevEl: navigationPrevRef.current,
+            nextEl: navigationNextRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = navigationPrevRef.current;
+            swiper.params.navigation.nextEl = navigationNextRef.current;
+       }}
+        >
+          {bannerData.map((item) => (
+            <SwiperSlide key={item.id}>
+              <Banner key={item.id} item={item} prev={navigationPrevRef} next={navigationNextRef}/>             
+            </SwiperSlide> ))}
+             <div className={styles.navBtnContainer}>
+                    <div className={styles.swiperBtn} ref={navigationPrevRef}>
+                        <svg width="6" height="14" viewBox="0 0 6 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 13L1.3698 7.5547C1.14587 7.2188 1.14587 6.7812 1.3698 6.4453L5 1" stroke="#304250" strokeWidth="1.5" strokeLinecap="round"/>
+                        </svg>
+                    </div>
+                    <div className={styles.swiperBtn} ref={navigationNextRef}>
+                        <svg width="6" height="14" viewBox="0 0 6 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L4.6302 6.4453C4.85413 6.7812 4.85413 7.2188 4.6302 7.5547L1 13" stroke="#304250" strokeWidth="1.5" strokeLinecap="round"/>
+                        </svg>
+                    </div>
+                </div> 
+      </Swiper>
+
+      <WiseBakerBanner />
       </div>
       <div className={styles.subtitleWrapper}> 
         <h2 className={styles.subtitle}>Акция</h2>

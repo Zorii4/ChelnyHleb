@@ -127,7 +127,7 @@
     color: #304250;
     opacity: 0.23;
     min-width: 810px;
-    margin-bottom: 20px;
+    margin-right: 75px;
 }
 
 .durationWrapper {
@@ -154,3 +154,25 @@
 .bannerImg {
     padding-right: 45px;
 }
+
+.navWrapper {
+    display: flex;
+    align-items: flex-end;
+}
+ 
+/* .navBtnContainer {
+    width: 86px;
+    height: 36px;
+    border: 2px solid #E2E9EE;
+    border-radius: 70px;
+    display: flex;
+}
+
+.swiperBtn {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}  */

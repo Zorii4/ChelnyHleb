@@ -1,0 +1,207 @@
+.mainContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mainTitle {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 110%;
+    color: #304250;
+    margin-bottom: 60px;
+}
+
+.leftPartOrderContainer {
+    width: 708px;
+}
+
+.subtitle {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 120%;
+    color: #304250;
+    margin-bottom: 20px;
+}
+
+.inputLKWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.inputLK {
+    width: 228px;
+    height: 46px;
+    background: #FFFFFF;
+    border: 1px solid #E1E7EE;
+    border-radius: 8px;
+    padding-left: 16px;
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #B0BCC9;
+}
+
+.LKText {
+    display: block;
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #8797A4;
+    margin-bottom: 60px;
+}
+
+.deliveryLinkWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.deliveryLink {
+    font-family: 'Din';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+    text-decoration-line: underline;
+    color: #61A430;
+}
+
+.addressContainer {
+    width: 100%;
+    height: 232px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 60px;
+}
+
+.dataAdressWrapper {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.timeDelivery {
+    width: 204px;
+    margin-right: 60px;
+}
+
+.addressDelivery {
+    width: 204px;
+}
+
+.inputAddressContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 104px;
+}
+
+.inputAddressWrapper {
+    width: 324px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.inputAddress {
+    width: 156px;
+    height: 46px;
+    border: 1px solid #B0BCC9;
+    border-radius: 8px;
+}
+
+.inputComments {
+    width: 324px;
+    height: 100%;
+    border: 1px solid #E1E7EE;
+    border-radius: 8px;
+}
+
+.bonusWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.puchaseRadioWrapper {
+    width: 348px;
+    height: 46px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.puchaseLabel {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #304250;
+}
+
+.puchaseCheckboxWrapper {
+    width: 348px;
+    height: 46px;
+    border: 1px solid #61A430;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Oswald';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #61A430;
+}
+
+.puchaseBonusLabel {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #304250;
+}
+
+.backMoneyText {
+    display: block;
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #8797A4;
+    margin-bottom: 60px;
+}
+
+.absenceContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 75px;
+}
+
+.absenceInputWrapper {
+    width: 228px;
+    height: 65px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+
+.absenceRadioLabel {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #304250;
+}

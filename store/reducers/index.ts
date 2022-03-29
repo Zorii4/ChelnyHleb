@@ -5,16 +5,15 @@ import { categoriesReducer } from "./categoriesReducer";
 import { goodsFromCategoryReducer, goodsReducer } from "./goodsReducer";
 import { sesonesReducer } from "./sesonesReducer";
 
-
 const rootReducer = combineReducers({
     goods: goodsReducer,
     bannerData: bannerReducer,
     sesonesData: sesonesReducer,
     categories: categoriesReducer,
-    goodsFromCategory: goodsFromCategoryReducer
+    goodsFromCategory: goodsFromCategoryReducer,
 })
 
-export const reducer = (state, action) => {
+export const reducer = (state:any, action:any) => {
     if (action.type === HYDRATE) {
       const nextState = {
         ...state, // use previous state

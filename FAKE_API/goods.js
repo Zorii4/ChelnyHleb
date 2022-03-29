@@ -19,11 +19,11 @@ const subCategoriesObj = {
 }
 
 const subCategories = [
-    { id: 1, title: "Торты", category: categoriesObj.baker.name, subCategory: subCategoriesObj.cake.name },
-    { id: 2, title: "Пироги", category: categoriesObj.baker.name, subCategory: subCategoriesObj.pie.name },
-    { id: 3, title: "Салаты мясные", category: categoriesObj.kitchen.name, subCategory: subCategoriesObj.salad.name},
-    { id: 4, title: "Мясо курицы", category: categoriesObj.meat.name, subCategory: subCategoriesObj.chicken.name},
-    { id: 5, title: "Мясо индейки", category: categoriesObj.meat.name, subCategory: subCategoriesObj.turkey.name}
+    { id: 1, title: "Торты", category: categoriesObj.baker.name, subCategory: subCategoriesObj.cake.name, categoryId:1},
+    { id: 2, title: "Пироги", category: categoriesObj.baker.name, subCategory: subCategoriesObj.pie.name, categoryId:1},
+    { id: 3, title: "Салаты мясные", category: categoriesObj.kitchen.name, subCategory: subCategoriesObj.salad.name, categoryId:2},
+    { id: 4, title: "Мясо курицы", category: categoriesObj.meat.name, subCategory: subCategoriesObj.chicken.name, categoryId:3},
+    { id: 5, title: "Мясо индейки", category: categoriesObj.meat.name, subCategory: subCategoriesObj.turkey.name, categoryId:3}
 ]
 
 const finalCategories = {
@@ -77,7 +77,8 @@ const goods = [
         standart: "ГОСТ 31454-2012",
         bestBefore: "9 дней",
         tempMin: 2,
-        tempMax: 6
+        tempMax: 6,
+        basketImg: "/img/basket-images/onion.png"
     },
     {        
         id: 2,
@@ -109,7 +110,8 @@ const goods = [
         standart: "ГОСТ 31454-2012",
         bestBefore: "9 дней",
         tempMin: 2,
-        tempMax: 6 
+        tempMax: 6,
+        basketImg: "/img/basket-images/onion.png" 
     },
     {        
         id: 3,
@@ -141,7 +143,8 @@ const goods = [
         standart: "ГОСТ 31454-2012",
         bestBefore: "9 дней",
         tempMin: 2,
-        tempMax: 6
+        tempMax: 6,
+        basketImg: "/img/basket-images/yo.png"
     },
     {        
         id: 4,
@@ -172,7 +175,8 @@ const goods = [
         standart: "ГОСТ 31454-2012",
         bestBefore: "9 дней",
         tempMin: 2,
-        tempMax: 6 
+        tempMax: 6,
+        basketImg: "/img/basket-images/alexandrov.png" 
     },
     {        
         id: 5,
@@ -204,7 +208,8 @@ const goods = [
         standart: "ГОСТ 31454-2012",
         bestBefore: "9 дней",
         tempMin: 2,
-        tempMax: 6
+        tempMax: 6,
+        basketImg: "/img/basket-images/alexandrov.png"
     },
     {        
         id: 6,
@@ -235,7 +240,8 @@ const goods = [
         standart: "ГОСТ 31454-2012",
         bestBefore: "9 дней",
         tempMin: 2,
-        tempMax: 6 
+        tempMax: 6,
+        basketImg: "/img/basket-images/yo.png" 
     },
     {        
         id: 7,
@@ -267,7 +273,8 @@ const goods = [
         standart: "ГОСТ 31454-2012",
         bestBefore: "9 дней",
         tempMin: 2,
-        tempMax: 6 
+        tempMax: 6,
+        basketImg: "/img/basket-images/onion.png" 
     },
     {        
         id: 8,
@@ -299,7 +306,8 @@ const goods = [
         standart: "ГОСТ 31454-2012",
         bestBefore: "9 дней",
         tempMin: 2,
-        tempMax: 6 
+        tempMax: 6,
+        basketImg: "/img/basket-images/onion.png" 
     },
     {        
         id: 9,
@@ -330,26 +338,47 @@ const goods = [
         standart: "ГОСТ 31454-2012",
         bestBefore: "9 дней",
         tempMin: 2,
-        tempMax: 6 
+        tempMax: 6,
+        basketImg: "/img/basket-images/yo.png" 
     },
 ]
 
 const users = [
     {
         id: 1,
-        name: "Анастасия"
+        name: "Анастасия",
+        email: "asd@asd.asd",
+        phone: 123456789,
+        bonus:22,
+        cardNumber:"6535 6565 8789 3468",
+        password:123
     },
     {
         id: 2,
-        name: "Ксения"
+        name: "Ксения",
+        email: "asd@asd.asd",
+        phone: 123456789,
+        bonus:321,
+        cardNumber: "1234 4356 7688 9868",
+        password:123
     },
     {
         id: 3,
-        name: "Евгений Борисович"
+        name: "Евгений Борисович",
+        email: "asd@asd.asd",
+        phone: 123456789,
+        bonus:431,
+        cardNumber: "1234 4356 7688 9868",
+        password:123
     },
     {
         id: 4,
-        name: "Виталий"
+        name: "Виталий",
+        email: "asd@asd.asd",
+        phone: 123456789,
+        bonus:315,
+        cardNumber: "1234 4356 7688 9868",
+        password:123
     }
 ]
 
@@ -392,6 +421,28 @@ const banner = [
         discount: 40,
         image: "/img/grape.png",
         duration: "28 июн - 10 июл"
+    },
+    {   
+        id:2, 
+        title: "Пиво",
+        subtitle: "Пиво 1 литр",
+        description: "Сладкий и ароматный, созревший под жарким солнцем Армении. И совсем без косточек",
+        oldprice: 109.90,
+        newprice: 99.90,
+        discount: 40,
+        image: "/img/grape.png",
+        duration: "28 июн - 10 июл"
+    },
+    {   
+        id:3, 
+        title: "Морковь",
+        subtitle: "Морковь мытая, 1 кг",
+        description: "Сладкий и ароматный, созревший под жарким солнцем Армении. И совсем без косточек",
+        oldprice: 140.90,
+        newprice: 120.90,
+        discount: 40,
+        image: "/img/grape.png",
+        duration: "21 июл - 10 авг"
     }
 ]
 
@@ -401,6 +452,21 @@ const sesonesBanner = [
         title: "Фермерские продукты",
         background: "/img/sesonsBG.jpg",
         description: "Возраждение традиций и качественных продуктов питания"
+    }
+]
+
+const shops = [
+    {
+        id:1,
+        coordinates: "55.74, 52.42"
+    },
+    {
+        id:2,
+        coordinates: "55.70, 52.46"
+    },
+    {
+        id:3,
+        coordinates: "55.75, 52.53"
     }
 ]
 
@@ -438,10 +504,27 @@ export function fetchAllComments () {
     return comments
 }
 
-export function fetchBannerData () {
+export function fetchBannerDatas () {
     return banner
 }
 
 export function fetchSesonesData () {
     return sesonesBanner
+}
+
+export function fetchBasket () {
+    let basket = []
+    basket.push (goods[8])
+    basket.push (goods[4])
+    basket.push (goods[2])
+    basket.push (goods[7])
+    return basket
+}
+
+export function fetchShops () {
+    return shops
+}
+
+export function fetchOneUser () {
+    return users[2]
 }

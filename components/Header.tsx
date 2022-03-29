@@ -12,8 +12,8 @@ const Header: React.FC = () => {
         <header className={styles.mainContainer}>
             <div className={styles.linkWrapper}>
                 <div>
-                    <Link href="#"><a className={styles.link}>Мудрый пекарь</a></Link>
-                    <Link href="#"><a className={styles.link}>Домашняя кухня</a></Link>
+                    <Link href="catalog//baker"><a className={styles.link}>Мудрый пекарь</a></Link>
+                    <Link href="catalog/citchen"><a className={styles.link}>Домашняя кухня</a></Link>
                     <Link href="#"><a className={styles.link}>Халяль</a></Link>
                 </div>
                 <div>
@@ -50,7 +50,7 @@ const Header: React.FC = () => {
                     </div>
                 </button>
                 <div className={styles.basketLinkWrapper}>
-                    <Link href="#">
+                    <Link href="/basket">
                         <a className={styles.basket}>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4.97388 5.51953L4.41805 3.01953H2.81055" stroke="#323232" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

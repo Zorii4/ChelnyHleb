@@ -11,9 +11,9 @@ import { Goods } from '../../../types/goods'
 import Image from "next/image"
 import Link from 'next/link'
 
-const SubCategory: React.FC = () => {
+const SubCategory  = () => {
     // const { goods } = useTypedSelector(state => state.goodsFromCategory)  
-    const [goods, setGoods] = useState<Goods[]>([])
+    const [goods, setGoods] = useState([])
     const [category, setCategory] = useState({})
     const [subCategories, setSubCategories] = useState([])
 
@@ -23,7 +23,7 @@ const SubCategory: React.FC = () => {
       setSubCategories(fetchAllSubCategories)
     },[])
     
-    if(!category.pic) { <p>loading</p>}
+    if(!category.pic) return (<p>loading</p>)
 
     return (  
         <div className={styles.container}>
@@ -39,7 +39,7 @@ const SubCategory: React.FC = () => {
                         <ul>
                             {subCategories.map ((item)=> (
                                 <li key={item.id} className={styles.subCatItem}>
-                                    <Link href={`http://localhost:3000/catalog/${item.category}/${item.subCategory}`}>
+                                    <Link href={`/catalog/${item.category}/${item.subCategory}`}>
                                         <a className={styles.subCatLink}>{item.title}</a>
                                     </Link>                                    
                                 </li>                          

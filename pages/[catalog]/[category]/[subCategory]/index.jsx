@@ -11,9 +11,9 @@ import { Goods } from '../../../../types/goods'
 import Image from "next/image"
 import Link from 'next/link'
 
-const FinalCategory: React.FC = () => { 
+const FinalCategory = () => { 
 
-    const [goods, setGoods] = useState<Goods[]>([])
+    const [goods, setGoods] = useState([])
     const [category, setCategory] = useState({})
     const [subCategories, setSubCategories] = useState([])
     const [finalCat, setFinalCat] = useState([])
@@ -42,7 +42,7 @@ const FinalCategory: React.FC = () => {
                         <ul>
                             {finalCat.map ((item)=> (
                                 <li key={item.id} className={styles.subCatItem}>
-                                    <Link href={`http://localhost:3000/catalog/${item.category}/${item.subCategory}/${item.id}/`}>
+                                    <Link href={`/catalog/${item.category}/${item.subCategory}/${item.id}/`}>
                                         <a className={styles.subCatLink}>{item.title}</a>
                                     </Link>                                    
                                 </li>                          

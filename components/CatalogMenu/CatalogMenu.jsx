@@ -5,12 +5,15 @@ import { fetchAllCategories } from "../../FAKE_API/goods"
 import { useTypedSelector } from "../../hooks/useTypeSelector"
 import styles from "./catalogMenu.module.css"
 
-const CatalogMenu: React.FC = () => {
+const CatalogMenu  = () => {
 
 const [categories, setCategories] = useState([])
+const [subCategories, setSubcategories] = useState([])
+const [finalCategories, setFinalCategories] = useState([])
 
     useEffect(()=> {
-    setCategories(fetchAllCategories())
+        setCategories(fetchAllCategories())
+
     },[])
 
 
@@ -18,7 +21,7 @@ const [categories, setCategories] = useState([])
         <div className={styles.container}>
             <ul className={styles.menuList}>
                 {categories.map((item) => (
-                    <li className={styles.menuItem}>
+                    <li className={styles.menuItem} key={item.id}>
                         <Link href="#">
                             <a className={styles.categoryLink}>
                                 <div className={styles.linkWrapper}>

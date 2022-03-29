@@ -1,13 +1,12 @@
 import Link from "next/link"
 import styles from "../styles/SesonesBanner.module.css"
-import { SesonesBanner } from "../types/sesones"
 import { useTypedSelector } from "../hooks/useTypeSelector"
 import { useEffect, useState } from "react"
 import { fetchSesonesData } from "../FAKE_API/goods"
 
-const SesonesBanner: React.FC = () => {
+const SesonesBanner = () => {
     const [sesonesBanner, setSesonesBanner] = useState()
-    // const {sesonesBanner} = useTypedSelector(state => state.sesonesData)
+    // const {sesonesBanner} = useTypedSelector(state => state.sesonesData)nm
     
     useEffect (() => {
         setSesonesBanner(fetchSesonesData())
@@ -18,7 +17,7 @@ const SesonesBanner: React.FC = () => {
     return (
         <>
             {sesonesBanner.map((item)=> (
-                <div className={styles.sesonesContainer} style={{backgroundImage: `url(${item.background})`}}>
+                <div className={styles.sesonesContainer} style={{backgroundImage: `url(${item.background})`}} key={item.id}>
                     <div className={styles.sesonesTopWrapper}>
                         <Link href="#">
                             <a className={styles.sesonesLeftUp}>

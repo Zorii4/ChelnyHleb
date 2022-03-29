@@ -3,11 +3,8 @@ import { useEffect, useState } from "react"
 import { useTypedSelector } from "../hooks/useTypeSelector"
 import { fetchAllGoods, fetchAllCategories } from '../FAKE_API/goods'
 
-interface CategoriesCardProps {
-    numberOfColumn: number
-}
 
-const CategoriesCard: React.FC<CategoriesCardProps> = ({ numberOfColumn }) => {
+const CategoriesCard = ({ numberOfColumn }) => {
 
     // const {categories} = useTypedSelector(state => state.categories)
 
@@ -22,7 +19,7 @@ const CategoriesCard: React.FC<CategoriesCardProps> = ({ numberOfColumn }) => {
         <ul>
             {categories.map((item)=> (
                 <li key={item.id} style={{backgroundImage: `url(${item.background})`}}>
-                    <Link href={`http://localhost:3000/catalog/${item.category}`}>
+                    <Link href={`/catalog/${item.category}`}>
                         <a>
                             <h3>{item.title}</h3>
                         </a>
