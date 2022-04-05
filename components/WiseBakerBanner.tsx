@@ -3,7 +3,7 @@ import styles from "../styles/WiseBakerBanner.module.css"
 
 const WiseBakerBanner: React.FC = () => {
     return (
-        <Link href='#'>
+        <Link href='/baker'>
             <a>
                 <div className={styles.wiseBakerContainer}>
                     <h3 className={styles.wiseBakerTitle}>Попробуйте нашу выпечку</h3>

@@ -22,7 +22,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import  { Navigation, Autoplay } from "swiper"
 import 'swiper/css';
 import 'swiper/css/navigation';
-
+import Layout from "../components/Layout"
 
 const Home = () => {
   // const {goods} = useTypedSelector(state => state.goods)
@@ -46,7 +46,7 @@ const Home = () => {
     {/* <CatalogMenu />  */}
 
       <div className={styles.bannersContainer}>
-      <Swiper     
+        <Swiper     
           slidesPerView={1}
           spaceBetween={10}
           modules={[Navigation, Autoplay]}
@@ -63,24 +63,24 @@ const Home = () => {
           onBeforeInit={(swiper) => {
             swiper.params.navigation.prevEl = navigationPrevRef.current;
             swiper.params.navigation.nextEl = navigationNextRef.current;
-       }}
+          }}
         >
-          {bannerData.map((item) => (
-            <SwiperSlide key={item.id}>
-              <Banner key={item.id} item={item} prev={navigationPrevRef} next={navigationNextRef}/>             
-            </SwiperSlide> ))}
-             <div className={styles.navBtnContainer}>
-                    <div className={styles.swiperBtn} ref={navigationPrevRef}>
-                        <svg width="6" height="14" viewBox="0 0 6 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 13L1.3698 7.5547C1.14587 7.2188 1.14587 6.7812 1.3698 6.4453L5 1" stroke="#304250" strokeWidth="1.5" strokeLinecap="round"/>
-                        </svg>
-                    </div>
-                    <div className={styles.swiperBtn} ref={navigationNextRef}>
-                        <svg width="6" height="14" viewBox="0 0 6 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 1L4.6302 6.4453C4.85413 6.7812 4.85413 7.2188 4.6302 7.5547L1 13" stroke="#304250" strokeWidth="1.5" strokeLinecap="round"/>
-                        </svg>
-                    </div>
-                </div> 
+        {bannerData.map((item) => (
+          <SwiperSlide key={item.id}>
+            <Banner key={item.id} item={item}/>             
+          </SwiperSlide> ))}
+          <div className={styles.navBtnContainer}>
+            <div className={styles.swiperBtn} ref={navigationPrevRef}>
+                <svg width="6" height="14" viewBox="0 0 6 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 13L1.3698 7.5547C1.14587 7.2188 1.14587 6.7812 1.3698 6.4453L5 1" stroke="#304250" strokeWidth="1.5" strokeLinecap="round"/>
+                </svg>
+            </div>
+            <div className={styles.swiperBtn} ref={navigationNextRef}>
+                <svg width="6" height="14" viewBox="0 0 6 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L4.6302 6.4453C4.85413 6.7812 4.85413 7.2188 4.6302 7.5547L1 13" stroke="#304250" strokeWidth="1.5" strokeLinecap="round"/>
+                </svg>
+            </div>
+          </div> 
       </Swiper>
 
       <WiseBakerBanner />

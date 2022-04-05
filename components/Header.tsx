@@ -12,8 +12,8 @@ const Header: React.FC = () => {
         <header className={styles.mainContainer}>
             <div className={styles.linkWrapper}>
                 <div>
-                    <Link href="catalog//baker"><a className={styles.link}>Мудрый пекарь</a></Link>
-                    <Link href="catalog/citchen"><a className={styles.link}>Домашняя кухня</a></Link>
+                    <Link href="/catalog/baker"><a className={styles.link}>Мудрый пекарь</a></Link>
+                    <Link href="/catalog/citchen"><a className={styles.link}>Домашняя кухня</a></Link>
                     <Link href="#"><a className={styles.link}>Халяль</a></Link>
                 </div>
                 <div>
@@ -60,14 +60,14 @@ const Header: React.FC = () => {
                             </svg>
                         </a>
                     </Link>
-                    <Link href="#">
+                    <Link href="/account/favorities">
                         <a className={styles.basket}>
                             <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd" clipRule="evenodd" d="M13.08 3.33203C15.7258 3.33203 17.5 5.81536 17.5 8.12786C17.5 12.822 10.1342 16.6654 10 16.6654C9.86583 16.6654 2.5 12.822 2.5 8.12786C2.5 5.81536 4.27417 3.33203 6.92 3.33203C8.4325 3.33203 9.42583 4.0862 10 4.75786C10.5742 4.0862 11.5675 3.33203 13.08 3.33203Z" stroke="#B0BCC9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>
                         </a>
                     </Link>
-                    <Link href="#">
+                    <Link href="/account/thisorder">
                         <a className={styles.basket}>
                             <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.0621 3.77078C13.2011 4.90981 13.2011 6.75654 12.0621 7.89557C10.923 9.0346 9.07632 9.0346 7.93728 7.89557C6.79825 6.75654 6.79825 4.90981 7.93728 3.77078C9.07632 2.63175 10.923 2.63175 12.0621 3.77078" stroke="#B0BCC9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

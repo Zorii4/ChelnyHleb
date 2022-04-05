@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.notFoundTitle {
+    font-family: 'Oswald';
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #B0BCC9;
+}
+
+.titleWrapper {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 35px;
+}
+
+.notFoundText {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #B0BCC9;
+    margin-bottom: 20px;
+}
+
+.imageWrapper {
+    margin-bottom: 40px;
+}
+
+.linkWrapper {
+    margin-bottom: 80px;
+}
+
+.notFoundLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 232px;
+    height: 39px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 120%;
+    color: #304250;
+}

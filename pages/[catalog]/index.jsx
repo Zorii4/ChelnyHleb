@@ -15,24 +15,31 @@ const Catalog = () => {
 
     const [categories, setCategories] = useState()
     const [subCategories, setSubCategories] = useState()
-   
+    const [activeIndex, setActiveIndex] = useState(null)
 
     useEffect(()=> {
         setCategories(fetchAllCategories())
         setSubCategories(fetchAllSubCategories())
     },[])
 
+    const handleClick = (ind) => {
+        ind === activeIndex ? setActiveIndex(null) : setActiveIndex(ind) 
+    }
+   
     if(!categories && !subCategories) return <h1>loading</h1>
 
     return (
         <div className={styles.container}>
             <div className={styles.menu}>
-                {categories.map((category)=>( 
+                {categories.map((category, index)=>( 
                     <Accordion
                         key={category.id} 
                         pic={category.pic}
                         title={category.title} 
                         subTitle={subCategories.map((subcategory) => (subcategory.categoryId === category.id ? <div className={styles.menuItem}>{subcategory.title}</div> : ""))} 
+                        index={index}
+                        onTitleClick={handleClick}
+                        isOpen={activeIndex === index ? true : false}
                     />
                 ))}
                 </div>

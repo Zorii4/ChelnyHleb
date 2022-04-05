@@ -4,17 +4,16 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect } from "react"
 import { fetchGoodById } from "../FAKE_API/goods"
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
+import { addToBasket } from "../store/reducers/basketReducer"
 
 const GoodCard = ({ good }) => {
 
     const [intiger, float] = good.newprice.toString().split('.')
+    const dispatch = useDispatch()
 
-    const addToBasket = (id) => {
-
-        let g = fetchGoodById(id)
-        console.log(g)
-
+    const handleAddToBasket = (good) => {
+        dispatch(addToBasket(good))
     }
 
     return (
@@ -48,7 +47,7 @@ const GoodCard = ({ good }) => {
                     <div className={styles.goodNewPriceRub}>{intiger}</div>
                     <div className={styles.goodNewPriceKop}>{float}₽</div>
                 </div>
-                <button className={styles.orderButton} onClick={()=>addToBasket(good.id)}>
+                <button className={styles.orderButton} onClick={() => handleAddToBasket(good)}>
                     <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.71493 7.45117L5.96456 4.07617H3.79443" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         <path fillRule="evenodd" clipRule="evenodd" d="M8.69807 16.6874L6.71582 7.45117H20.9561C21.6727 7.45117 22.2059 8.11155 22.0563 8.81242L20.3666 16.6874C20.2552 17.2061 19.7973 17.5762 19.2663 17.5762H9.7972C9.26732 17.5762 8.80945 17.2061 8.69807 16.6874Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

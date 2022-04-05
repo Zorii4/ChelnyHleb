@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Oswald';
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 105%;
+    text-transform: uppercase;
+    color: #61A430;
+    margin-bottom: 30px;
+    margin-top: 120px;
+}
+
+.thanksText {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #8797A4;
+    margin-bottom: 6px;
+}
+
+.address,.date {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #8797A4;
+}
+
+.addressDateWrapper {
+    margin-bottom: 30px;
+}
+
+.backLink {
+    width: 199px;
+    height: 39px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 120%;
+    color: #304250;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,161 @@
+.puchaseDescriptionContainer {
+    width: 1140px;
+    max-height: 375px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leftWrpapper {
+    width: 650px;
+}
+
+.puchaseItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.puchaseItemTitle {
+    width: 275px;
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #304250;
+}
+
+.puchaseQuantity {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #304250;
+}
+
+.puchaseAmount {
+    font-family: 'Oswald';
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: #304250;
+}
+
+.deliveryAdressWrapper {
+    width: 316px;
+    height: 73px;
+    background: #F2F5FB;
+    border-radius: 8px;
+    margin-bottom: 1px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.deliveryAmountWrapper {
+    width: 316px;
+    height: 223px;
+    background: #F2F5FB;
+    border-radius: 8px;
+    padding: 18px 25px 25px 25px;
+}
+
+.addrWrapper {
+    margin-left: 20px;
+}
+
+.deliveryDate {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #304250;
+}
+
+.deliveryDestination {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #8797A4;
+}
+
+.puchaseItem {
+    margin-bottom: 8px;
+}
+
+.puchaseItemSubTitle {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #304250;
+}
+
+.puchaseItemNumber {
+    font-family: 'Oswald';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #304250;
+}
+
+.puchaseItemTotal {
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.totalAmountTitle {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 120%;
+    color: #304250;
+}
+
+.totalAmountNumber {
+    font-family: 'Oswald';
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: #304250;
+}
+
+.puchaseItemBtns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.confirmBtn {
+    cursor: pointer;
+    width: 168px;
+    height: 46px;
+    background: #61A430;
+    border-radius: 8px;
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+}
+
+.cancelBtn {
+    cursor: pointer;
+    font-family: 'Din';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    text-decoration-line: underline;
+    color: #304250;
+    opacity: 0.5;
+    border: none;
+    background-color: transparent;
+}

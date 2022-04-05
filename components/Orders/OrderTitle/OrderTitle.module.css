@@ -1,0 +1,87 @@
+.ordersItemHeader {
+    cursor: pointer;
+}
+
+.containerHeader {
+    width: 1140px;
+    height: 100px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin-bottom: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.orderDescr {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #B0BCC9;
+    margin-bottom: 8px;
+    margin-right: 60px;
+}
+
+.numberOfOrder {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    color: #304250;
+    margin-right: 15px;
+}
+
+.statusWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.amountDataWrapper {
+    display: flex;
+}
+
+.amountWrapper {
+    margin-right: 40px;
+}
+
+.orderArrowClose {
+    align-self: center;
+    transform: rotate(180deg);
+    transition: transform .5s ease;
+}
+
+.orderArrowOpen {
+    align-self: center;
+    transition: transform .5s ease;
+    transform: rotate(360deg);
+}
+
+.totalOrderAmount, .orderDate {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #304250;
+}
+
+.contentDefault {
+    transition: max-height .5s ease;
+    overflow-y: hidden;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+.contentDefault:not(.contentActive) {
+    max-height: 0 !important;
+}
+
+.bonusNumber {
+    font-family: 'Oswald';;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: right;
+    color: #61A430;
+}

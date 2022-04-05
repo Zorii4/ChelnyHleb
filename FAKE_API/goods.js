@@ -351,7 +351,8 @@ const users = [
         phone: 123456789,
         bonus:22,
         cardNumber:"6535 6565 8789 3468",
-        password:123
+        password:123,
+        address: "ул Академика Рубаненко, 2"
     },
     {
         id: 2,
@@ -360,7 +361,8 @@ const users = [
         phone: 123456789,
         bonus:321,
         cardNumber: "1234 4356 7688 9868",
-        password:123
+        password:123,
+        address: "ул Академика Рубаненко, 2"
     },
     {
         id: 3,
@@ -369,7 +371,8 @@ const users = [
         phone: 123456789,
         bonus:431,
         cardNumber: "1234 4356 7688 9868",
-        password:123
+        password:123,
+        address: "ул Академика Рубаненко, 2"
     },
     {
         id: 4,
@@ -378,7 +381,8 @@ const users = [
         phone: 123456789,
         bonus:315,
         cardNumber: "1234 4356 7688 9868",
-        password:123
+        password:123,
+        address: "ул Академика Рубаненко, 2"
     }
 ]
 
@@ -458,16 +462,89 @@ const sesonesBanner = [
 const shops = [
     {
         id:1,
-        coordinates: "55.74, 52.42"
+        coordinates: "55.74, 52.42",
+        district:"ЗЯБ",
+        complex: '06',
+        address:"ул. Батенчука 9 п.ГЭС 8/18",
+        smartBaker: false,
+        workTime: "7:00 — 22:00"
     },
     {
         id:2,
-        coordinates: "55.70, 52.46"
+        coordinates: "55.70, 52.46",
+        district:"Новый город",
+        complex: '35',
+        address:"ул.Тан 209А",
+        smartBaker: false,
+        workTime: "7:00 — 22:00"
     },
     {
         id:3,
-        coordinates: "55.75, 52.53"
+        coordinates: "55.75, 52.53",
+        district:"ГЭС",
+        complex: '46',
+        address:"ул.Ш. Усманова 43/10",
+        smartBaker: true,
+        workTime: "7:00 — 21:00"
+    },
+    {
+        id:4,
+        coordinates: "55.74, 52.42",
+        district:"ЗЯБ",
+        complex: '34',
+        address:"Бульвар Камала 27/13",
+        smartBaker: false,
+        workTime: "7:00 — 22:00"
+    },
+    {
+        id:5,
+        coordinates: "55.70, 52.46",
+        district:"Новый город",
+        complex: '34',
+        address:"пр. Сююмбике д. 67 В",
+        smartBaker: true,
+        workTime: "Круглосуточно"
+    },
+    {
+        id:6,
+        coordinates: "55.75, 52.53",
+        district:"ГЭС",
+        complex: '47',
+        address:"Хлебокомбинат № 1",
+        smartBaker: true,
+        workTime: "7:00 — 22:00"      
     }
+]
+
+const orders = [ 
+    {  
+        id:1,
+        status:"Отменён",
+        amount: 1080,
+        data: "24.04 14:00",
+        address: "ул Академика Рубаненко, 2",
+        bonus:12,
+        consist: [fetchGoodById(3), fetchGoodById(5), fetchGoodById(7)],
+    },
+    {  
+        id:2,
+        status:"Ожидает оплаты",
+        amount: 1780,
+        data: "11.05 15:00",
+        address: "ул Академика Рубаненко, 6",
+        bonus:123,
+        consist: [fetchGoodById(4), fetchGoodById(1), fetchGoodById(2)],
+    },
+    {  
+        id:3,
+        status:"В работе",
+        amount: 1560,
+        data: "07.02 10:00",
+        address: "ул Академика Рубаненко, 25",
+        bonus:125,
+        consist: [fetchGoodById(9), fetchGoodById(8), fetchGoodById(2)],
+    },
+
 ]
 
 export function fetchAllGoods() {
@@ -527,4 +604,17 @@ export function fetchShops () {
 
 export function fetchOneUser () {
     return users[2]
+}
+
+export function fetchOrders () {
+    return orders
+}
+
+export function fetchOneOrder () {
+    return orders[1]
+}
+
+export function fetchFavorities () {
+    const result = goods.filter ((item) => item.like === true)
+    return result
 }

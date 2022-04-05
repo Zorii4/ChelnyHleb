@@ -1,7 +1,7 @@
 .menuButtonWrapper {
     display: flex;
     align-items: center;
-    margin-bottom: 16px;
+
     cursor: pointer;
     justify-content: space-between;
 }
@@ -27,4 +27,23 @@
 
 .menuTitle {
     margin-left: 8px;
+}
+
+.contentDefault {
+    transition: max-height .3s ease;
+    overflow-y: hidden;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+.contentDefault:not(.contentActive) {
+    max-height: 0 !important;
+}
+
+.arrayDown {
+    transform: rotate(180deg);
+}
+
+.arrayUp {
+    transition: transform .3s ease;
 }

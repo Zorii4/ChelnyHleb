@@ -1,0 +1,100 @@
+.mainContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 75px;
+}
+
+.userBonusCardContainer {
+    width: 256px;
+    height: 160px;
+    border-radius: 8px;
+    background-image: url(../../public/bonusCardBG.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 10px;
+}
+
+.bonusNumberWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 52px;
+}
+
+.bonusNumber {
+    display: inline;
+    font-family: 'Oswald';
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-right: 8px;
+}
+
+.bonusNumberText {
+    width: 100px;
+    font-family: 'Din';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+
+.userBonusCardName {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+.userBonusCardNumber {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.userLinksContainer {
+    width: 256px;
+    height: 167px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.accountListItem {
+    padding-bottom: 15px;
+}
+
+.accountLink {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #304250;
+}
+
+.activeLink{
+    font-family: 'Golos Medium';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #304250;
+    position: relative;
+    margin-left: 10px;
+}
+
+.activeLink::before {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #61A430;
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: -10px;
+}

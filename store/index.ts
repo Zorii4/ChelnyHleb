@@ -1,15 +1,21 @@
-import { Context, createWrapper, MakeStore } from "next-redux-wrapper"
-import { AnyAction, applyMiddleware, createStore, Store } from "redux";
-import thunk, { ThunkDispatch } from "redux-thunk";
-import { reducer, RootState } from "./reducers";
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { createWrapper } from 'next-redux-wrapper'
+import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit"
+import { goodInBasketReducer } from './reducers/basketReducer'
 
-const makeStore: MakeStore<Store> = (context: Context) => createStore(reducer,
-    composeWithDevTools(
-        applyMiddleware(thunk)
-      )
-    );
-    
-export const wrapper = createWrapper<Store<RootState>>(makeStore, {debug: true})
+export function makeStore() {
+  return configureStore({
+        reducer: {
+          goodInBasket: goodInBasketReducer,
+        },
+        devTools: true,
+    });
+  }
 
-export type NextThunkDispatch = ThunkDispatch <RootState, void, AnyAction>
+export const store = makeStore()
+
+export type RootStore = ReturnType<typeof makeStore>
+export type RootState = ReturnType<RootStore['getState']>
+export type AppDispatch = typeof store.dispatch
+export type AppThunk<ReturnType = void> = ThunkAction<ReturnType, RootState, unknown, Action<string>>
+
+export const wrapper = createWrapper<RootStore>(makeStore);

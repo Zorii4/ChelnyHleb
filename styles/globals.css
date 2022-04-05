@@ -7,6 +7,14 @@
 }
 
 @font-face {
+  font-family: 'Golos Medium';
+  src: url('../public/fonts/Golos/Golos-UI_Medium.woff');
+  src: url('../public/fonts/Golos/Golos-UI_Medium.woff2');
+  font-style: normal; 
+  font-weight: normal; 
+}
+
+@font-face {
   font-family: 'Oswald';
   src: url('../public/fonts/Oswald/oswald-regular.woff');
   src: url('../public/fonts/Oswald/oswald-regular.woff2');
@@ -59,8 +67,6 @@ a {
 * {
   box-sizing: border-box;
 }
-
-
 
 ul {
   list-style-type: none;
