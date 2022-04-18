@@ -5,9 +5,11 @@ const categoriesObj = {
 }
 
 const categories = [
-    { id: 1, title: "Мудрый пекарь", background: "/img/categories/bakerBG.jpg", pic: "/img/categories/catPicLittle.jpg", category: categoriesObj.baker.name},
-    { id: 2, title: "Домашняя кухня", background: "/img/categories/bakerBG.jpg", pic: "/img/categories/catPicLittle.jpg", category: categoriesObj.kitchen.name},
-    { id: 3, title: "Мясо, птица", background: "/img/categories/homeKitchen.jpg", pic: "/img/categories/catPicLittle.jpg", category: categoriesObj.meat.name},
+    { id: 1, title: "Мудрый пекарь", background: "/img/categories/bakerBG.jpg", backgroundmobile:"/img/categories/categoriesBGMobile.png", pic: "/img/categories/catPicLittle.jpg", category: categoriesObj.baker.name},
+    { id: 2, title: "Домашняя кухня", background: "/img/categories/bakerBG.jpg", backgroundmobile:"/img/categories/categoriesBGMobile.png", pic: "/img/categories/catPicLittle.jpg", category: categoriesObj.kitchen.name},
+    { id: 3, title: "Мясо, птица", background: "/img/categories/homeKitchen.jpg", backgroundmobile:"/img/categories/categoriesBGMobile.png", pic: "/img/categories/catPicLittle.jpg", category: categoriesObj.meat.name},
+    { id: 4, title: "Бакалея", background: "/img/categories/bakerBG.jpg", backgroundmobile:"/img/categories/categoriesBGMobile.png", pic: "/img/categories/catPicLittle.jpg"},
+    { id: 5, title: "Молочные продукты, яйцо", background: "/img/categories/homeKitchen.jpg", backgroundmobile:"/img/categories/categoriesBGMobile.png", pic: "/img/categories/catPicLittle.jpg"},
 ]
 
 const subCategoriesObj = {
@@ -424,6 +426,7 @@ const banner = [
         newprice: 83.90,
         discount: 40,
         image: "/img/grape.png",
+        mobilmage: "/img/grapeMobile.png",
         duration: "28 июн - 10 июл"
     },
     {   
@@ -435,6 +438,7 @@ const banner = [
         newprice: 99.90,
         discount: 40,
         image: "/img/grape.png",
+        mobilmage: "/img/grapeMobile.png",
         duration: "28 июн - 10 июл"
     },
     {   
@@ -446,6 +450,7 @@ const banner = [
         newprice: 120.90,
         discount: 40,
         image: "/img/grape.png",
+        mobilmage: "/img/grapeMobile.png",
         duration: "21 июл - 10 авг"
     }
 ]
@@ -455,6 +460,7 @@ const sesonesBanner = [
         id: 1,
         title: "Фермерские продукты",
         background: "/img/sesonsBG.jpg",
+        backgroundMobile: "/img/backgroundMobile.png",
         description: "Возраждение традиций и качественных продуктов питания"
     }
 ]

@@ -12,7 +12,7 @@ const WiseBakerBanner: React.FC = () => {
                         <img src='BakerLogo.png'></img>
                         <p className={styles.wiseBakerLink}>Подробнее</p>
                     </div>
-                </div>
+                </div>        
             </a>
         </Link>
         

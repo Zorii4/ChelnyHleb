@@ -21,7 +21,7 @@ const Accordion  = ({ pic, title, subTitle, index, onTitleClick, isOpen }) => {
                     </div>
                 </div>
             </div>
-            <div style={{maxHeight:`${elemRef.current?.offsetHeight}px`}} className={`${styles.contentDefault} ${isOpen ? styles.contentActive : null}`}>
+            <div style={{maxHeight:`${elemRef.current?.offsetHeight}px`}} className={`${styles.contentDefault} ${isOpen && styles.contentActive}`}>
                 <div ref={elemRef}>
                     {subTitle}
                 </div>

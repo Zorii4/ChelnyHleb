@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import GoodCard from '../../../../components/GoodCard'
-import WeeksNewBanner from '../../../../components/WeeksNewBanner'
+import WeeksNewBanner from '../../../../components/WeeksNewBanner/WeeksNewBanner'
 import { fetchAllGoods, fetchAllSubCategories, fetchCategoryById, fetchFinalCategories } from '../../../../FAKE_API/goods'
 import { useTypedSelector } from '../../../../hooks/useTypeSelector'
 import { NextThunkDispatch, wrapper } from '../../../../store'

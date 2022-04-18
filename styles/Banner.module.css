@@ -1,10 +1,10 @@
 .container {
-    width: 996px;
+    max-width: 996px;
     height: 100%;
     background-color: #fff;
     border-radius: 12px;
-    background-image: url(../public/ellipse.png);
-    background-size: contain;
+    background-image: url(../public/testBanner.png);
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -39,10 +39,9 @@
 
 .subtitle {
     font-family: 'Golos';
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
     letter-spacing: 0em;
     line-height: 17px;
     margin-bottom: 9px;
@@ -126,7 +125,6 @@
     letter-spacing: -0.02em;
     color: #304250;
     opacity: 0.23;
-    min-width: 810px;
     margin-right: 75px;
 }
 
@@ -149,30 +147,160 @@
     font-weight: 700;
     line-height: 15px;
     letter-spacing: -0.02em;
-}
-
-.bannerImg {
-    padding-right: 45px;
+    display: block;
 }
 
 .navWrapper {
     display: flex;
     align-items: flex-end;
 }
- 
-/* .navBtnContainer {
-    width: 86px;
-    height: 36px;
-    border: 2px solid #E2E9EE;
-    border-radius: 70px;
-    display: flex;
+
+@media (max-width: 1280px) {       
+    .wrapperRight {
+        padding-right: 50px;
+    }
+
+    .priceContainer {
+        margin-bottom: 20px;
+    }
+
+    .description {
+        margin-bottom: 50px;
+    }
+
+    .oldPrice {
+        font-size: 36px;
+        line-height: 49px;
+    }
+    
+    .discountWrapper {
+        width: 105px;
+        height: 45px;
+    }
+
+    .newPrice {
+        font-size: 120px;
+    }
+
+    .newPriceKop {
+        font-size: 26px;
+    }
+
+    .bannerFooterText {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .title {
+        font-size: 38px;
+    }
+
+    .subtitle,.description {
+        font-size: 14px;
+    }
 }
 
-.swiperBtn {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}  */
+@media (max-width: 1024px) {
+    .title {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .subtitle,.description {
+        font-size: 12px;
+    }
+
+    .description {
+        margin-bottom: 24px;
+    }
+
+    .priceContainer {
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .oldPrice {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .discountWrapper {
+        width: 96px;
+        height: 36px;
+        font-size: 32px;
+    }
+
+    .newPrice {
+        font-size: 98px;
+    }
+
+    .newPriceKop {
+        font-size: 22px;
+    }
+
+    .bannerFooterText {
+        font-size: 8px;
+    }
+
+    .durationWrapper {
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapperLeft {
+        padding-left: 16px;
+        padding-top: 10px;
+    }
+
+    .wrapperRight {
+        padding-right: 15px;
+    }
+
+    .durationWrapper {
+        margin-bottom: 20px;
+        font-size: 12px;
+        line-height: 11px;
+    }
+
+    .durationDate {
+        font-size: 11px;
+        line-height: 11px;
+        white-space: nowrap;
+    }
+
+    .title {
+        font-size: 28px;
+        margin-bottom: 6px;
+    }
+
+    .description {
+        margin-bottom: 14px;
+        line-height: 16px;
+    }
+
+    .priceContainer {
+        justify-content: flex-start;
+        margin-bottom: 4px;
+    }
+
+    .oldPrice {
+        font-size: 28px;
+        line-height: 38px;
+        margin-bottom: 0;
+    }
+
+    .discountWrapper {
+        width: 86px;
+        height: 30px;
+        font-size: 30px;
+    }
+
+    .newPrice {
+        font-size: 79px;
+    }
+
+    .newPriceKop {
+        font-size: 20px;
+    }
+}

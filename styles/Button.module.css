@@ -1,6 +1,4 @@
 
-
-
 .footerFeedbackBtn {
     width: 316px;
     height: 56px;
@@ -13,4 +11,20 @@
     line-height: 120%;
     text-align: center;
     color: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+    .footerFeedbackBtn {
+        width: 219px;
+        height: 52px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footerFeedbackBtn {
+        width: 163px;
+        height: 40px;
+        font-size: 12px;
+    }
 }

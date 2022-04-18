@@ -5,6 +5,12 @@
     margin-bottom: 3px;
 }
 
+.likeButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 .discountProcent {
     width: 59px;
     height: 24px;
@@ -32,7 +38,6 @@
     line-height: 120%;
     color: #304250;
     margin-top: 8px;
-    margin-bottom: 30px;
 }
 
 .goodOldPrice {
@@ -78,4 +83,79 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+}
+
+.bottomWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 110px;
+}
+
+@media (max-width: 768px) {
+    .goodCardTitle {
+        font-size: 14px;
+        margin-top: 6px;
+    }
+    
+    .bottomWrapper {
+        min-height: 95px;
+    }
+}
+
+@media (max-width: 480px) {
+    .discountProcent {
+        width: 48px;
+        height: 18px;
+        font-size: 16px;
+    }
+
+    .rateNumber {
+        font-family: 'Golos';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 120%;
+        color: #304250;
+    }
+
+    .goodCardTitle {
+        margin-top: 4px;
+    }
+
+    .goodOldPrice {
+        font-size: 10px;
+        line-height: 15px;
+        text-decoration: line-through;
+        color: #B0BCC9;
+    }
+
+    .goodNewPriceRub {
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        color: #304250;
+    }
+    
+    .goodNewPriceKop {
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 15px;
+        color: #304250;
+    }
+
+    .bottomWrapper {
+        min-height: 85px;
+    }
+
+    .orderButton {
+        width: 34px;
+        height: 34px;
+        background: linear-gradient(109.23deg, #BFE470 -22.36%, #61A430 92.46%);
+        border-radius: 8px;
+    }
+
 }

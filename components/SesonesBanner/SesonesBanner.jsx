@@ -1,8 +1,8 @@
 import Link from "next/link"
-import styles from "../styles/SesonesBanner.module.css"
-import { useTypedSelector } from "../hooks/useTypeSelector"
+import styles from "./SesonesBanner.module.css"
+import { useTypedSelector } from "../../hooks/useTypeSelector"
 import { useEffect, useState } from "react"
-import { fetchSesonesData } from "../FAKE_API/goods"
+import { fetchSesonesData } from "../../FAKE_API/goods"
 
 const SesonesBanner = () => {
     const [sesonesBanner, setSesonesBanner] = useState()
@@ -22,11 +22,23 @@ const SesonesBanner = () => {
                         <Link href="#">
                             <a className={styles.sesonesLeftUp}>
                                 <h3 className={styles.sesonesTitle}>{item.title}</h3>
+                                <div className={styles.hoverWrapper}>
+                                    <div className={styles.hoverDecription}>{item.description}</div>
+                                    <div>
+                                        <Link href="#"><a className={styles.hoverLink}>Перейти</a></Link>
+                                    </div>
+                                </div>
                             </a>
                         </Link>
                         <Link href="#">
                             <a className={styles.sesonesRightUp}>
                                 <h3 className={styles.sesonesTitle}>Домашняя кухня</h3>
+                                <div className={styles.hoverWrapper}>
+                                    <div className={styles.hoverDecription}>{item.description}</div>
+                                    <div>
+                                        <Link href="#"><a className={styles.hoverLink}>Перейти</a></Link>
+                                    </div>
+                                </div>
                             </a>
                         </Link>
                     </div>

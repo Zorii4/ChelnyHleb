@@ -1,0 +1,52 @@
+.wiseBakerContainer {
+    width: 100%;
+    height: 170px;
+    margin-bottom: 35px;
+    background-image: url(../../../public/bakerBGmobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wiseBakerTitle {
+    width: 235px;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.wiseBakerSubtitle {
+    width: 177px;
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+.wiseBakerLink {
+    font-family: 'Din';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+    opacity: 0.66;
+}
+
+.upWrapper,.downWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

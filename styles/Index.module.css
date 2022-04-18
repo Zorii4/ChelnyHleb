@@ -3,7 +3,7 @@
     justify-content: space-between;
     margin-bottom: 60px;
     height: 363px;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .cardItem {
@@ -13,10 +13,20 @@
     border-radius: 8px;
     padding: 14px;
     flex-shrink: 0;
+    margin-right: 12px;
 }
 
-.cardItem:not(:nth-child(5n)) {
+/* .cardItem:not(:nth-child(5n)) {
     margin-right: 12px;
+} */
+
+.cardWrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari и Opera */
+}
+
+.cardWrapper {
+    -ms-overflow-style: none;  /* IE и Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 .subtitleWrapper {
@@ -41,6 +51,7 @@
     justify-content: space-between;
     margin-bottom: 92px;
     position: relative;
+    gap: 0 10px;
 }
 
 .showAllLink {
@@ -77,5 +88,59 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
 
+@media (max-width: 1280px) {
+    .bannersContainer {
+        height: 370px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .bannersContainer {
+        height: 285px;
+        gap: 0 5px;
+    }  
+}
+
+@media (max-width: 768px) {
+    .bannersContainer {
+        height: 225px;
+        margin-bottom: 45px;  
+    } 
+    .cardItem {
+        width: 236px;
+        height: 323px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bannersContainer {
+        display: block;
+        height: inherit;
+    }
+
+    .cardWrapper {
+        height: inherit;
+    }
+
+    .cardItem {
+        width: 165px;
+        height: 250px;
+        padding: 8px;
+    }
+
+    .categoriesWrapper {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .subtitle {
+        font-size: 23px;
+    }
+
+    .showAllLink {
+        font-size: 12px;
+    }    
 }

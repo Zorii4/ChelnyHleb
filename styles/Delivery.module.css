@@ -1,0 +1,132 @@
+.mainTitle {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 110%;
+    color: #304250;
+    margin-bottom: 32px;
+}
+
+.container {
+    display: flex;
+}
+
+.description {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #304250;
+    margin-bottom: 50px;
+}
+
+.subTitle {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 110%;
+    color: #304250;
+    margin-bottom: 25px;
+}
+
+.phoneLink {
+    display: block;
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 120%;
+    color: #304250;
+    margin-bottom: 8px;
+}
+
+.diliveryPriceList {
+    width: 350px;
+}
+
+.deliveryPriceItemHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.deliveryPriceItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remark {
+    font-family: 'Golos medium';
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 120%;
+    color: #304250;
+}
+
+.deliveryList {
+    margin-left: 18px;
+}
+
+.listDescriptionWrapper {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.listDescriptionWrapper:last-child {
+    margin-bottom: 40px;
+}
+
+.listNumber {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #304250;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin-right: 18px;
+}
+
+.listDescript {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #304250;
+}
+
+.deliverySwaperWrapper {
+    width: 707px;
+    border-radius: 8px;
+    margin-bottom: 60px;
+}
+
+.swiper-slide {
+    border-radius: 8px !important;
+}
+
+.navBtnContainer {
+    width: 86px;
+    height: 36px;
+    border: 2px solid #E2E9EE;
+    border-radius: 70px;
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.swiperBtn {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

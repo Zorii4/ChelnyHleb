@@ -1,11 +1,13 @@
 import { createWrapper } from 'next-redux-wrapper'
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit"
 import { goodInBasketReducer } from './reducers/basketReducer'
+import { marketGoodsReducer } from './reducers/goodsReducer'
 
 export function makeStore() {
   return configureStore({
         reducer: {
           goodInBasket: goodInBasketReducer,
+          marketGoods: marketGoodsReducer,
         },
         devTools: true,
     });

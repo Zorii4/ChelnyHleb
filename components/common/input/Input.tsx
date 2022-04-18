@@ -11,7 +11,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 const Input: React.FC<InputProps> = ({ name, styleName, type, hasIcon }) => {
     return (
-        <div style={{position:"relative"}}>
+        <div style={{position:"relative", flex:"1 1 auto"}}>
             <input className={styles[styleName]} placeholder={name} type={type} />
             {hasIcon&& <InputIcon/>}
         </div>

@@ -1,8 +1,18 @@
 .searchInput {
-    width: 550px;
+    width: 100%;
     height: 46px;
     border-radius: 8px;
     border: none;
     color: #B0BCC9;
     padding-left: 20px;
+}
+
+.searchInputMobile {
+    width: 100%;
+    height: 40px;
+    background: #F2F5FB;
+    color: #8797A4;
+    border-radius: 6px;
+    padding-left: 20px;
+    border: none;
 }

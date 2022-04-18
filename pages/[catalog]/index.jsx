@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
-import CategoriesCard from '../../components/CategoriesCard'
-import WeeksNewBanner from '../../components/WeeksNewBanner'
+import CategoriesCard from '../../components/CategoriesCard/CategoriesCard'
+import WeeksNewBanner from '../../components/WeeksNewBanner/WeeksNewBanner'
 import { NextThunkDispatch, wrapper } from '../../store'
 import { fetchCategories } from '../../store/actions-creators/categories'
 import { fetchGoods } from '../../store/actions-creators/goods'
@@ -45,7 +45,7 @@ const Catalog = () => {
                 </div>
             <div className={styles.content}>
                 <WeeksNewBanner />
-                <CategoriesCard numberOfColumn={3}/>                
+                <CategoriesCard isCatalog/>                
             </div>
         </div>
     )

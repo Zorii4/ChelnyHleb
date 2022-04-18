@@ -56,11 +56,3 @@
     align-items: center;   
 }
 
-.menuItem:hover #idi{
-    display: block;
-
-}
-
-.subCategory {
-    display: none;
-}

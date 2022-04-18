@@ -2,7 +2,7 @@ import { HYDRATE } from "next-redux-wrapper";
 import { combineReducers } from "redux";
 import { bannerReducer } from "./bannerReducer";
 import { categoriesReducer } from "./categoriesReducer";
-import { goodsFromCategoryReducer, goodsReducer } from "./goodsReducer";
+import { goodsFromCategoryReducer, goodsReducer } from "./goodsReducerOld";
 import { sesonesReducer } from "./sesonesReducer";
 
 const rootReducer = combineReducers({

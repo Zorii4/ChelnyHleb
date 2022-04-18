@@ -9,21 +9,19 @@ const Footer: React.FC = () => {
     return (
         <div className={styles.footer}>
             <div className={styles.footerContainer}>
-                <div className={styles.logoWrapper}>
-                    <Image layout="fixed" src={logo}/>
-                </div>
-                    <nav className={styles.navMenu}>
-                        <div className={styles.navMenuLeft}>
-                            <Link href="#"><a className={styles.navLink}>Каталог товаров</a></Link>
-                            <Link href="#"><a className={styles.navLink}>Акции</a></Link>
-                            <Link href="#"><a className={styles.navLink}>Собственные марки</a></Link>
-                        </div>
-                        <div className={styles.navMenuRight}>
-                            <Link href="#"><a className={styles.navLink}>Контакты</a></Link>
-                            <Link href="#"><a className={styles.navLink}>Активация карты</a></Link>
-                            <Link href="#"><a className={styles.navLink}>Личный кабинет</a></Link>
-                        </div>                       
-                    </nav>      
+                <div><Image layout="fixed" src={logo}/></div>
+                <nav className={styles.navMenu}>
+                    <div className={styles.navMenuLeft}>
+                        <Link href="#"><a className={styles.navLink}>Каталог товаров</a></Link>
+                        <Link href="#"><a className={styles.navLink}>Акции</a></Link>
+                        <Link href="#"><a className={styles.navLink}>Собственные марки</a></Link>
+                    </div>
+                    <div className={styles.navMenuRight}>
+                        <Link href="#"><a className={styles.navLink}>Контакты</a></Link>
+                        <Link href="#"><a className={styles.navLink}>Активация карты</a></Link>
+                        <Link href="#"><a className={styles.navLink}>Личный кабинет</a></Link>
+                    </div>                       
+                </nav>      
                 <div className={styles.footerConatctsWrapper}>
                     <p className={styles.footerContactsSubtitle}>Служба поддержки</p>
                     <a className={styles.footerContactsPhone} href="tel:88007009745">8 800 700-97-45</a>

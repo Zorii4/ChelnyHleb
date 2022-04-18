@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    width: 1428px;
+    max-width: 1428px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 124px;
@@ -8,7 +8,7 @@
 }
 
 .menu {
-    width: 250px;
+    min-width: 250px;
     display: flex;
     flex-direction: column;
 }
@@ -35,14 +35,14 @@
     margin-bottom: 60px;
 }
 
-.cardItem {
-    height: 363px;
-    width: 276px;
-    background: #FFFFFF;
-    border-radius: 8px;
-    padding: 14px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 12px;
+@media (max-width: 1024px) {
+    .menu {
+        min-width: 235px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        min-width: 200px;
+    }
 }

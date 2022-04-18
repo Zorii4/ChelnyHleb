@@ -5,7 +5,7 @@
 }
 
 .footerContainer {
-    width: 1428px;
+    max-width: 1428px;
     height: 235px;
     margin-left: auto;
     margin-right: auto;
@@ -14,13 +14,6 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
-}
-
-.logoWrapper {
-    height: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .copyrightText {
@@ -32,7 +25,7 @@
 }
 
 .navMenu {
-    width: 344px;
+    min-width: 344px;
     display: flex;
     justify-content: space-between;
 }
@@ -40,13 +33,13 @@
 .navMenuLeft {
     display: flex;
     flex-direction: column;
-    width: 148px;
+    max-width: 148px;
 }
 
 .navMenuRight {
     display: flex;
     flex-direction: column;
-    width: 150px;
+    max-width: 150px;
 }
 
 .navLink {
@@ -125,7 +118,7 @@
 .copyrightContainer {
     display: flex;
     justify-content: space-between;
-    width: 1428px;
+    max-width: 1428px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -157,4 +150,79 @@
     font-size: 14px;
     line-height: 17px;
     color: #B0BCC9;
+}
+
+@media (max-width: 1280px) {
+    .footerContainer, .copyrightContainer {
+        max-width: 1250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+   .footerContainer, .copyrightContainer {
+        max-width: 994px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footerContactsPhone {
+        font-size: 22px;
+    }
+
+    .navMenu {
+        max-width: 344px;
+        min-width: 0;
+        justify-content: flex-start;
+        gap: 0 20px
+    }
+
+    .navLink {
+        font-size: 14px;
+    }
+
+    .feedbackWrapper {
+        width: 250px;
+        height: 140px;
+    }
+
+    .feedbackTitle {
+        font-size: 19px;
+    }
+
+    .feedbackText {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footerContainer, .copyrightContainer {
+        max-width: 738px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navMenu {
+        display: block;
+    }
+
+    .feedbackWrapper {
+        width: 200px;
+        height: 125px;
+    }
+
+    .feedbackTitle {
+        font-size: 14px;
+    }
+
+    .feedbackText {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        display: none;
+    }
 }
