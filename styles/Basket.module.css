@@ -1,6 +1,6 @@
 .basketMainContainer {
     display: flex;
-    justify-content: space-around;
+    gap: 0 60px;
 }
 
 .mainTitle {
@@ -18,10 +18,19 @@
 
 .cardWrapper {
     display: flex; 
-    justify-content: space-between;
     margin-bottom: 60px;
     height: 363px;
-    overflow: hidden;
+    overflow: auto;
+    gap: 0 12px;
+}
+
+.cardWrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari и Opera */
+}
+
+.cardWrapper {
+    -ms-overflow-style: none;  /* IE и Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 .cardItem {
@@ -33,10 +42,6 @@
     flex-shrink: 0;
 }
 
-.cardItem:not(:nth-child(5n)) {
-    margin-right: 12px;
-}
-
 .orderTitle {
     font-family: 'Golos';
     font-weight: normal;
@@ -46,3 +51,23 @@
     margin-bottom: 25px;
 }
 
+@media (max-width: 1024px) {
+    .basketMainContainer {
+        gap: 0 15px;
+    }  
+}
+
+@media (max-width: 480px) {
+    .basketMainContainer {
+        display: block;
+    }  
+
+    .cardWrapper {
+        height: inherit;
+    }
+
+    .cardItem {
+        height: 265px;
+        width: 190px;
+    }
+}

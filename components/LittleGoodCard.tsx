@@ -3,18 +3,21 @@ import styles from "../styles/LittleGoodCard.module.css"
 import Image from 'next/image'
 import { useDispatch } from "react-redux"
 import { addFavorities } from "../store/reducers/goodsReducer"
+import { useMediaQuery } from "react-responsive"
 
 interface GoodProps {
     good: Goods
-    addFavorities: (good:GoodProps) => void
+    addFavorities: (good:Goods) => void
   }
 
 const LittleGoodCard: React.FC <GoodProps> = ({ good }) => {
 
+    const isMobile = useMediaQuery({ query: '(max-width: 480px)'})
+
     const [intiger, float] = good.newprice.toString().split('.')
     const dispatch = useDispatch()
     
-    const handleAddFav = (good:GoodProps) => {
+    const handleAddFav = (good:Goods) => {
         return dispatch(addFavorities(good))
     }
  
@@ -37,7 +40,8 @@ const LittleGoodCard: React.FC <GoodProps> = ({ good }) => {
                     </svg>
                 </button>
             </div>
-            <Image src={good.image} width={170} height={113}></Image>
+            {isMobile ? <Image src={good.image} width={98} height={68} alt=""></Image> :
+                        <Image src={good.image} width={170} height={113} alt=""></Image>}
             <div className={styles.bottomWrapper}>
                 <h4 className={styles.goodCardTitle}>{good.title}</h4>
                 <div className={styles.goodOldPrice}>{good.oldprice}₽</div>

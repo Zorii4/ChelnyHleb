@@ -27,16 +27,20 @@
     line-height: 110%;
 }
 
-.link {
+.link, .linkClock {
     color: #8797A4;
 }
 
-.link:not(:last-child) {
+.link:not(:last-child), .linkClock {
     margin-right: 24px;
 }
 
 .basket:not(:last-child) {
     margin-right: 5px;
+}
+
+.link:hover {
+    color: #304250;
 }
 
 .navWrapper {
@@ -55,6 +59,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.basket:hover > svg > path {
+    stroke: #304250
 }
 
 .wayDelivery {
@@ -87,10 +95,6 @@
     display: flex;
 }
 
-.wayDeliveryMobile {
-    display: none;
-}
-
 @media (max-width: 1280px) {
     .mainContainer {
         max-width: 1250px;
@@ -120,9 +124,5 @@
         max-width: 738px;
         margin-left: auto;
         margin-right: auto;
-    }
-
-    .wayDelivery {
-        display: none;
     }
 }

@@ -1,5 +1,5 @@
 .wrapperOne {
-    height: 512px;
+    min-height: 512px;
     background-color: #fff;
     border-radius: 8px;
     margin-bottom: 8px;
@@ -13,7 +13,7 @@
 }
 
 .wrapperTwo {
-    height: 495px;
+    min-height: 495px;
     background-color: #fff;
     border-radius: 8px;
     margin-bottom: 8px;
@@ -21,13 +21,13 @@
 }
 
 .wrapperThree {
-    height: 789px;
+    min-height: 789px;
     background-color: #fff;
     border-radius: 8px;
     margin-bottom: 60px;
     padding: 71px 52px 92px 52px;
     display: flex;
-    justify-content: space-between;
+    gap: 0 150px;
 }
  
 .priceWrapper {
@@ -93,7 +93,6 @@
     justify-content: space-around;
     margin-right: 12px;
 }
-
 
 .goodOldPiceWrapper {
     display: flex;
@@ -205,7 +204,7 @@
 }
 
 .characteristicWrapper {
-    width: 1020px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content:space-between;
@@ -258,12 +257,12 @@
 }
 
 .infoDescriptionList {
-    width: 563px;
+    width: 50%;
 }
 
 .infoDescriptionWrapper {
     display: flex;
-    justify-content: space-between;
+    gap: 0 60px;
 }
 
 .rateWrapper {
@@ -300,7 +299,7 @@
 }
 
 .rateButton {
-    width: 298px;
+    width: 100%;
     height: 46px;
     border: 1px solid #61A430;
     border-radius: 8px;
@@ -313,6 +312,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
 }
 
 .topWrapper {
@@ -389,7 +389,17 @@
     justify-content: space-between;
     margin-bottom: 60px;
     height: 363px;
-    overflow: hidden;
+    overflow: auto;
+    gap: 0 12px;
+}
+
+.cardWrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari и Opera */
+}
+
+.cardWrapper {
+    -ms-overflow-style: none;  /* IE и Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 .cardItem {
@@ -401,10 +411,6 @@
     flex-shrink: 0;
 }
 
-.cardItem:not(:nth-child(5n)) {
-    margin-right: 12px;
-}
-
 .similarGoodTitle {
     font-family: 'Golos';
     font-weight: normal;
@@ -412,4 +418,193 @@
     line-height: 110%;
     color: #304250;
     margin-bottom: 24px;
+}
+
+@media (max-width: 1024px) {
+    .wrapperThree {
+        gap: 0 100px;
+    }
+
+    .rateWrapper {
+        height: 300px;
+    }
+
+    .rateWrapper {
+        padding: 16px;
+    }
+
+    .rateNumber {
+        font-size: 32px;
+    }
+
+    .rateQuantity {
+        font-size: 20px;
+    }
+
+    .priceWrapper {
+        min-width: 450px;
+        padding: 14px 14px 12px 24px;
+    }
+
+    .feedbackWrapper {
+        margin-bottom: 40px;
+    }
+
+    .goodNewPriceRub {
+        font-size: 82px;
+    }
+
+    .orderButton {
+        min-width: 220px;
+        min-height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapperOne {
+        padding: 25px;
+    }
+
+    .priceWrapper {
+        min-width: 385px;
+    }
+
+    .brandName {
+        margin-bottom: 12px;
+    }
+
+    .title {
+        font-size: 28px;
+        line-height: 100%;
+    }
+
+    .feedbackWrapper {
+        margin-bottom: 32px;
+    }
+
+    .goodNewPriceRub {
+        font-size: 72px;
+    }
+
+    .goodNewPriceKop {
+        font-size: 22px;
+    }
+
+    .orderButton {
+        min-width: 170px;
+    }
+
+    .wrapperThree {
+        padding: 37px 26px 56px 40px;
+        gap: 0 50px;
+    }
+
+    .rateNumber {
+        font-size: 26px;
+    }
+
+    .rateQuantity {
+        font-size: 16px;
+    }
+
+    .feedBackTitle {
+        font-size: 28px;
+    }
+
+    .commentUserName, .commentDate {
+        font-size: 14px;
+    }
+
+    .commentDescription {
+        font-size: 20px;
+    }
+
+    .topWrapper {
+        margin-bottom: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapperOne {
+        display: block;
+        padding: 20px;
+    }
+
+    .priceWrapper, .wrapperThree {
+        background-color: inherit;
+        padding: 0;
+    }
+
+    .bottomContainer {
+        display: block;
+    }
+
+    .goodNewPiceWrapper, .cardWrapper {
+        margin-bottom: 25px;
+    }
+
+    .orderButton {
+        min-width: 100%;
+    }
+
+    .wrapperTwo {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .characteristicWrapper, 
+    .infoDescriptionWrapper, 
+    .wrapperThree {
+        display: block;
+    }
+
+    .characteristicList, 
+    .energyTitle, 
+    .infoDescriptionList,
+    .rateWrapper {
+        width: 100%;
+    }
+
+    .energyTitle {
+        margin-bottom: 15px;
+    }
+
+    .rateWrapper {
+        background-color: #fff;
+        margin-bottom: 25px;
+    }
+
+    .showMoreBtn {
+        border: 1px solid #DAE2E9;
+    }
+
+    .cardWrapper {
+        height: inherit;
+    }
+
+    .cardItem {
+        height: 265px;
+        width: 185px;
+    }
+}
+
+@media (max-width: 375px) {
+    .priceWrapper {
+        min-width: inherit;
+    }
+
+    .energyTitle {
+        font-size: 20px;
+    }
+
+    .characteristicItemData {
+        height: inherit;
+        width: 76px;
+        font-size: 40px;
+        background-size: contain;
+    }
+
+    .characteristicItemDescription {
+        font-size: 14px;
+    }
 }

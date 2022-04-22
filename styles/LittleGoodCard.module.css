@@ -84,6 +84,11 @@
 .bottomWrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     min-height: 85px;
+}
+
+@media (max-width: 1024px) {
+    .bottomWrapper {
+        justify-content: space-between;
+    }
 }

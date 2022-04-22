@@ -1,18 +1,15 @@
 .container {
     display: flex;
-    width: 1428px;
+    max-width: 1428px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 124px;
-}
-
-.menuWrapper {
-    width: 22%;
+    gap: 0 10px;
 }
 
 .menu {
-    width: 256px;
-    min-height: 318px;
+    min-width: 256px;
+    max-height: 318px;
     background: #FFFFFF;
     border-radius: 12px;
     padding: 16px;
@@ -22,7 +19,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 80%;
 }
 
 .cardWrapper {
@@ -75,4 +71,83 @@
     font-size: 16px;
     line-height: 120%;
     color: #304250;
+}
+
+@media (max-width: 1280px) {
+    .container {
+        gap: 0 10px;
+        margin-bottom: 0px;
+    }
+
+    .menu {
+        min-width: 235px;
+    }
+
+    .cardWrapper {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cardWrapper {
+        justify-content: flex-start;
+        gap: 0 10px
+    }
+
+    .cardItem {
+        width: 242px;
+        height: 340px;
+    }
+} 
+
+@media (max-width: 768px) {
+    .menu {
+        min-width: 200px;
+    }
+
+    .cardWrapper {
+        justify-content: space-between;
+    }
+
+    .cardItem {
+        height: 335px;
+        width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        display: block;
+    }
+
+    .catMobileList {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px 15px;
+        margin-bottom: 50px;  
+    }
+    
+    .subCatItemMobile {
+        background-color: #fff;
+        padding: 5px;
+        border-radius: 4px;     
+    }
+
+    .cardItem {
+        height: 265px;
+        width: 220px;
+    }    
+}
+
+@media (max-width: 375px) {
+    .cardWrapper {
+        justify-content: flex-start;
+        gap: 0 5px;  
+    }
+
+    .cardItem {
+        padding: 8px;
+        height: 255px;
+        width: 170px;
+    }
 }

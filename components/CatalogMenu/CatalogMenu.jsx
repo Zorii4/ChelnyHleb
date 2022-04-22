@@ -29,7 +29,7 @@ const [onMause, setOnMause] = useState(false)
                         <Link href="#">
                             <a className={styles.categoryLink}>
                                 <div className={styles.linkWrapper}>
-                                    <Image width={40} height={40} src={item.pic}></Image>
+                                    <Image width={40} height={40} src={item.pic} alt=""></Image>
                                     <h3 className={styles.linkTitle}>
                                         {item.title}
                                     </h3>   

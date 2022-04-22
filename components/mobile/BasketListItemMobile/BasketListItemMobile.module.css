@@ -1,0 +1,116 @@
+.container {
+    width: 100%;
+    height: 100px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    margin-bottom: 6px;
+    align-items: center;
+    padding: 10px;
+    gap: 0 15px;
+}
+
+.discountProcent {
+    width: 35px;
+    height: 15px;
+    background-image: url(../../../public/discountBG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Oswald';
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 3px;
+}
+
+.rightPartWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 80%;
+}
+
+.priceQuantityWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.basketTitle {
+    font-family: 'Golos';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 120%;
+    color: #304250;
+}
+
+.basketQuantityWrapper {
+    width: 99px;
+    height: 34px;
+    background: #F2F5FB;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.basketQuantityBtn {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-family: 'Din';
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: #8797A4;
+}
+
+.basketQuantityNumber {
+    font-family: 'Din';
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: #8797A4;
+}
+
+.totalPriceContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.totalOldPrice {
+    font-family: 'Oswald';
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    text-decoration-line: line-through;
+    color: #B0BCC9;
+}
+
+.totalPriceWrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 80px;
+}
+
+.totalPriceRub {
+    font-family: 'Oswald';
+    font-size: 24px;
+    line-height: 100%;
+    color: #304250;
+}
+
+.totalPriceKop {
+    font-family: 'Oswald';
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 21px;
+    color: #304250;
+}

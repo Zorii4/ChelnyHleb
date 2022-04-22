@@ -1,8 +1,12 @@
 import styles from "./OrderAmount.module.css"
 import Link from "next/link"
+import { useRouter } from "next/router"
 
 
 const OrderAmount = ({goodsInBasket, address}) => {
+
+  const router = useRouter()
+  
     return (
         <div className={styles.puchaseWrapper}>
             <ul>
@@ -61,7 +65,7 @@ const OrderAmount = ({goodsInBasket, address}) => {
                 <input className={styles.puchasePromo} placeholder="Промокод"></input>
               </li>
               <li>
-                <button className={styles.puchaseButton}>Перейти к оформлению</button>
+                <button className={styles.puchaseButton} onClick={()=>router.push('/order')}>Перейти к оформлению</button>
               </li>
             </ul>
         </div> 

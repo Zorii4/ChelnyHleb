@@ -29,13 +29,13 @@
     background-color: #fff;
 }
 
-.wrapper {
-    max-width: 450px;
+.wrapperMobile {
+    width: 450px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.navWrapper {
+.navWrapperMobile {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -79,8 +79,8 @@
 }
 
 @media (max-width: 375px) {
-    .wrapper {
-        max-width: 345px;
+    .wrapperMobile {
+        width: 345px;
         margin-left: auto;
         margin-right: auto;
     }

@@ -1,16 +1,14 @@
 .mainContainer {
     display: flex;
-    justify-content: space-between;
-    width: 1135px;
+    gap: 0 70px;
 }
 
 .settingsContainer {
-    width: 708px;
-    height: 707px;
     background: #FFFFFF;
     border-radius: 8px;
     margin-bottom: 80px;
     padding: 75px;
+    width: 70%;
 }
 
 .settingsTitle {
@@ -24,12 +22,12 @@
 
 .settingsInputWrapper {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 40px;
+    gap: 0 12px;
 }
 
 .settingsInput {
-    width: 272px;
+    width: 50%;
     height: 46px;
     border: 1px solid #E1E7EE;
     border-radius: 8px;
@@ -48,7 +46,7 @@
 }
 
 .settingsSubmitBtn, .settingsCancelBtn {
-    width: 272px;
+    width: 50%;
     height: 56px;
     border-radius: 8px;
     font-family: 'Golos';
@@ -70,13 +68,17 @@
 }
 
 .addressContainer {
-    width: 343px;
     height: 60px;
     background: #FFFFFF;
     border-radius: 8px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    padding: 20px;
+    gap: 0 15px;
+}
+
+.addressWrapper {
+    width: 30%;
 }
 
 .addressSubtitle {
@@ -86,4 +88,63 @@
     line-height: 120%;
     color: #304250;
     margin-bottom: 20px;
+}
+
+@media (max-width: 1280px) {
+    .mainContainer {
+        gap: 0 30px;
+    }
+
+    .settingsContainer {
+        padding: 60px;
+    }
+
+    .settingsInputWrapperCheckbox {
+        width: 525px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .settingsContainer {
+        padding: 25px;
+    }
+
+    .settingsInputWrapperCheckbox {
+        width: 430px;
+    }
+
+    .addressSubtitle {
+        font-size: 20px;
+    }
+
+    .addressContainer {
+        padding: 10px;
+    }
+
+    .userAddress {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainContainer {
+        display: block;
+    }
+
+    .settingsInputWrapperCheckbox {
+        width: 403px;
+    }
+
+    .settingsContainer, .addressWrapper {
+        width: inherit;
+    }
+
+    .settingsContainer {
+        margin-bottom: 25px;
+    }
+
+    .addressContainer {
+        padding: 20px;
+        justify-content: center;
+    }
 }

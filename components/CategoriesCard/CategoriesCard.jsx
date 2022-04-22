@@ -45,15 +45,15 @@ const CategoriesCard = ({ isCatalog }) => {
 
                 @media (max-width: 1024px) {     
                     li {
-                        width: 370px;
+                        width: 320px;
                         height: 174px;
                     }
                 }
 
                 @media (max-width: 768px) {
                     li {
-                        width: 264px;
-                        height: 180px;
+                        width: 238px;
+                        height: 150px;
                     }
                 }
             `}</style>

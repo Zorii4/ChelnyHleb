@@ -10,7 +10,7 @@ const Custom404 = () => {
             </div>
             <span className={styles.notFoundText}>Ошибка 404</span>
             <div className={styles.imageWrapper}>
-                <Image src="/img/404.png" width={320} height={200}></Image>
+                <Image src="/img/404.png" width={320} height={200} alt="404 error"></Image>
             </div>
             <div className={styles.linkWrapper}>
                 <Link href="/">

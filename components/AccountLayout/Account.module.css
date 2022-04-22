@@ -1,7 +1,7 @@
 .mainContainer {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 75px;
+    justify-content: space-between;
 }
 
 .userBonusCardContainer {
@@ -97,4 +97,17 @@
     position: absolute;
     top: 45%;
     left: -10px;
+}
+
+@media (max-width: 1280px) {
+    .mainContainer {
+        justify-content: flex-start;
+        gap: 0 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainContainer {
+        gap: 0 20px;
+    }
 }

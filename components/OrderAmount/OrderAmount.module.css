@@ -144,7 +144,7 @@
 }
 
 .puchasePromo {
-    width: 312px;
+    width: 100%;
     height: 46px;
     border: 1px solid #DDE3EA;
     border-radius: 8px;
@@ -158,7 +158,7 @@
 }
 
 .puchaseButton {
-    width: 312px;
+    width: 100%;
     height: 56px;
     background: #61A430;
     border-radius: 8px;
@@ -169,4 +169,40 @@
     text-align: center;
     color: #FFFFFF;
     border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1280px) {
+    .puchaseWrapper {
+        width: 330px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .kindOfDeliveryWrapper {
+        justify-content: flex-start;
+        gap: 0 10px;
+        padding: 5px;
+    }
+}    
+
+@media (max-width: 768px) {
+    .puchaseAdressWrapper {
+        height: 165px;
+    }
+
+    .kindOfDeliveryWrapper {
+        height: 65px;
+    }
+
+    .puchaseWrapper {
+        min-height: 645px;
+        max-height: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    .puchaseWrapper {
+        width: 100%;
+    }
 }

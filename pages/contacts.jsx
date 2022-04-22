@@ -33,13 +33,13 @@ if(!shops) return (<p>loading</p>)
                     </thead>
                     <tbody>
                         {shops.map((item) => (
-                            <tr scope="row">
+                            <tr scope="row" key={item.id}>
                                 <td className={styles.tableRow}>{item.district}</td>
                                 <td className={styles.tableRow}>{item.complex}</td>
                                 <td className={styles.tableRow}>{item.address}</td>
                                 <td className={styles.tableRow}>{item.smartBaker ? 
                                     <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12.3346 1.3335L5.0013 8.66683L1.66797 5.3335" stroke="#8797A4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.3346 1.3335L5.0013 8.66683L1.66797 5.3335" stroke="#8797A4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                     </svg>
                                 : ""}
                                 </td>

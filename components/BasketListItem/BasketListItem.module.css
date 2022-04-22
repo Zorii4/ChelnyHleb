@@ -5,7 +5,6 @@
     border-radius: 8px;
     display: flex;
     margin-bottom: 8px;
-    display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 6px;
@@ -124,3 +123,22 @@
     cursor: pointer;
 }
 
+@media (max-width: 1280px) {
+    .container {
+        width: 900px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 700px;
+        justify-content: flex-start;
+        gap: 0 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 525px;
+    }
+}

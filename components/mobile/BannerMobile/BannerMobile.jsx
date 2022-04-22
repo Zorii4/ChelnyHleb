@@ -20,7 +20,7 @@ const BannerMobile = ({ item }) => {
                         </div>
                 </div>
             <div className={styles.rightWrapper}>
-                <Image width={153} height={111} src={item.mobilmage}></Image>
+                <Image width={153} height={111} src={item.mobilmage} alt=""></Image>
             </div>
         </div>
     )

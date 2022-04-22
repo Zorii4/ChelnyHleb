@@ -12,7 +12,7 @@ const OrderTitle = ({ orders, isHistory }) => {
     }
 
     return (
-        <ul>
+        <ul className={styles.orderList}>
             {orders.map((order, index) => (
                 <li className={styles.ordersItemHeader} onClick={() => onHandleVisible(index)} key={order.id}>
                     <div className={styles.containerHeader}>
@@ -34,6 +34,13 @@ const OrderTitle = ({ orders, isHistory }) => {
                                             height: 20px;
                                             display: flex;
                                             align-items: center;
+                                            white-space: nowrap;
+                                        }
+
+                                        @media (max-width: 768px) {
+                                            p {
+                                                font-size: 14px;
+                                            }
                                         }
                                     `}</style>
                                     </p>

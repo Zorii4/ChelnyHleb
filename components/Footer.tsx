@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
     return (
         <div className={styles.footer}>
             <div className={styles.footerContainer}>
-                <div><Image layout="fixed" src={logo}/></div>
+                <div><Image layout="fixed" src={logo} alt=""/></div>
                 <nav className={styles.navMenu}>
                     <div className={styles.navMenuLeft}>
                         <Link href="#"><a className={styles.navLink}>Каталог товаров</a></Link>

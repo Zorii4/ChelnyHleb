@@ -7,14 +7,14 @@ const ThisOrderDescription = ({ order, isHistory }) => {
             <ul className={styles.leftWrpapper}>
                 {order.consist.map ((item)=>(
                     <li className={styles.puchaseItem} key={item.id}>
-                        <Image src={item.basketImg} width={94} height={66}></Image>
+                        <Image src={item.basketImg} width={94} height={66} alt=""></Image>
                         <p className={styles.puchaseItemTitle}>{item.title}</p>
                         <div className={styles.puchaseQuantity}>{item.consist.length} шт</div>
                         <div className={styles.puchaseAmount}>{order.amount} ₽</div>
                     </li>
                 ))}
             </ul>
-            <div>
+            <div className={styles.descriptionList}>
                 <div className={styles.deliveryAdressWrapper}>
                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" clipRule="evenodd" d="M9.84519 13.3127L13.9072 2.35371C14.2052 1.54971 13.4222 0.766715 12.6182 1.06471L1.65419 5.12971C0.730187 5.47271 0.803187 6.80272 1.75819 7.04272L6.69819 8.28371L7.93119 13.2077C8.17119 14.1637 9.50219 14.2367 9.84519 13.3127V13.3127Z" stroke="#304250" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -26,15 +26,15 @@ const ThisOrderDescription = ({ order, isHistory }) => {
                 </div>
                 <div className={styles.deliveryAmountWrapper}>
                     <ul>
-                        <li className={styles.puchaseItem}>
+                        <li className={styles.puchaseItemAmount}>
                             <span className={styles.puchaseItemSubTitle}>Товары</span>
                             <span className={styles.puchaseItemNumber}>{order.amount} ₽</span>
                         </li>
-                        <li className={styles.puchaseItem}>
+                        <li className={styles.puchaseItemAmount}>
                             <span className={styles.puchaseItemSubTitle}>Доставка</span>
                             <span className={styles.puchaseItemNumber}>{order.amount} ₽</span>
                         </li>
-                        <li className={styles.puchaseItem}>
+                        <li className={styles.puchaseItemAmount}>
                             <span className={styles.puchaseItemSubTitle}>Баллы за покупку</span>
                             <span className={styles.puchaseItemNumber}>
                                 11&nbsp;  

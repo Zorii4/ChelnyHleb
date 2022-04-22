@@ -10,12 +10,16 @@ import styles from "./Baker.module.css"
 import { Goods } from '../../../types/goods'
 import Image from "next/image"
 import Link from 'next/link'
+import WeeksBannerMobile from "../../../components/mobile/WeeksBannerMobile/WeeksBannerMobile"
+import { useMediaQuery } from "react-responsive"
 
 const SubCategory  = () => {
     // const { goods } = useTypedSelector(state => state.goodsFromCategory)  
     const [goods, setGoods] = useState([])
     const [category, setCategory] = useState({})
     const [subCategories, setSubCategories] = useState([])
+
+    const isMobile = useMediaQuery({ query: '(max-width: 480px)'})
 
     useEffect(()=> {
       setGoods(fetchAllGoods())
@@ -27,28 +31,40 @@ const SubCategory  = () => {
 
     return (  
         <div className={styles.container}>
-            <div className={styles.menuWrapper}>
-                <div className={styles.menu}> 
-                    {category.pic && 
-                        <div className={styles.linkWrapper}>
-                            <Image width={40} height={40} src={category.pic}></Image>
-                            <h3 className={styles.linkTitle}>
-                                {category.title}
-                            </h3>
-                        </div>}                    
-                        <ul>
-                            {subCategories.map ((item)=> (
-                                <li key={item.id} className={styles.subCatItem}>
-                                    <Link href={`/catalog/${item.category}/${item.subCategory}`}>
-                                        <a className={styles.subCatLink}>{item.title}</a>
-                                    </Link>                                    
-                                </li>                          
-                            ))}
-                        </ul> 
+            {isMobile ? (
+                <div>
+                    <ul className={styles.catMobileList}>
+                        {subCategories.map ((item)=> (
+                            <li key={item.id} className={styles.subCatItemMobile}>
+                                <Link href={`/catalog/${item.category}/${item.subCategory}`}>
+                                    <a className={styles.subCatLink}>{item.title}</a>
+                                </Link>                                    
+                            </li>                          
+                        ))}
+                    </ul> 
                 </div>
-            </div>    
+                ):(
+            <div className={styles.menu}> 
+            {category.pic && 
+                <div className={styles.linkWrapper}>
+                    <Image width={40} height={40} src={category.pic} alt=""></Image>
+                    <h3 className={styles.linkTitle}>
+                        {category.title}
+                    </h3>
+                </div>}                    
+                <ul>
+                    {subCategories.map ((item)=> (
+                        <li key={item.id} className={styles.subCatItem}>
+                            <Link href={`/catalog/${item.category}/${item.subCategory}`}>
+                                <a className={styles.subCatLink}>{item.title}</a>
+                            </Link>                                    
+                        </li>                          
+                    ))}
+                </ul> 
+            </div>)}
+
             <div className={styles.content}>
-                <WeeksNewBanner />
+            {isMobile ? <WeeksBannerMobile /> : <WeeksNewBanner />}
                 <ul className={styles.cardWrapper}>
                     {goods.map ((item) => (
                         <li key = {item.id} className={styles.cardItem}>

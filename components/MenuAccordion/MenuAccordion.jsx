@@ -10,7 +10,7 @@ const Accordion  = ({ pic, title, subTitle, index, onTitleClick, isOpen }) => {
         <div>
             <div className={styles.menuButtonWrapper} onClick={() => onTitleClick(index)}>
                 <div className={styles.buttonMenu}>
-                    <Image width={40} height={40} src={pic}></Image>                                                 
+                    <Image width={40} height={40} src={pic} alt=""></Image>                                                 
                     <p className={styles.menuTitle}>{title}</p>
                 </div>
                 <div>

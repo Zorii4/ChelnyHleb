@@ -11,12 +11,12 @@ const Settings = () => {
 
     useEffect (()=> {
         setUser(fetchOneUser())
-    })
+    },[])
     
     if (!user) return <p>loading</p>
 
     return (
-        <>
+        <div style={{width: "100%"}}>
             <h1>Мои настройки</h1>
             <style jsx>{`
                 h1 { font-family: 'Golos';
@@ -63,17 +63,17 @@ const Settings = () => {
                         <button className={styles.settingsCancelBtn}>Отменить</button>
                     </div>
                 </div>
-                <div>
+                <div className={styles.addressWrapper}>
                     <h2 className={styles.addressSubtitle}>Избранные адреса</h2>
                     <div className={styles.addressContainer}>
-                        <p>{user.address}</p>
+                        <p className={styles.userAddress}>{user.address}</p>
                         <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 9L5 5L1 1" stroke="#8797A4" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

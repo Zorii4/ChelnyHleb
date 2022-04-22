@@ -15,7 +15,7 @@ const SesonesBannerMobile = () => {
     return (
         <>
             {sesonesBanner.map((item)=> (
-                <ul className={styles.sesonesList}>
+                <ul className={styles.sesonesList} key={item.id}>
                     <li className={styles.sesonesItemeLeftUp} style={{backgroundImage: `url(${item.backgroundMobile})`}}> 
                         <Link href="#">
                             <a className={styles.sesonesLink}>
@@ -28,7 +28,8 @@ const SesonesBannerMobile = () => {
                             li {
                                 background-repeat: no-repeat;
                                 background-size: cover;
-                                width: 219px;
+                                flex-basis: 48%;
+                                flex-shrink: 1;
                                 height: 219px;
                                 border-radius: 10px;
                                 padding: 10px;

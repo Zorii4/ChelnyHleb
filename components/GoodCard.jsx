@@ -47,8 +47,8 @@ const GoodCard = ({ good }) => {
                 <a>
                     <div className={styles.imageContainer}>
                         {isMobile ? 
-                            <Image width={150} height={104} src={good.image}></Image> : 
-                            <Image width={240} height={166} src={good.image}></Image>}
+                            <Image width={150} height={104} src={good.image} alt=""></Image> : 
+                            <Image width={240} height={166} src={good.image} alt=""></Image>}
                     </div>                            
                     <div className={styles.rateNumber}>
                         <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">

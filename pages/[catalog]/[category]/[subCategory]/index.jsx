@@ -34,7 +34,7 @@ const FinalCategory = () => {
                 <div className={styles.menu}> 
                     {category.pic && 
                         <div className={styles.linkWrapper}>
-                            <Image width={40} height={40} src={category.pic}></Image>
+                            <Image width={40} height={40} src={category.pic} alt=""></Image>
                             <h3 className={styles.linkTitle}>
                                 {category.title}
                             </h3>

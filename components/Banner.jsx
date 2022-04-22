@@ -57,12 +57,12 @@ const Banner = ({item}) => {
                         <span className={styles.durationDate}>{item.duration}</span>
                     </p>
                     {isSmallScreen ?
-                        (<Image width={153} height={111} src={item.image}></Image>):
+                        (<Image width={153} height={111} src={item.image} alt=""></Image>):
                     isMediumScreen ?                         
-                        (<Image width={233} height={181} src={item.image}></Image>):
+                        (<Image width={233} height={181} src={item.image} alt=""></Image>):
                     isBigScreen ? 
-                        (<Image width={263} height={211} src={item.image}></Image>): 
-                        (<Image width={372} height={256} src={item.image}></Image>)}
+                        (<Image width={263} height={211} src={item.image} alt=""></Image>): 
+                        (<Image width={372} height={256} src={item.image} alt=""></Image>)}
                 </div>
             </div>
             <div className={styles.navWrapper}>

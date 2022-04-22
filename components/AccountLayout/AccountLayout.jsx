@@ -1,7 +1,6 @@
 import styles from "./Account.module.css"
 import { useState, useEffect } from "react"
 import { fetchOneUser } from "../../FAKE_API/goods"
-import Link from "next/link"
 import { ActiveLink } from "../ActiveLink"
 
 const AccountLayout = ({ children }) => {
@@ -9,7 +8,7 @@ const AccountLayout = ({ children }) => {
 
     useEffect (()=> {
         setUser(fetchOneUser())
-    })
+    },[])
     
     if (!user) return <p>loading</p>
 
@@ -22,8 +21,8 @@ const AccountLayout = ({ children }) => {
                             <p className={styles.bonusNumber}>{user.bonus}</p>
                             <span className={styles.bonusNumberText}>Бонусных баллов</span>
                         </div>
-                    <p className={styles.userBonusCardName}>{user.name}</p>
-                    <span className={styles.userBonusCardNumber}>{user.cardNumber}</span>
+                        <p className={styles.userBonusCardName}>{user.name}</p>
+                        <span className={styles.userBonusCardNumber}>{user.cardNumber}</span>
                     </div>
                     <div className={styles.userLinksContainer}>
                         <ul>

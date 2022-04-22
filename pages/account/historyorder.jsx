@@ -17,7 +17,7 @@ const HistoryOrder = () => {
     if (!orders) return <p>loading</p>
 
     return (
-        <>
+        <div style={{width: "100%"}}>
             <h1>История заказов</h1>
             <style jsx>{`
                 h1 { font-family: 'Golos';
@@ -28,7 +28,7 @@ const HistoryOrder = () => {
                     margin-bottom: 40px;}
             `}</style>
                 <OrderTitle orders={orders} isHistory={true}/>
-        </>
+        </div>
     )
 }
 

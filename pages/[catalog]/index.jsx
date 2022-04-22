@@ -9,6 +9,9 @@ import { useEffect, useState } from "react"
 import { fetchAllCategories, fetchAllSubCategories, fetchCategoryById } from '../../FAKE_API/goods'
 import Image from "next/image"
 import Accordion from "../../components/MenuAccordion/MenuAccordion"
+import { useMediaQuery } from "react-responsive"
+import WeeksBannerMobile from "../../components/mobile/WeeksBannerMobile/WeeksBannerMobile"
+import CategoriesCardMobile from '../../components/mobile/CategoriesCardMobile/CategoriesCardMobile'
 
 
 const Catalog = () => {
@@ -16,6 +19,9 @@ const Catalog = () => {
     const [categories, setCategories] = useState()
     const [subCategories, setSubCategories] = useState()
     const [activeIndex, setActiveIndex] = useState(null)
+
+    const isMobile = useMediaQuery({ query: '(max-width: 480px)'})
+
 
     useEffect(()=> {
         setCategories(fetchAllCategories())
@@ -30,22 +36,23 @@ const Catalog = () => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.menu}>
-                {categories.map((category, index)=>( 
-                    <Accordion
-                        key={category.id} 
-                        pic={category.pic}
-                        title={category.title} 
-                        subTitle={subCategories.map((subcategory) => (subcategory.categoryId === category.id ? <div className={styles.menuItem}>{subcategory.title}</div> : ""))} 
-                        index={index}
-                        onTitleClick={handleClick}
-                        isOpen={activeIndex === index ? true : false}
-                    />
-                ))}
-                </div>
+            {!isMobile &&
+                <div className={styles.menu}>
+                    {categories.map((category, index)=>( 
+                        <Accordion
+                            key={category.id} 
+                            pic={category.pic}
+                            title={category.title} 
+                            subTitle={subCategories.map((subcategory) => (subcategory.categoryId === category.id ? <div className={styles.menuItem}>{subcategory.title}</div> : ""))} 
+                            index={index}
+                            onTitleClick={handleClick}
+                            isOpen={activeIndex === index ? true : false}
+                        />
+                    ))}
+                </div>}
             <div className={styles.content}>
-                <WeeksNewBanner />
-                <CategoriesCard isCatalog/>                
+                {isMobile ? <WeeksBannerMobile /> : <WeeksNewBanner />}
+                {isMobile ? <CategoriesCardMobile /> : <CategoriesCard isCatalog />}             
             </div>
         </div>
     )

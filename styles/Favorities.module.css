@@ -1,9 +1,10 @@
 .cardWrapper {
+    width: 1140px;
     display: flex; 
     margin-bottom: 60px;
     min-height: 363px;
     flex-wrap: wrap;
-    margin-left: 32px;
+    gap: 0 12px;
 }
 
 .cardItem {
@@ -16,6 +17,15 @@
     margin-bottom: 12px;
 }
 
-.cardItem:not(:nth-child(4n)) {
-    margin-right: 12px;
+@media (max-width: 1280px) {
+    .cardWrapper {
+        width: inherit;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardItem {
+        height: 315px;
+        width: 225px;
+    }
 }

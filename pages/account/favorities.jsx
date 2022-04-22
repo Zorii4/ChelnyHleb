@@ -16,7 +16,7 @@ const Favorities = () => {
     if (!favorities) return (<p>loading</p>)
 
     return (
-        <>
+        <div style={{width: "100%"}}>
             <h1>Избранное</h1>
             <style jsx>{`
                 h1 { font-family: 'Golos';
@@ -33,7 +33,7 @@ const Favorities = () => {
                     </li>
                 ))}
             </ul>    
-        </>
+        </div>
     )
 }
 

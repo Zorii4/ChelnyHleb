@@ -15,7 +15,7 @@ useEffect (()=> {
 if (!orders) return <p>loading</p>
 
     return (
-        <>
+        <div style={{width: "100%"}}>
             <h1>Текущие заказы</h1>
             <style jsx>{`
                 h1 { font-family: 'Golos';
@@ -26,7 +26,7 @@ if (!orders) return <p>loading</p>
                     margin-bottom: 40px;}
             `}</style>
             <OrderTitle orders={orders} />
-        </>
+        </div>
     )
 }
 

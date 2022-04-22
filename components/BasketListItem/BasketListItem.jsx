@@ -17,7 +17,7 @@ const BasketListItem = ({ props, onDelete }) => {
                     </svg>
                     {props.discount}%
                 </div>}
-                <Image src={props.basketImg} width={94} height={66}></Image>
+                <Image src={props.basketImg} width={94} height={66} alt=""></Image>
             </div>
             <h4 className={styles.basketTitle}>{props.title}</h4>
             <button>like</button>

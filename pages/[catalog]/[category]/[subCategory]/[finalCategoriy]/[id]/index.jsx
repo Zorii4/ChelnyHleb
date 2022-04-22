@@ -6,6 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import GoodInfoList from "../../../../../../components/GoodInfoList/GoodInfoList"
 import GoodCard from "../../../../../../components/GoodCard"
+import { useMediaQuery } from "react-responsive"
 
 
 const GoodFromCategory = () => {
@@ -22,13 +23,14 @@ const GoodFromCategory = () => {
         setGoods(fetchAllGoods())
     }, [])
 
+    const isMobile = useMediaQuery({ query: '(max-width: 480px)'})
 
     return ( 
         <>
             {goodById ? ( 
-                <div>
+                <>
                     <div className={styles.wrapperOne}>                        
-                        <div><Image src={goodById.bigImg} width={564} height={389}></Image></div>
+                        <div><Image src={goodById.bigImg} width={564} height={389} alt=""></Image></div>
                         <div className={styles.rightColumnWrapper}>
                             <div className={styles.priceWrapper}>
                                 <p className={styles.brandName}>{goodById.brand}</p>
@@ -42,14 +44,15 @@ const GoodFromCategory = () => {
                                     <Link href='#'><a className={styles.feedbackLink}>{goodById.feedbackQuantity} отзывов</a></Link>
                                 </div>
                                 <div>                                 
-                                    {goodById.discount &&
+                                    {goodById.discount && 
                                         (<div className={styles.discountWrapper}>
-                                            <div className={styles.discountProcent}>
-                                                <svg width="10" height="3" viewBox="0 0 10 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fillRule="evenodd" clipRule="evenodd" d="M-0.0012579 0.984474L9.96484 0.984474V2.4082L-0.0012579 2.4082V0.984474Z" fill="white"/>
-                                                </svg>
-                                            {goodById.discount}%
-                                            </div>
+                                            {!isMobile &&(
+                                                <div className={styles.discountProcent}>
+                                                    <svg width="10" height="3" viewBox="0 0 10 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fillRule="evenodd" clipRule="evenodd" d="M-0.0012579 0.984474L9.96484 0.984474V2.4082L-0.0012579 2.4082V0.984474Z" fill="white"/>
+                                                    </svg>
+                                                {goodById.discount}%
+                                            </div>)}
                                             <div className={styles.goodOldPiceWrapper}>
                                                 <div className={styles.goodOldPriceRub}>{goodById.oldprice.toString().split('.')[0]}</div>
                                                 <div className={styles.goodOldPriceKop}>{goodById.oldprice.toString().split('.')[1]}₽</div>
@@ -122,6 +125,17 @@ const GoodFromCategory = () => {
                             </ul>
                         </div>
                     </div>
+                    {isMobile && 
+                        <>
+                            <h3 className={styles.similarGoodTitle}>Похожие товары</h3>
+                                <ul className={styles.cardWrapper}>
+                                {goods.map ((item) => 
+                                <li className={styles.cardItem} key={item.id}>
+                                    <GoodCard good={item}/>
+                                </li>           
+                                )}   
+                            </ul>
+                        </>}
                     <div className={styles.wrapperThree}>
                         <div className={styles.rateWrapper}>
                             <div className={styles.rateNumberWrapper}>
@@ -173,15 +187,18 @@ const GoodFromCategory = () => {
                             <button className={styles.showMoreBtn}>Показать еще</button>
                         </div>
                     </div>
-                    <h3 className={styles.similarGoodTitle}>Похожие товары</h3>
-                    <ul className={styles.cardWrapper}>
-                        {goods.map ((item) => 
-                        <li className={styles.cardItem} key={item.id}>
-                            <GoodCard good={item}/>
-                        </li>           
-                        )}   
-                    </ul>
-                </div>
+                    {!isMobile &&
+                        <>
+                            <h3 className={styles.similarGoodTitle}>Похожие товары</h3>
+                            <ul className={styles.cardWrapper}>
+                                {goods.map ((item) => 
+                                <li className={styles.cardItem} key={item.id}>
+                                    <GoodCard good={item}/>
+                                </li>           
+                                )}   
+                            </ul>
+                        </>}
+                </>
             ) : (             
                 <h1>loading</h1>
             )}
