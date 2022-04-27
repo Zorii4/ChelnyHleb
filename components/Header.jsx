@@ -4,6 +4,7 @@ import styles from "../styles/Header.module.css"
 import logo from "../public/logo.png"
 import Input from "./common/input/Input"
 import { useRouter } from "next/router"
+import AddressModal from "../components/ModalWindow/AddressModal"
 
 const Header = () => {
 
@@ -13,6 +14,7 @@ const Header = () => {
         <header className={styles.mainContainer}>
             <>
                 <div className={styles.linkWrapper}>
+                    <AddressModal />
                     <div>
                         <Link href="/catalog/baker"><a className={styles.link}>Мудрый пекарь</a></Link>
                         <Link href="/catalog/citchen"><a className={styles.link}>Домашняя кухня</a></Link>

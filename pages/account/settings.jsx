@@ -35,8 +35,8 @@ const Settings = () => {
                     </div>
                     <h3 className={styles.settingsTitle}>Контакты</h3>
                     <div className={styles.settingsInputWrapper}>
-                        <input className={styles.settingsInput} type="text" placeholder={user.email}/>
-                        <input className={styles.settingsInput} type="text" placeholder={user.phone}/>                    
+                        <input className={styles.settingsInput} type="email" placeholder={user.email}/>
+                        <input className={styles.settingsInput} type="tel" placeholder={user.phone}/>                    
                     </div>
                     <h3 className={styles.settingsTitle}>Смена пароля</h3>
                     <div className={styles.settingsInputWrapper}>

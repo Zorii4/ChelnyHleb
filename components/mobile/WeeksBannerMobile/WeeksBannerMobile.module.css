@@ -29,15 +29,15 @@
 
 .cardList {
     width: 150px;
-    height: 190px;
+    height: 195px;
     border: none;
     background: #FFFFFF;
     border-radius: 8px;
     padding: 10px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 450px) {
     .cardWrapper {
-        width: 336px;
+        width: 440px;
     }
 }

@@ -125,4 +125,8 @@
         margin-left: auto;
         margin-right: auto;
     }
+
+    .wayDelivery {
+        display: none;
+    }
 }

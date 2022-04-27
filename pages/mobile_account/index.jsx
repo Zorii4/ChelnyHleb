@@ -24,7 +24,7 @@ const MobileAccount = () => {
             </div>
             <ul className={styles.linksWrapper}>
                 <li className={styles.linksItem}>
-                    <Link href="/mobile_account/thisorder">
+                    <Link href="/mobile_account/thisorder_mobile">
                         <a className={styles.accountLink}>
                             Текущие заказы
                             <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,7 +34,7 @@ const MobileAccount = () => {
                     </Link>
                 </li>
                 <li className={styles.linksItem}>
-                    <Link href="/mobile_account/historyorder">
+                    <Link href="/mobile_account/historyorder_mobile">
                         <a className={styles.accountLink}>
                             История заказов
                             <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +44,7 @@ const MobileAccount = () => {
                     </Link>
                 </li>
                 <li className={styles.linksItem}>
-                    <Link href="/mobile_account/favorities">
+                    <Link href="/mobile_account/favorities_mobile">
                         <a className={styles.accountLink}>
                             Избранное
                             <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +54,7 @@ const MobileAccount = () => {
                     </Link>
                 </li>
                 <li className={styles.linksItem}>
-                    <Link href="/mobile_account/settings">
+                    <Link href="/mobile_account/settings_mobile">
                         <a className={styles.accountLink}>
                             Мои настройки
                             <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">

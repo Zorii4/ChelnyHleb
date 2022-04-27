@@ -1,8 +1,11 @@
 import { useState, useRef } from "react";
 import ThisOrderDescription from "../ThisOrderDescription/ThisOrderDescription";
 import styles from "./OrderTitle.module.css"
+import { useMediaQuery } from "react-responsive"
 
 const OrderTitle = ({ orders, isHistory }) => {
+
+    const isMobile = useMediaQuery({ query: '(max-width: 480px)'})
 
     const elemRef = useRef()
     const [activeIndex, setActiveIndex] = useState(null)
@@ -17,7 +20,7 @@ const OrderTitle = ({ orders, isHistory }) => {
                 <li className={styles.ordersItemHeader} onClick={() => onHandleVisible(index)} key={order.id}>
                     <div className={styles.containerHeader}>
                         <div>
-                            <p className={styles.orderDescr}>Номер заказа</p>
+                            <p className={styles.orderDescrSubtitle}>Номер заказа</p>
                             <div className={styles.statusWrapper}>
                                 <p className={styles.numberOfOrder}>№ {order.id}</p>
                                 {!isHistory &&
@@ -50,7 +53,7 @@ const OrderTitle = ({ orders, isHistory }) => {
                         <div className={styles.amountDataWrapper}>
                             {isHistory &&
                                 <div>
-                                    <p className={styles.orderDescr}>Начислено</p>
+                                    <p className={styles.orderDescrSubtitle}>Начислено</p>
                                     <div>
                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fillRule="evenodd" clipRule="evenodd" d="M4.94218 8.7771C3.74457 7.57053 2.29042 6.79101 0.570312 6.44474C1.57087 2.94835 4.5691 0.355677 8.17308 0.00955293C5.62402 2.8125 4.41898 6.10746 4.94218 8.7771ZM9.71531 0C13.4015 0.305128 16.4168 2.9317 17.4275 6.42108C15.678 6.74813 14.1645 7.54809 12.9365 8.7771C13.5601 6.12638 12.374 2.8125 9.71531 0Z" fill="#61A430"/>

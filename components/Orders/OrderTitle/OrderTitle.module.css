@@ -17,7 +17,7 @@
     width: 1140px;
 }
 
-.orderDescr {
+.orderDescr, .orderDescrSubtitle {
     font-family: 'Golos';
     font-weight: normal;
     font-size: 14px;
@@ -25,6 +25,7 @@
     color: #B0BCC9;
     margin-bottom: 8px;
     margin-right: 60px;
+    white-space: nowrap;
 }
 
 .numberOfOrder {
@@ -133,5 +134,17 @@
 
     .amountWrapper {
         margin-right: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    .amountWrapper, .orderDescr, .orderDate {
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .orderList {
+        width: 345px;
     }
 }

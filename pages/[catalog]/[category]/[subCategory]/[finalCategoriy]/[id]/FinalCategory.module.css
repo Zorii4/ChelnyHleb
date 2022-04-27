@@ -535,6 +535,10 @@
         padding: 0;
     }
 
+    .priceWrapper {
+        min-width: inherit;
+    }
+
     .bottomContainer {
         display: block;
     }
@@ -544,7 +548,8 @@
     }
 
     .orderButton {
-        min-width: 100%;
+        min-width: 0px;
+        width: 100%;
     }
 
     .wrapperTwo {
@@ -589,10 +594,6 @@
 }
 
 @media (max-width: 375px) {
-    .priceWrapper {
-        min-width: inherit;
-    }
-
     .energyTitle {
         font-size: 20px;
     }

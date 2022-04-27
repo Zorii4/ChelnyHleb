@@ -29,3 +29,27 @@
         width: 225px;
     }
 }
+
+@media (max-width: 480px) {
+    .cardWrapper {
+        gap: 0px 0px;
+        justify-content: space-evenly;
+    }
+
+    .cardItem {
+        height: 260px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 375px) {
+    .cardWrapper {
+        gap: 0px 5px;
+        justify-content: flex-start;
+    }
+
+    .cardItem {
+        height: 255px;
+        width: 170px;
+    }
+}
