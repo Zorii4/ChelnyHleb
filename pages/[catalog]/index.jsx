@@ -14,26 +14,16 @@ import WeeksBannerMobile from "../../components/mobile/WeeksBannerMobile/WeeksBa
 import CategoriesCardMobile from '../../components/mobile/CategoriesCardMobile/CategoriesCardMobile'
 
 
-const Catalog = () => {
+const Catalog = ({ categories, subCategories }) => {
 
-    const [categories, setCategories] = useState()
-    const [subCategories, setSubCategories] = useState()
     const [activeIndex, setActiveIndex] = useState(null)
 
     const isMobile = useMediaQuery({ query: '(max-width: 480px)'})
-
-
-    useEffect(()=> {
-        setCategories(fetchAllCategories())
-        setSubCategories(fetchAllSubCategories())
-    },[])
 
     const handleClick = (ind) => {
         ind === activeIndex ? setActiveIndex(null) : setActiveIndex(ind) 
     }
    
-    if(!categories && !subCategories) return <h1>loading</h1>
-
     return (
         <div className={styles.container}>
             {!isMobile &&
@@ -41,9 +31,8 @@ const Catalog = () => {
                     {categories.map((category, index)=>( 
                         <Accordion
                             key={category.id} 
-                            pic={category.pic}
-                            title={category.title} 
-                            subTitle={subCategories.map((subcategory) => (subcategory.categoryId === category.id ? <div className={styles.menuItem}>{subcategory.title}</div> : ""))} 
+                            category={category}
+                            subCategories={subCategories}
                             index={index}
                             onTitleClick={handleClick}
                             isOpen={activeIndex === index ? true : false}
@@ -52,13 +41,23 @@ const Catalog = () => {
                 </div>}
             <div className={styles.content}>
                 {isMobile ? <WeeksBannerMobile /> : <WeeksNewBanner />}
-                {isMobile ? <CategoriesCardMobile /> : <CategoriesCard isCatalog />}             
+                {isMobile ? <CategoriesCardMobile />
+                : 
+                <CategoriesCard isCatalog categories={categories}/>}             
             </div>
         </div>
     )
 }
 
 export default Catalog
+
+export async function getServerSideProps() {
+    const resCategories = await fetch ("http://localhost:4200/categories")
+    const categories = await resCategories.json()
+    const resSubCategories = await fetch ("http://localhost:4200/subcategories")
+    const subCategories = await resSubCategories.json()
+    return { props: { categories, subCategories} }
+  }
 
 // export const getServerSideProps = wrapper.getServerSideProps(store => async () => {
 //     const dispatch = store.dispatch as NextThunkDispatch

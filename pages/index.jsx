@@ -22,18 +22,13 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import  { Navigation, Autoplay } from "swiper"
 import 'swiper/css';
 import 'swiper/css/navigation';
-import Layout from "../components/Layout"
 import { useSelector } from "react-redux"
 import BannerMobile from '../components/mobile/BannerMobile/BannerMobile'
 import WiseBannerMobile from '../components/mobile/WiseBannerMobile/WiseBannerMobile'
 
-const Home = () => {
+const Home = ({ goods, bannerData, popCat }) => {
   // const {goods} = useTypedSelector(state => state.goods)
-
-  const { goods } = useSelector (state => state.marketGoods)
-
-  // const [goods, setGoods] = useState([])
-  const [bannerData, setBannerData] = useState()
+  // const {goods} = useSelector (state => state.marketGoods)
 
   const navigationPrevRef = useRef(null)
   const navigationNextRef = useRef(null)
@@ -41,17 +36,10 @@ const Home = () => {
   const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)'})
   const isMobile = useMediaQuery({ query: '(max-width: 480px)'})
 
-  useEffect(()=> {
-    // setGoods(fetchAllGoods())
-    setBannerData(fetchBannerDatas())
-  },[])
-
-  if (!bannerData) return (<p>loading...</p>)
-
   return (
     <> 
 
-     {/* <CatalogMenu /> */}
+      {/* <CatalogMenu />  */}
 
       <div className={styles.bannersContainer}>
         <Swiper     
@@ -125,13 +113,26 @@ const Home = () => {
         <Link href='/catalog'><a className={styles.showAllLink}>Смотреть все</a></Link>
       </div>
       <div className={styles.categoriesWrapper}>
-        {isMobile ? <CategoriesCardMobile /> : <CategoriesCard />}
+        {isMobile ? <CategoriesCardMobile /> : <CategoriesCard categories={popCat}/>}
       </div>      
     </>     
   )
 }
 
 export default Home;
+
+export async function getServerSideProps() {
+  const resGoods = await fetch ("http://localhost:4200/goods")
+  const goods = await resGoods.json()
+
+  const resBanner = await fetch ("http://localhost:4200/banner")
+  const bannerData = await resBanner.json()
+  
+  const resCat = await fetch ("http://localhost:4200/categories?isPopular=true")
+  const popCat = await resCat.json()
+
+  return { props: { goods, bannerData, popCat } }
+}
 
 // export const getServerSideProps = wrapper.getServerSideProps(store => async () => {
 //   const dispatch = store.dispatch as NextThunkDispatch

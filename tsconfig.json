@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/milk", "components/Banner.jsx", "store/reducers/index.js", "components/GoodCard.jsx", "pages/[catalog]/[category]/[subCategory]/[finalCategoriy]/[id]/index.jsx", "pages/[catalog]/[category]/[subCategory]/index.jsx", "pages/[catalog]/[category]/index.jsx", "pages/basket.jsx", "pages/index.jsx", "components/CatalogMenu/CatalogMenu.jsx", "components/WeeksNewBanner/WeeksNewBanner.jsx", "components/SesonesBanner.оsx", "components/CategoriesCard/CategoriesCard.jsx", "components/GoodInfoList/GoodInfoList.jsx", "components/BasketListItem/BasketListItem.jsx", "pages/[catalog]/index.jsx", "components/Header.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/milk", "components/Banner.jsx", "store/reducers/index.js", "components/GoodCard.jsx", "pages/[catalog]/[category]/[subCategory]/[finalCategoriy]/[id]/index.jsx", "pages/[catalog]/[category]/[subCategory]/index.jsx", "pages/[catalog]/[category]/index.jsx", "pages/basket.jsx", "pages/index.jsx", "components/CatalogMenu/CatalogMenu.jsx", "components/WeeksNewBanner/WeeksNewBanner.jsx", "components/SesonesBanner.оsx", "components/CategoriesCard/CategoriesCard.jsx", "components/GoodInfoList/GoodInfoList.jsx", "components/BasketListItem/BasketListItem.jsx", "pages/[catalog]/index.jsx", "components/Header.jsx", "components/Layout.tsx"],
   "exclude": ["node_modules"]
 }

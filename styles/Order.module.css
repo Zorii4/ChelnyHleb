@@ -106,11 +106,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 }
 
 .inputAddress {
     width: 156px;
-    height: 46px;
+    height: 48px;
     border: 1px solid #B0BCC9;
     border-radius: 8px;
 }
@@ -204,4 +205,112 @@
     font-size: 16px;
     line-height: 120%;
     color: #304250;
+}
+
+@media (max-width: 1024px) {
+    .leftPartOrderContainer {
+        width: inherit;
+        max-width: 700px;
+    }
+
+    .inputComments {
+        width: 300px;
+    }
+
+    .puchaseRadioWrapper, 
+    .puchaseCheckboxWrapper {
+        width: 340px;
+    }
+
+    .absenceInputWrapper {
+        width: 225px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainContainer {
+        justify-content: flex-start;
+        gap: 0 10px;
+    }
+
+    .leftPartOrderContainer {
+        max-width: 530px;
+    }
+
+    .inputLK {
+        width: 173px;
+        font-size: 14px;
+    }
+
+    .addressContainer {
+        height: inherit;
+        padding: 20px;
+    }
+
+    .inputAddressContainer {
+        height: inherit;
+    } 
+
+    .inputAddress {
+        width: 156px;
+        margin-bottom: 2px;
+    }
+
+    .puchaseRadioWrapper, 
+    .puchaseCheckboxWrapper {
+        width: 260px;
+    }
+
+    .puchaseLabel,
+    .puchaseBonusLabel,
+    .absenceRadioLabel {
+        font-size: 14px;
+    }
+
+    .absenceInputWrapper {
+        padding: 8px;
+        width: 170px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainTitle {
+        font-size: 45px;
+    }
+
+    .mainContainer,
+    .inputLKWrapper,
+    .inputAddressContainer,
+    .inputAddressWrapper,
+    .absenceContainer,
+    .bonusWrapper {
+        display: block;
+    }
+
+    .inputLK,
+    .addressContainer,
+    .inputAddressWrapper,
+    .inputAddress,
+    .inputComments,
+    .absenceInputWrapper {
+        width: 100%;
+    }
+
+    .inputComments {
+        height: 100px;
+    }
+
+    .puchaseRadioWrapper, 
+    .puchaseCheckboxWrapper {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .puchaseRadioWrapper {
+        gap: 0 15px;
+    }
+
+    .absenceInputWrapper {
+        margin-bottom: 8px;
+    }
 }

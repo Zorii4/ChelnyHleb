@@ -8,12 +8,17 @@ import Layout from '../../components/Layout'
 const Settings = () => {
 
     const [user, setUser] = useState()
+    const [data, setData] = useState({name:'', surname:''})
 
     useEffect (()=> {
         setUser(fetchOneUser())
     },[])
     
     if (!user) return <p>loading</p>
+
+    const handleChange = ({target}) => {
+        setData((prev) => ({...prev,[target.name]: target.value}))
+    }
 
     return (
         <div style={{width: "100%"}}>
@@ -30,8 +35,8 @@ const Settings = () => {
                 <div className={styles.settingsContainer}>
                     <h3 className={styles.settingsTitle}>Мои данные</h3>
                     <div className={styles.settingsInputWrapper}>
-                        <input className={styles.settingsInput} type="text" placeholder={user.name} />
-                        <input className={styles.settingsInput} type="text" placeholder={user.name}/>                    
+                        <input className={styles.settingsInput} type="text" name="name" placeholder={user.name} value={data.name} onChange={handleChange}/>
+                        <input className={styles.settingsInput} type="text" name="surname" placeholder={user.name} value={data.surname} onChange={handleChange}/>
                     </div>
                     <h3 className={styles.settingsTitle}>Контакты</h3>
                     <div className={styles.settingsInputWrapper}>

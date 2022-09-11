@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
                         <Link href="#"><a className={styles.navLink}>Собственные марки</a></Link>
                     </div>
                     <div className={styles.navMenuRight}>
-                        <Link href="#"><a className={styles.navLink}>Контакты</a></Link>
+                        <Link href="/contacts"><a className={styles.navLink}>Контакты</a></Link>
                         <Link href="#"><a className={styles.navLink}>Активация карты</a></Link>
                         <Link href="#"><a className={styles.navLink}>Личный кабинет</a></Link>
                     </div>                       

@@ -10,7 +10,6 @@ const CatalogMenu  = () => {
 const [categories, setCategories] = useState([])
 const [subCategories, setSubcategories] = useState([])
 const [finalCategories, setFinalCategories] = useState([])
-const [onMause, setOnMause] = useState(false)
 
     useEffect(()=> {
         setCategories(fetchAllCategories())
@@ -22,10 +21,7 @@ const [onMause, setOnMause] = useState(false)
         <div className={styles.container}>
             <ul className={styles.menuList}>
                 {categories.map((item) => (
-                    <li className={styles.menuItem} key={item.id} 
-                        onMouseEnter={()=>!onMause ? setOnMause(!onMause) : setOnMause(onMause)}
-                        onMouseLeave={()=>setOnMause(!onMause)}
-                    >
+                    <li className={styles.menuItem} key={item.id}>
                         <Link href="#">
                             <a className={styles.categoryLink}>
                                 <div className={styles.linkWrapper}>
@@ -39,9 +35,7 @@ const [onMause, setOnMause] = useState(false)
                     </li>     
                 ))}
             </ul>
-            {onMause &&
-                <div className={styles.subCategory}>подкатегория мудрого пекаря</div>                     
-            }
+            <div className={styles.subCategory}>подкатегория мудрого пекаря</div>                         
         </div>
     )
 }

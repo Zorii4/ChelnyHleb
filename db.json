@@ -1,7 +1,7 @@
 {
     "banner": [
         {   
-            "id":1, 
+            "id": 1, 
             "title": "Виноград",
             "subtitle": "Виноград киш-миш, 1 кг",
             "description": "Сладкий и ароматный, созревший под жарким солнцем Армении. И совсем без косточек",
@@ -10,114 +10,31 @@
             "discount": 40,
             "image": "/img/grape.png",
             "duration": "28 июн - 10 июл"
+        },
+        {   
+            "id": 2, 
+            "title": "Пиво",
+            "subtitle": "Пиво 1 литр",
+            "description": "Сладкий и ароматный, созревший под жарким солнцем Армении. И совсем без косточек",
+            "oldprice": 109.90,
+            "newprice": 99.90,
+            "discount": 40,
+            "image": "/img/grape.png",
+            "mobilmage": "/img/grapeMobile.png",
+            "duration": "28 июн - 10 июл"
+        },
+        {   
+            "id": 3, 
+            "title": "Морковь",
+            "subtitle": "Морковь мытая, 1 кг",
+            "description": "Сладкий и ароматный, созревший под жарким солнцем Армении. И совсем без косточек",
+            "oldprice": 140.90,
+            "newprice": 120.90,
+            "discount": 40,
+            "image": "/img/grape.png",
+            "mobilmage": "/img/grapeMobile.png",
+            "duration": "21 июл - 10 авг"
         }
-    ],
-
-    "goods": [
-        {
-            "id": 1,
-            "title": "Сок Ideas тыквенно-апельсиновый, 1л",
-            "rate": 4.6,
-            "oldprice": 211.56,
-            "newprice": 189.89,
-            "image": "/img/watermelon.png",
-            "discount": 12,
-            "like": true,
-            "category": "milk"          
-        },
-
-        {
-            "id": 2,
-            "title": "Арбуз, 1кг",
-            "rate": 4.5,
-            "oldprice": 211.56,
-            "newprice": 34.89,
-            "image": "/img/watermelon.png",
-            "discount": 20,
-            "like": false,
-            "category": "milk"  
-        },
-
-        {
-            "id": 3,
-            "title": "Коктейль молочный Чудо Шоколад 3%, 200мл",
-            "rate": 4.9,
-            "oldprice": 211.56,
-            "newprice": 29.89,
-            "image": "/img/juice.png",
-            "discount": 80,
-            "like": true,
-            "category": "milk" 
-        },
-
-        {
-            "id": 4,
-            "title": "Голубика, 120гр",
-            "rate": 4.5,
-            "oldprice": 211.56,
-            "newprice": 320.89,
-            "image": "/img/juice.png",
-            "discount": 12, 
-            "like": false,
-            "category": "meat" 
-        },
-
-        {
-            "id": 5,
-            "title": "Семена тыквенные Семушка очищенные, 150г",
-            "rate": 4.8,
-            "oldprice": 211.56,
-            "newprice": 77.89,
-            "image": "/img/watermelon.png",
-            "discount": 15, 
-            "like": true,
-            "category": "meat" 
-        },
-
-        {
-            "id": 6,
-            "title": "Напиток безалкогольный Coca-Cola газированный, 330мл",
-            "rate": 4.8,
-            "oldprice": 211.56,
-            "newprice": 34.89,
-            "image": "/img/watermelon.png",
-            "discount": 10,
-            "like": false,
-            "category": "meat"  
-        },
-
-        {
-            "id": 7,
-            "title": "Сметана Простоквашино 15% 300г",
-            "rate": 4.6,
-            "oldprice": 211.56,
-            "newprice": 59.89,
-            "image": "/img/juice.png",
-            "like": true,
-            "category": "milk" 
-        },
-
-        {
-            "id": 8,
-            "title": "Индейка Инди-Лайт, 1кг",
-            "rate": 4.4,
-            "oldprice": 211.56,
-            "newprice": 189.89,
-            "image": "/img/watermelon.png",
-            "like": false,
-            "category": "meat" 
-        },
-
-        {
-            "id": 9,
-            "title": "Огурцы, 450г",
-            "rate": 4.6,
-            "oldprice": 211.56,
-            "newprice": 49.89,
-            "image": "/img/juice.png",
-            "like": true,
-            "category": "milk" 
-        }   
     ],
 
     "sesonesBanner": [
@@ -129,60 +46,464 @@
         }
     ],
 
-    "categories": [
+    "goods": [
         {
             "id": 1,
-            "title": "Мудрый пекарь",
-            "background": "/img/categories/bakerBG.jpg",
-            "url": "milk"
+            "title": "Вкусный торт с шоколадом",
+            "rate": 4.6,
+            "oldprice": 211.56,
+            "newprice": 189.89,
+            "image": "/img/watermelon.png",
+            "discount": 12,
+            "like": true,
+            "popular": false,
+            "new": true,
+            "bigImg":"/img/bigbottle.png",
+            "brand": "Домик в деревне",
+            "feedbackQuantity": 30,
+            "consist":["Молоко цельное", "Сливки", "Вода"],
+            "energy": 60,
+            "protein": 2.9,
+            "carbonates": 4.7,
+            "fat": 3.5,
+            "kind": "Пастеризованное",
+            "type": "В бутылке",
+            "weight": 0.927,
+            "volume": 0.927,
+            "fatness": 2.5,
+            "standart": "ГОСТ 31454-2012",
+            "bestBefore": "9 дней",
+            "tempMin": 2,
+            "tempMax": 6,
+            "basketImg": "/img/basket-images/onion.png",
+            "category": "cat_id_1",
+            "subcategory": "subcat_id_1",
+            "finalcategory": "finalcat_id_1"          
         },
+
         {
             "id": 2,
-            "title": "Домашняя кухня",
-            "background": "/img/categories/homeKitchen.jpg",
-            "url": "meat"
+            "title": "Курица бройлер",
+            "rate": 4.5,
+            "oldprice": 211.56,
+            "newprice": 34.89,
+            "image": "/img/watermelon.png",
+            "discount": 20,
+            "like": false,
+            "popular": true,
+            "new": true,
+            "bigImg":"/img/bigbottle.png",
+            "brand": "Домик в деревне",
+            "feedbackQuantity": 30,
+            "consist":["Молоко цельное", "Сливки", "Вода"],
+            "energy": 60,
+            "protein": 2.9,
+            "carbonates": 4.7,
+            "fat": 3.5,
+            "kind": "Пастеризованное",
+            "type": "В бутылке",
+            "weight": 0.927,
+            "volume": 0.927,
+            "fatness": 2.5,
+            "standart": "ГОСТ 31454-2012",
+            "bestBefore": "9 дней",
+            "tempMin": 2,
+            "tempMax": 6,
+            "basketImg": "/img/basket-images/onion.png", 
+            "category": "cat_id_3",
+            "subcategory": "subcat_id_4",
+            "finalcategory": "finalcat_id_5"   
         },
+
         {
             "id": 3,
-            "title": "Мясо, птица",
-            "background": "/img/categories/meat.jpg",
-            "url": "url"
+            "title": "Ещё какая-то курица",
+            "rate": 4.9,
+            "oldprice": 211.56,
+            "newprice": 29.89,
+            "image": "/img/juice.png",
+            "discount": 80,
+            "like": true,
+            "popular": false,
+            "new": true,
+            "bigImg":"/img/bigbottle.png",
+            "brand": "Домик в деревне",
+            "feedbackQuantity": 30,
+            "consist":["Молоко цельное", "Сливки", "Вода"],
+            "energy": 60,
+            "protein": 2.9,
+            "carbonates": 4.7,
+            "fat": 3.5,
+            "kind": "Пастеризованное",
+            "type": "В бутылке",
+            "weight": 0.927,
+            "volume": 0.927,
+            "fatness": 2.5,
+            "standart": "ГОСТ 31454-2012",
+            "bestBefore": "9 дней",
+            "tempMin": 2,
+            "tempMax": 6,
+            "basketImg": "/img/basket-images/yo.png",
+            "category": "cat_id_3",
+            "subcategory": "subcat_id_4",
+            "finalcategory": "finalcat_id_6"
         },
+
         {
             "id": 4,
-            "title": "Бакалея",
-            "background": "/img/categories/bakaley.jpg",
-            "url": "url"
+            "title": "Курица третьего вида",
+            "rate": 4.5,
+            "oldprice": 211.56,
+            "newprice": 320.89,
+            "image": "/img/juice.png",
+            "discount": 12, 
+            "like": false,
+            "popular": true,
+            "new": true,
+            "bigImg":"/img/bigbottle.png",
+            "brand": "Домик в деревне",
+            "feedbackQuantity": 30,
+            "consist":["Молоко цельное", "Сливки", "Вода"],
+            "energy": 60,
+            "protein": 2.9,
+            "carbonates": 4.7,
+            "fat": 3.5,
+            "kind": "Пастеризованное",
+            "type": "В бутылке",
+            "weight": 0.927,
+            "volume": 0.927,
+            "fatness": 2.5,
+            "standart": "ГОСТ 31454-2012",
+            "bestBefore": "9 дней",
+            "tempMin": 2,
+            "tempMax": 6,
+            "basketImg": "/img/basket-images/alexandrov.png",
+            "category": "cat_id_3",
+            "subcategory": "subcat_id_4",
+            "finalcategory": "finalcat_id_6"
         },
+
         {
             "id": 5,
-            "title": "Овощи, фрукты, ягоды, зелень",
-            "background": "/img/categories/bakaley.jpg",
-            "url": "url"
+            "title": "Пирог с щукой",
+            "rate": 4.8,
+            "oldprice": 211.56,
+            "newprice": 77.89,
+            "image": "/img/watermelon.png",
+            "discount": 15, 
+            "like": true,
+            "popular": true,
+            "new": false,
+            "bigImg":"/img/bigbottle.png",
+            "brand": "Домик в деревне",
+            "feedbackQuantity": 30,
+            "consist":["Молоко цельное", "Сливки", "Вода"],
+            "energy": 60,
+            "protein": 2.9,
+            "carbonates": 4.7,
+            "fat": 3.5,
+            "kind": "Пастеризованное",
+            "type": "В бутылке",
+            "weight": 0.927,
+            "volume": 0.927,
+            "fatness": 2.5,
+            "standart": "ГОСТ 31454-2012",
+            "bestBefore": "9 дней",
+            "tempMin": 2,
+            "tempMax": 6,
+            "basketImg": "/img/basket-images/alexandrov.png",
+            "category": "cat_id_2",
+            "subcategory": "subcat_id_2",
+            "finalcategory": "finalcat_id_3"
         },
+
         {
             "id": 6,
-            "title": "Хлеб, выпечка",
-            "background": "/img/categories/meat.jpg",
-            "url": "url"
+            "title": "Пирог с сёмгой",
+            "rate": 4.8,
+            "oldprice": 211.56,
+            "newprice": 34.89,
+            "image": "/img/watermelon.png",
+            "discount": 10,
+            "like": false,
+            "popular": false,
+            "new": false,
+            "bigImg":"/img/bigbottle.png",
+            "brand": "Домик в деревне",
+            "feedbackQuantity": 30,
+            "consist":["Молоко цельное", "Сливки", "Вода"],
+            "energy": 60,
+            "protein": 2.9,
+            "carbonates": 4.7,
+            "fat": 3.5,
+            "kind": "Пастеризованное",
+            "type": "В бутылке",
+            "weight": 0.927,
+            "volume": 0.927,
+            "fatness": 2.5,
+            "standart": "ГОСТ 31454-2012",
+            "bestBefore": "9 дней",
+            "tempMin": 2,
+            "tempMax": 6,
+            "basketImg": "/img/basket-images/yo.png",
+            "category": "cat_id_2",
+            "subcategory": "subcat_id_2",
+            "finalcategory": "finalcat_id_3" 
         },
+
         {
             "id": 7,
-            "title": "Молочные продукты, яйцо",
-            "background": "/img/categories/homeKitchen.jpg",
-            "url": "url"
+            "title": "Торт с фруктами",
+            "rate": 4.6,
+            "oldprice": 211.56,
+            "newprice": 59.89,
+            "image": "/img/juice.png",
+            "like": true,
+            "popular": true,
+            "new": true,
+            "bigImg":"/img/bigbottle.png",
+            "brand": "Домик в деревне",
+            "feedbackQuantity": 30,
+            "consist":["Молоко цельное", "Сливки", "Вода"],
+            "energy": 60,
+            "protein": 2.9,
+            "carbonates": 4.7,
+            "fat": 3.5,
+            "kind": "Пастеризованное",
+            "type": "В бутылке",
+            "weight": 0.927,
+            "volume": 0.927,
+            "fatness": 2.5,
+            "standart": "ГОСТ 31454-2012",
+            "bestBefore": "9 дней",
+            "tempMin": 2,
+            "tempMax": 6,
+            "basketImg": "/img/basket-images/onion.png", 
+            "category": "cat_id_1",
+            "subcategory": "subcat_id_1",
+            "finalcategory": "finalcat_id_2"
         },
+
         {
             "id": 8,
-            "title": "Соки, воды, напитки",
-            "background": "/img/categories/meat.jpg",
-            "url": "url"
+            "title": "Салат оливье с колбасой",
+            "rate": 4.4,
+            "oldprice": 211.56,
+            "newprice": 189.89,
+            "image": "/img/watermelon.png",
+            "like": false,
+            "popular": false,
+            "new": false,
+            "bigImg":"/img/bigbottle.png",
+            "brand": "Домик в деревне",
+            "feedbackQuantity": 30,
+            "consist":["Молоко цельное", "Сливки", "Вода"],
+            "energy": 60,
+            "protein": 2.9,
+            "carbonates": 4.7,
+            "fat": 3.5,
+            "kind": "Пастеризованное",
+            "type": "В бутылке",
+            "weight": 0.927,
+            "volume": 0.927,
+            "fatness": 2.5,
+            "standart": "ГОСТ 31454-2012",
+            "bestBefore": "9 дней",
+            "tempMin": 2,
+            "tempMax": 6,
+            "basketImg": "/img/basket-images/onion.png", 
+            "category": "cat_id_2",
+            "subcategory": "subcat_id_3",
+            "finalcategory": "finalcat_id_4"
         },
+
         {
             "id": 9,
-            "title": "Кобасы, сосиски, деликатесы",
+            "title": "Салат оливье с курицей",
+            "rate": 4.6,
+            "oldprice": 211.56,
+            "newprice": 49.89,
+            "image": "/img/juice.png",
+            "like": true,
+            "popular": true,
+            "new": false,
+            "bigImg":"/img/bigbottle.png",
+            "brand": "Домик в деревне",
+            "feedbackQuantity": 30,
+            "consist":["Молоко цельное", "Сливки", "Вода"],
+            "energy": 60,
+            "protein": 2.9,
+            "carbonates": 4.7,
+            "fat": 3.5,
+            "kind": "Пастеризованное",
+            "type": "В бутылке",
+            "weight": 0.927,
+            "volume": 0.927,
+            "fatness": 2.5,
+            "standart": "ГОСТ 31454-2012",
+            "bestBefore": "9 дней",
+            "tempMin": 2,
+            "tempMax": 6,
+            "basketImg": "/img/basket-images/yo.png", 
+            "category": "cat_id_2",
+            "subcategory": "subcat_id_3",
+            "finalcategory": "finalcat_id_4"
+        }   
+    ],
+
+    "categories": [
+        {
+            "id": "cat_id_1",
+            "title": "Мудрый пекарь",
+            "background": "/img/categories/bakerBG.jpg",
+            "pic": "/img/categories/catPicLittle.jpg",
+            "url": "baker",
+            "isPopular": true
+        },
+        {
+            "id": "cat_id_2",
+            "title": "Домашняя кухня",
+            "background": "/img/categories/homeKitchen.jpg",
+            "pic": "/img/categories/catPicLittle.jpg",
+            "url": "kitchen",
+            "isPopular": true
+        },
+        {
+            "id": "cat_id_3",
+            "title": "Мясо, птица",
+            "background": "/img/categories/meat.jpg",
+            "pic": "/img/categories/catPicLittle.jpg",
+            "url": "meat",
+            "isPopular": true
+        },
+        {
+            "id": "cat_id_4",
+            "title": "Бакалея",
             "background": "/img/categories/bakaley.jpg",
-            "url": "url"
+            "pic": "/img/categories/catPicLittle.jpg",
+            "url": "bakaley",
+            "isPopular": false
+        },
+        {
+            "id": "cat_id_5",
+            "title": "Овощи, фрукты, ягоды, зелень",
+            "background": "/img/categories/bakaley.jpg",
+            "pic": "/img/categories/catPicLittle.jpg",
+            "url": "vegetables",
+            "isPopular": true
+        },
+        {
+            "id": "cat_id_6",
+            "title": "Хлеб, выпечка",
+            "background": "/img/categories/meat.jpg",
+            "pic": "/img/categories/catPicLittle.jpg",
+            "url": "bread",
+            "isPopular": true
+        },
+        {
+            "id": "cat_id_7",
+            "title": "Молочные продукты, яйцо",
+            "background": "/img/categories/homeKitchen.jpg",
+            "pic": "/img/categories/catPicLittle.jpg",
+            "url": "milk",
+            "isPopular": false
+        },
+        {
+            "id": "cat_id_8",
+            "title": "Соки, воды, напитки",
+            "background": "/img/categories/meat.jpg",
+            "pic": "/img/categories/catPicLittle.jpg",
+            "url": "juice",
+            "isPopular": true
+        },
+        {
+            "id": "cat_id_9",
+            "title": "Колбасы, сосиски, деликатесы",
+            "background": "/img/categories/bakaley.jpg",
+            "pic": "/img/categories/catPicLittle.jpg",
+            "url": "sausage",
+            "isPopular": false
+        }
+    ],
+
+    "subcategories": [
+        {
+            "id": "subcat_id_1",
+            "title": "Торты",
+            "pic": "img/categories/catPicLittle.jpg",
+            "category": "cat_id_1",
+            "url": "cake"
+        },
+        {
+            "id": "subcat_id_2",
+            "title": "Пироги",
+            "pic": "img/categories/catPicLittle.jpg",
+            "category": "cat_id_1",
+            "url": "pie"
+        },
+        {
+            "id": "subcat_id_3",
+            "title": "Салаты мясные",
+            "pic": "img/categories/catPicLittle.jpg",
+            "category": "cat_id_2",
+            "url": "meat_salad"
+        },
+        {
+            "id": "subcat_id_4",
+            "title": "Мясо курицы",
+            "pic": "img/categories/catPicLittle.jpg",
+            "category": "cat_id_3",
+            "url": "chicken_meat" 
+        },
+        {
+            "id": "subcat_id_5",
+            "title": "Мясо индейки",
+            "pic": "img/categories/catPicLittle.jpg",
+            "category": "cat_id_3",
+            "url": "turkey_meat"
+        }
+    ],
+
+    "finalcategories": [
+        {
+            "id": "finalcat_id_1",
+            "title": "Торты шоколадные",
+            "subcategory": "subcat_id_1"
+        },
+        {
+            "id": "finalcat_id_2",
+            "title": "Торты фруктовые",
+            "subcategory": "subcat_id_1"
+        },
+        {
+            "id": "finalcat_id_3",
+            "title": "Пироги с рыбой",
+            "subcategory": "subcat_id_1"
+        },
+        {
+            "id": "finalcat_id_4",
+            "title": "Салат оливье",
+            "subcategory": "subcat_id_1"
+        },
+        {
+            "id": "finalcat_id_5",
+            "title": "Курицы 1",
+            "subcategory": "subcat_id_1"
+        },
+        {
+            "id": "finalcat_id_6",
+            "title": "Курицы 2",
+            "subcategory": "subcat_id_1"
+        },
+        {
+            "id": "finalcat_id_7",
+            "title": "Индюшки 1",
+            "subcategory": "subcat_id_1"
+        },
+        {
+            "id": "finalcat_id_8",
+            "title": "Индюшки 2",
+            "subcategory": "subcat_id_1"
         }
     ]
     

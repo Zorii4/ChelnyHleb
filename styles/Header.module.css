@@ -35,10 +35,6 @@
     margin-right: 24px;
 }
 
-.basket:not(:last-child) {
-    margin-right: 5px;
-}
-
 .link:hover {
     color: #304250;
 }
@@ -51,7 +47,7 @@
     gap: 0 15px;
 }
 
-.basket {
+.basket, .favorities, .lk {
     background-color: #fff;
     width: 46px;
     height: 46px;
@@ -59,9 +55,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-.basket:hover > svg > path {
+.basket:hover > svg > path,
+.favorities:hover > svg > path,
+.lk:hover > svg > path {
     stroke: #304250
 }
 
@@ -93,6 +92,138 @@
 
 .basketLinkWrapper {
     display: flex;
+    position: relative;
+    align-items: center;
+    gap: 0 5px;
+}
+
+.miniBasketWrapper {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 370px;
+    max-height: 370px;
+    background-color: #fff;
+    z-index: 50;
+    padding: 10px 10px 0px 15px;
+    border-radius: 12px;
+}
+
+.basket::after {
+    content: none;
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    transform:translateX(-50%);
+    border: 12px solid transparent; 
+    border-bottom: 12px solid #fff;
+}
+
+.miniBasketList {
+    overflow-y: scroll;
+    max-height: 300px;
+    padding-right: 15px;
+}
+
+.miniBasketItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.bottomWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    border-top: 1px solid #DDE3EA;
+}
+
+.bottomPriceWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.priceWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0px 20px;
+}
+
+.title {
+    width: 60%;
+    text-align: left;
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #304250;
+}
+
+.price {
+    font-family: 'Din';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #304250;
+}
+
+.basketLink {
+    width: 124px;
+    height: 40px;
+    background: #61A430;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Golos Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+.miniBasketList::-webkit-scrollbar {
+    width: 2px;
+    background-color: transparent;
+}
+
+.miniBasketList::-webkit-scrollbar-thumb {
+    background-color: #304250;
+} 
+
+.miniBasketList::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.deliveryDescr {
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #304250;
+}
+
+.deliveryPriceNumber {
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    color: #304250;
+}
+
+.basket:hover::after {
+    content: '';
 }
 
 @media (max-width: 1280px) {

@@ -141,10 +141,8 @@
     .amountWrapper, .orderDescr, .orderDate {
         display: none;
     }
-}
 
-@media (max-width: 375px) {
     .orderList {
-        width: 345px;
+        width: 100%;
     }
 }

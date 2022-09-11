@@ -56,3 +56,10 @@
     align-items: center;   
 }
 
+.subCategory {
+    display: none;
+}
+
+.menuItem:hover > .subCategory {
+    display: block;
+}

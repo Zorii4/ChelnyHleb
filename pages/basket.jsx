@@ -28,7 +28,7 @@ const Basket = () => {
   if(content.length === 0) return (<p>Basket is empty</p>)
 
   const handleDelete = (id) => {
-    setGoodsInBasket(goodsInBasket.filter ((good)=>id !== good.id))
+    content.filter((good)=>id !== good.id)
   }
 
   return (

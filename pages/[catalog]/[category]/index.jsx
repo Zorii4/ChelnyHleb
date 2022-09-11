@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import GoodCard from '../../../components/GoodCard'
 import WeeksNewBanner from '../../../components/WeeksNewBanner/WeeksNewBanner'
@@ -10,6 +9,7 @@ import styles from "./Baker.module.css"
 import { Goods } from '../../../types/goods'
 import Image from "next/image"
 import Link from 'next/link'
+import { useRouter } from "next/router"
 import WeeksBannerMobile from "../../../components/mobile/WeeksBannerMobile/WeeksBannerMobile"
 import { useMediaQuery } from "react-responsive"
 
@@ -20,6 +20,9 @@ const SubCategory  = () => {
     const [subCategories, setSubCategories] = useState([])
 
     const isMobile = useMediaQuery({ query: '(max-width: 480px)'})
+
+    const router = useRouter()
+    console.log(router.query);
 
     useEffect(()=> {
       setGoods(fetchAllGoods())
@@ -78,6 +81,14 @@ const SubCategory  = () => {
 }
 
 export default SubCategory
+
+export async function getServerSideProps( {params} ) {
+    // const res = await fetch (`http://localhost:4200/${params}`)
+    console.log(params)
+    return { props: { } }
+}
+// ДОРАБОТАТЬ ПОЛУЧЕНИЕ КАТЕГОРИЙ ПО ПАРАМЕТРАМ ИЗ АДРЕСНОЙ СТРОКИ
+
 
 // export const getServerSideProps = wrapper.getServerSideProps(store => async ({ params }) => {
 

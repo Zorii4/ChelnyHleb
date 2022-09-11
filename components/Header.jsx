@@ -5,16 +5,22 @@ import logo from "../public/logo.png"
 import Input from "./common/input/Input"
 import { useRouter } from "next/router"
 import AddressModal from "../components/ModalWindow/AddressModal"
+import LoginModal from '../components/LoginModal/LoginModal'
+import { useState } from "react"
+import { useSelector } from "react-redux"
 
 const Header = () => {
-
+    const [isOpen, setIsOpen] = useState (false)
+    const [isVisible, setIsVisible] = useState (false)
     const router = useRouter()
+    const goodBasket = useSelector(state => state.goodInBasket)
 
     return (
         <header className={styles.mainContainer}>
             <>
                 <div className={styles.linkWrapper}>
-                    <AddressModal />
+                    {isOpen && <AddressModal close={setIsOpen}/>}
+                     {/* <LoginModal />   */}
                     <div>
                         <Link href="/catalog/baker"><a className={styles.link}>Мудрый пекарь</a></Link>
                         <Link href="/catalog/citchen"><a className={styles.link}>Домашняя кухня</a></Link>
@@ -27,7 +33,7 @@ const Header = () => {
                 </div>                
                 <div className={styles.navWrapper}>
                     <Link href="/"><a><Image layout="fixed" src={logo} alt=""/></a></Link>                             
-                        <button className={styles.catalogButton} onClick={()=>router.push('/catalog')}>
+                        <button className={styles.catalogButton} onClick={()=>router.push('/catalog/')}>
                             каталог
                             <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="17" height="2" rx="1" fill="white"/>
@@ -47,7 +53,7 @@ const Header = () => {
                         `}</style>
                         </button>
                     <Input styleName="searchInput" name="Поиск по каталогу" type="text" hasIcon/>
-                    <button className={styles.wayDelivery}>
+                    <button className={styles.wayDelivery} onClick={()=>setIsOpen(true)}>
                         <div className={styles.btnDiliveryWrapper}>
                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd" clipRule="evenodd" d="M9.84519 13.3127L13.9072 2.35371C14.2052 1.54971 13.4222 0.766715 12.6182 1.06471L1.65419 5.12971C0.730187 5.47271 0.803187 6.80272 1.75819 7.04272L6.69819 8.28371L7.93119 13.2077C8.17119 14.1637 9.50219 14.2367 9.84519 13.3127V13.3127Z" stroke="#61A430" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -60,7 +66,10 @@ const Header = () => {
                     </button>
                     <div className={styles.basketLinkWrapper}>
                         <Link href="/basket">
-                            <a className={styles.basket}>
+                            <a className={styles.basket}
+                                onMouseEnter={() => setIsVisible(true)}
+                                onMouseLeave={() => setIsVisible(false)}
+                            >
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4.97388 5.51953L4.41805 3.01953H2.81055" stroke="#B0BCC9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                 <path fillRule="evenodd" clipRule="evenodd" d="M6.44294 12.3612L4.97461 5.51953H15.5229C16.0538 5.51953 16.4488 6.0087 16.3379 6.52786L15.0863 12.3612C15.0038 12.7454 14.6646 13.0195 14.2713 13.0195H7.25711C6.86461 13.0195 6.52544 12.7454 6.44294 12.3612Z" stroke="#B0BCC9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -69,15 +78,44 @@ const Header = () => {
                                 </svg>
                             </a>
                         </Link>
+                        {isVisible &&
+                            <div className={styles.miniBasketWrapper}
+                                onMouseEnter={() => setIsVisible(true)}
+                                onMouseLeave={() => setIsVisible(false)}
+                            >
+                                <ul className={styles.miniBasketList}>
+                                    {goodBasket.goodInBasket.map ((item) => (
+                                        <li className={styles.miniBasketItem} key={item.id}>
+                                            <Image height={36} width={42} src={item.basketImg} alt=""/>
+                                            <p className={styles.title}>{item.title}</p>
+                                            <p className={styles.price}>{item.newprice} ₽</p>
+                                        </li>
+                                    ))}
+                                </ul>
+                                <div className={styles.bottomWrapper}>
+                                    <Link href="/basket"><a className={styles.basketLink}>В корзину</a></Link>
+                                    <div className={styles.bottomPriceWrapper}>
+                                        <div className={styles.priceWrapper}>
+                                            <p className={styles.deliveryDescr}>Доставка</p>
+                                            <span className={styles.deliveryPriceNumber}>78 ₽</span>
+                                        </div>
+                                        <div className={styles.priceWrapper}>
+                                            <p className={styles.deliveryDescr}>Итого к оплате</p>
+                                            <span className={styles.deliveryPriceNumber}>2303,22 ₽</span>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        }
                         <Link href="/account/favorities">
-                            <a className={styles.basket}>
+                            <a className={styles.favorities}>
                                 <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fillRule="evenodd" clipRule="evenodd" d="M13.08 3.33203C15.7258 3.33203 17.5 5.81536 17.5 8.12786C17.5 12.822 10.1342 16.6654 10 16.6654C9.86583 16.6654 2.5 12.822 2.5 8.12786C2.5 5.81536 4.27417 3.33203 6.92 3.33203C8.4325 3.33203 9.42583 4.0862 10 4.75786C10.5742 4.0862 11.5675 3.33203 13.08 3.33203Z" stroke="#B0BCC9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                             </a>
                         </Link>
                         <Link href="/account/thisorder">
-                            <a className={styles.basket}>
+                            <a className={styles.lk}>
                                 <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12.0621 3.77078C13.2011 4.90981 13.2011 6.75654 12.0621 7.89557C10.923 9.0346 9.07632 9.0346 7.93728 7.89557C6.79825 6.75654 6.79825 4.90981 7.93728 3.77078C9.07632 2.63175 10.923 2.63175 12.0621 3.77078" stroke="#B0BCC9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                 <path fillRule="evenodd" clipRule="evenodd" d="M3.33301 15.4163V16.2497C3.33301 16.7097 3.70634 17.083 4.16634 17.083H15.833C16.293 17.083 16.6663 16.7097 16.6663 16.2497V15.4163C16.6663 12.8947 13.373 11.2563 9.99967 11.2563C6.62634 11.2563 3.33301 12.8947 3.33301 15.4163Z" stroke="#B0BCC9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

@@ -42,6 +42,12 @@
     text-align: left;
 }
 
+.likeButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 .basketPrice {
     font-family: 'Golos';
     font-weight: normal;

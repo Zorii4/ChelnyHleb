@@ -1,8 +1,15 @@
 import { useRef } from "react"
 import Image from "next/image"
 import styles from "./MenuAccordion.module.css"
+import Link from "next/link"
 
-const Accordion  = ({ pic, title, subTitle, index, onTitleClick, isOpen }) => {
+const Accordion  = ({ 
+    subCategories,
+    category, 
+    index, 
+    onTitleClick, 
+    isOpen
+ }) => {
 
     const elemRef = useRef()
 
@@ -10,8 +17,8 @@ const Accordion  = ({ pic, title, subTitle, index, onTitleClick, isOpen }) => {
         <div>
             <div className={styles.menuButtonWrapper} onClick={() => onTitleClick(index)}>
                 <div className={styles.buttonMenu}>
-                    <Image width={40} height={40} src={pic} alt=""></Image>                                                 
-                    <p className={styles.menuTitle}>{title}</p>
+                    <Image width={40} height={40} src={category.pic} alt=""></Image>                                                 
+                    <p className={styles.menuTitle}>{category.title}</p>
                 </div>
                 <div>
                     <div className={`${styles.arrayUp} ${isOpen ? styles.arrayDown : null}`}>
@@ -23,7 +30,12 @@ const Accordion  = ({ pic, title, subTitle, index, onTitleClick, isOpen }) => {
             </div>
             <div style={{maxHeight:`${elemRef.current?.offsetHeight}px`}} className={`${styles.contentDefault} ${isOpen && styles.contentActive}`}>
                 <div ref={elemRef}>
-                    {subTitle}
+                    {subCategories.map((subcategory) => (
+                    (subcategory.category === category.id)&&
+                        <Link key={subcategory.id} href={`/catalog/${category.url}/${subcategory.url}`}>
+                            <a className={styles.menuItem}>{subcategory.title}</a>
+                        </Link>
+                    ))}         
                 </div>
             </div>
         </div>

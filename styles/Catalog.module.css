@@ -13,14 +13,6 @@
     flex-direction: column;
 }
 
-.menuItem {
-    font-family: 'Golos';
-    font-weight: normal;
-    font-size: 16px;
-    color: #304250;
-    margin-bottom: 10px;
-}
-
 .content {
     display: flex;
     flex-wrap: wrap;
@@ -44,5 +36,11 @@
 @media (max-width: 768px) {
     .menu {
         min-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        width: 100%;
     }
 }

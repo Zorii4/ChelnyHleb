@@ -152,6 +152,10 @@
     color: #B0BCC9;
 }
 
+.navLink:hover {
+    color: #56912B;
+}
+
 @media (max-width: 1280px) {
     .footerContainer, .copyrightContainer {
         max-width: 1250px;

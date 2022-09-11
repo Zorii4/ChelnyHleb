@@ -62,7 +62,7 @@ const WeeksNewBanner = () => {
                 >
                 {goods.map ((item) => 
                     (item.new && 
-                        <SwiperSlide>
+                        <SwiperSlide key={item.id}>
                             <li key={item.id} className={styles.cardList}>
                                 <LittleGoodCard good={item} />
                             </li>

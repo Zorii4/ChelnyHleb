@@ -5,22 +5,15 @@ import { fetchAllGoods, fetchAllCategories } from '../../FAKE_API/goods'
 import styles from "./CategoriesCard.module.css"
 
 
-const CategoriesCard = ({ isCatalog }) => {
+const CategoriesCard = ({ isCatalog, categories }) => {
 
     // const {categories} = useTypedSelector(state => state.categories)
-
-    const [categories, setCategories] = useState([])
-
-
-    useEffect(()=> {
-    setCategories(fetchAllCategories())
-    },[])
 
     return (
         <ul className={styles.catList}>
             {categories.map((item)=> (
                 <li key={item.id} style={{backgroundImage: `url(${item.background})`}}>
-                    <Link href={`/catalog/${item.category}`}>
+                    <Link href={`/catalog/${item.url}`}>
                         <a className={styles.catLink}>
                             <h3 className={styles.catTitle}>{item.title}</h3>
                         </a>
@@ -60,4 +53,5 @@ const CategoriesCard = ({ isCatalog }) => {
         </ul>
     )
 }
+
 export default CategoriesCard
